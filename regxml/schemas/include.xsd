@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict"
+        schemaLocation="reg.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"
+        schemaLocation="www-smpte-ra-org-reg-335-2012.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1"
+        schemaLocation="www-smpte-ra-org-reg-395-2014-13-1.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"
+        schemaLocation="www-smpte-ra-org-reg-2003-2012.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1"
+        schemaLocation="www-smpte-ra-org-reg-335-2012-13-1.xsd"/>
+</xs:schema>

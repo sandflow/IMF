@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon Dec 29 20:49:31 PST 2014--><!--By: regxmllib build 2dd6533bebd2d1094011d178f2cc861d77415ada--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict"/>
+<xs:element name="TapeFormat" type="r0:TapeFormatType"/>
+</xs:schema>
