@@ -1,14 +1,490 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Created: Mon Dec 29 20:49:30 PST 2014--><!--By: regxmllib build 2dd6533bebd2d1094011d178f2cc861d77415ada--><!--See: https://github.com/sandflow/regxmllib--><Baseline xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" rootElement="MXF" rootObject="Preface">
+<!--Created: Mon May 04 22:16:37 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><Baseline xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" rootElement="MXF" rootObject="Preface">
 <SchemeID>urn:uuid:e9ad45b5-abdb-5f16-7ffc-ff560e475a87</SchemeID>
 <SchemeURI>http://www.smpte-ra.org/reg/335/2012</SchemeURI>
 <MetaDefinitions>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
+<Symbol>InstanceID</Symbol>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>15370</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.01000000</Identification>
+<Symbol>IrisFNumber</Symbol>
+<Description>Lens aperture setting in EV/1000h based on 8000h for F16</Description>
+<Name>Iris F-Number</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32768</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200202.08000000</Identification>
+<Symbol>IrisTNumber</Symbol>
+<Description>Iris position value calculated from the “T-number” that is a measure of the amount of light transmitted through the lens in practice</Description>
+<Name>Iris T-Number</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32776</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200202.09000000</Identification>
+<Symbol>IrisRingPosition</Symbol>
+<Description>Iris ring rotation angle in unsigned integer. 0 is for full open, and FFFFh for close</Description>
+<Name>Iris Ring Position</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32777</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.02000000</Identification>
+<Symbol>FocusPositionFromImagePlane</Symbol>
+<Description>Distance in meters between the image plane and the object in focus</Description>
+<Name>Focus Position From Image Plane</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01020400.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32769</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.03000000</Identification>
+<Symbol>FocusPositionFromFrontLensVertex</Symbol>
+<Description>Distance in meters between the front of the lens and the object in focus</Description>
+<Name>Focus Position From Front Lens Vertex</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01020400.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32770</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200202.0a000000</Identification>
+<Symbol>FocusRingPosition</Symbol>
+<Description>Focus ring rotation angle in unsigned integer. 0 is for near-end, FFFFh for infinity</Description>
+<Name>Focus Ring Position</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32778</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.04000000</Identification>
+<Symbol>MacroSetting</Symbol>
+<Description>Indicates the capability of the lens macro function for close-up work with a limited focal range. True = On, False = Off</Description>
+<Name>Macro Setting</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01040100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32771</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.05000000</Identification>
+<Symbol>LensZoom35mmStillCameraEquivalent</Symbol>
+<Description>Focal length in meters.</Description>
+<Name>Lens Zoom 35mm Still Camera Equivalent</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01020400.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32772</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.06000000</Identification>
+<Symbol>LensZoomActualFocalLength</Symbol>
+<Description>Focal length in meters.</Description>
+<Name>Lens Zoom Actual Focal Length</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01020400.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32773</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200202.0b000000</Identification>
+<Symbol>ZoomRingPosition</Symbol>
+<Description>Zooming ring rotation angle in unsigned integer. 0 is for wide-end, and FFFFh is for tele-end</Description>
+<Name>Zoom Ring Position</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32779</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200202.07000000</Identification>
+<Symbol>OpticalExtenderMagnification</Symbol>
+<Description>Magnification factor setup of an optical extender or conversion lens where present</Description>
+<Name>Optical Extender Magnification</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32774</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.03020302.02100100</Identification>
+<Symbol>LensAttributes</Symbol>
+<Description>Informative description of the lens in use (as a text string).</Description>
+<Name>Lens Attributes</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100600.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>32775</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</MemberOf>
+</PropertyDefinition>
+<PropertyAliasDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
+<Symbol>InstanceID</Symbol>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>15370</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010101.01011502.00000000</OriginalProperty>
+</PropertyAliasDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01010000</Identification>
+<Symbol>AutoExposureMode</Symbol>
+<Description>Auto Exposure setup Mode</Description>
+<Name>Auto Exposure Mode</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33024</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200103.010c0000</Identification>
+<Symbol>ExposureIndexOfPhotoMeter</Symbol>
+<Description>Setting of the photo meter in ISO number.</Description>
+<Name>Exposure Index of Photo Meter</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33045</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01020000</Identification>
+<Symbol>AutoFocusSensingAreaSetting</Symbol>
+<Description>Auto Focus Sensing Area setting defined as a registered code</Description>
+<Name>Auto Focus Sensing Area Setting</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33025</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01030000</Identification>
+<Symbol>ColorCorrectionFilterWheelSetting</Symbol>
+<Description>Color Compensation Filter Wheel setting defined as a registered code</Description>
+<Name>Color Correction Filter Wheel Setting</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33026</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01040000</Identification>
+<Symbol>NeutralDensityFilterWheelSetting</Symbol>
+<Description>Neutral Density Filter Wheel setting as an integer value where the value 1 means a clear filter.</Description>
+<Name>Neutral Density Filter Wheel Setting</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33027</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01050000</Identification>
+<Symbol>ImageSensorDimensionEffectiveWidth</Symbol>
+<Description>Width of effective image area in micro meters</Description>
+<Name>Image Sensor Dimension Effective Width</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33028</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01060000</Identification>
+<Symbol>ImageSensorDimensionEffectiveHeight</Symbol>
+<Description>Height of effective image area in micro meters</Description>
+<Name>Image Sensor Dimension Effective Height</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33029</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04010301.03010000</Identification>
+<Symbol>CaptureFrameRate</Symbol>
+<Description>The rate that video images are captured expressed in frames per second (for example, 50:1, 60000:1001).</Description>
+<Name>Capture Frame Rate</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.03010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33030</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01070000</Identification>
+<Symbol>ImageSensorReadoutMode</Symbol>
+<Description>Imager Readout mode defined as a registered code</Description>
+<Name>Image Sensor Readout Mode</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33031</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01080000</Identification>
+<Symbol>ShutterSpeedAngle</Symbol>
+<Description>Shutter speed as an angle defining the shutter speed (angle) in minutes relative to a completely open shutter angle of 360 degrees.</Description>
+<Name>Shutter Speed (Angle)</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33032</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01080100</Identification>
+<Symbol>ShutterSpeedTime</Symbol>
+<Description>Shutter speed as a time defining the shutter speed (time) in seconds</Description>
+<Name>Shutter Speed (Time)</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.03010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33033</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.01090000</Identification>
+<Symbol>CameraMasterGainAdjustment</Symbol>
+<Description>Master Gain Control setting in 0.01 decibel units</Description>
+<Name>Camera Master Gain Adjustment</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010600.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33034</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.010a0000</Identification>
+<Symbol>ISOSensitivity</Symbol>
+<Description>Sensitivity to light</Description>
+<Name>ISO Sensitivity</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33035</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200103.010d0000</Identification>
+<Symbol>ColorMatrix</Symbol>
+<Description>Specifies the setting of the color balance of the camera with the ordered elements (R to R, G to R, B to R, R to G, G to G, B to G, R to B, G to B, B to B).</Description>
+<Name>Color Matrix</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.04020200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33048</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.010b0000</Identification>
+<Symbol>ElectricalExtenderMagnification</Symbol>
+<Description>Expresses the magnification setup of the picture size in percent where 100% (64h) represents the original picture size</Description>
+<Name>Electrical Extender Magnification</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33036</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.02010000</Identification>
+<Symbol>AutoWhiteBalanceMode</Symbol>
+<Description>Auto White Balance Mode defined as a registered code</Description>
+<Name>Auto White Balance Mode</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33037</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.02020000</Identification>
+<Symbol>WhiteBalance</Symbol>
+<Description>White Balance value defined by the temperature in Kelvin</Description>
+<Name>White Balance</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33038</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.02030000</Identification>
+<Symbol>CameraMasterBlackLevel</Symbol>
+<Description>Level of the master black level of the camera expressed as a percentage defined in 0.1 % units</Description>
+<Name>Camera Master Black Level</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010600.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33039</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.02040000</Identification>
+<Symbol>CameraKneePoint</Symbol>
+<Description>Level of the knee point in the camera transfer characteristic expressed as a percentage defined in 0.1 % units</Description>
+<Name>Camera Knee Point</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33040</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.02050000</Identification>
+<Symbol>CameraKneeSlope</Symbol>
+<Description>Slope of the transfer characteristic starting at the knee point.</Description>
+<Name>Camera Knee Slope</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.03010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33041</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04200103.02060000</Identification>
+<Symbol>CameraLuminanceDynamicRange</Symbol>
+<Description>Luminance Dynamic Range expressed as a percentage defined in 0.1 % units.</Description>
+<Name>Camera Luminance Dynamic Range</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33042</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010102.04010201.01010200</Identification>
+<Symbol>TransferCharacteristic</Symbol>
+<Description>Specifies the non-linear relationship between linear scene light levels and amplitude-compressed video signal levels at signal origination.</Description>
+<Name>Transfer Characteristic</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.02020102.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>12816</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200103.02070000</Identification>
+<Symbol>GammaForCDL</Symbol>
+<Description>Enumerated code that represents the gamma characteristic applied at the input to the ASC CDL.</Description>
+<Name>Gamma for CDL</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33046</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200103.02080000</Identification>
+<Symbol>ASCCDLV12</Symbol>
+<Description>10 parameters of ASC Color Decision List V1.2.</Description>
+<Name>ASC CDL V1.2</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.04011300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33047</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.01020108.02000000</Identification>
+<Symbol>CameraSettingFileURI</Symbol>
+<Description>The Uniform Resource Identifier (URI) of the file containing the camera setup parameters.</Description>
+<Name>Camera Setting File URI</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100600.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33043</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.03020302.02100200</Identification>
+<Symbol>CameraAttributes</Symbol>
+<Description>Informative description of the camera in use (as a text string).</Description>
+<Name>Camera Attributes</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100600.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>33044</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</MemberOf>
+</PropertyDefinition>
+<PropertyAliasDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
+<Symbol>InstanceID</Symbol>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>15370</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.7f010000</MemberOf>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010101.01011502.00000000</OriginalProperty>
+</PropertyAliasDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.04060805.00000000</Identification>
+<Symbol>UDAMSetIdentifier</Symbol>
+<Description>The immutable ID of the instance of this user-defined acquisition metadata set</Description>
+<Name>UDAM Set Identifier</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>57344</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0c020101.7f010000</MemberOf>
+</PropertyDefinition>
+<PropertyAliasDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
+<Symbol>InstanceID</Symbol>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>15370</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01010100</MemberOf>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010101.01011502.00000000</OriginalProperty>
+</PropertyAliasDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.01010000</Identification>
 <Symbol>ObjectClass</Symbol>
 <Description>Specifies a reference to the definition of a class of object</Description>
 <Name>Object Class</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010100.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>257</LocalIdentification>
@@ -26,11 +502,22 @@
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01010100</MemberOf>
 </PropertyDefinition>
 <PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.06010104.020e0000</Identification>
+<Symbol>ApplicationPlugInObjects</Symbol>
+<Description>A batch of strong references to Application Plug-In Objects</Description>
+<Name>Application Plug-In Batch</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05051100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01010100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.04070100.00000000</Identification>
 <Symbol>ComponentDataDefinition</Symbol>
 <Description>Specifies the basic essence type of a component</Description>
 <Name>Component Data Definition</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>513</LocalIdentification>
@@ -117,7 +604,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.01030201.02000000</Identification>
 <Symbol>EdgeCodeHeader</Symbol>
 <Description>An organizationally given header for a film reel or roll</Description>
-<Name>Edge Code Header </Name>
+<Name>Edge Code Header</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -126,7 +613,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.06010000</Identification>
-<Symbol>AvailableRepresentations</Symbol>
+<Symbol>Choices</Symbol>
 <Description>Specifies a vector of references to available representations of the same original essence</Description>
 <Name>Available Representations</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05060700.00000000</Type>
@@ -150,7 +637,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.07020103.03030000</Identification>
 <Symbol>EventPosition</Symbol>
 <Description>Specifies the Starting Time of an Event in edit units, relative to the origin</Description>
-<Name>Event Start </Name>
+<Name>Event Start</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01012001.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -161,7 +648,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.05300404.01000000</Identification>
 <Symbol>EventComment</Symbol>
 <Description>User-provided Comment Text for an event</Description>
-<Name>Editing Event Comment</Name>
+<Name>Event Comment</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -194,8 +681,8 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.05300506.00000000</Identification>
 <Symbol>Operation</Symbol>
 <Description>Specifies the Effect or Transition used in an operation</Description>
-<Name>Operation Definition ID</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Name>Operation</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05010700.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>2817</LocalIdentification>
@@ -239,7 +726,7 @@
 <Symbol>Rendering</Symbol>
 <Description>Specifies a reference to pre-rendered results of an operation</Description>
 <Name>Effect Rendering</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05020600.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05020800.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>2821</LocalIdentification>
@@ -248,9 +735,9 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.06070000</Identification>
 <Symbol>NestedScopeTracks</Symbol>
-<Description>Specifies a vector of references to the tracks in a package</Description>
-<Name>Package Tracks</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05060500.00000000</Type>
+<Description>Specifies a vector of references to segments</Description>
+<Name>Nested Scope Tracks</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05060600.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>3073</LocalIdentification>
@@ -259,9 +746,9 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.02070000</Identification>
 <Symbol>InputSegment</Symbol>
-<Description>Specifies the input essence whose timebase is to be converted </Description>
+<Description>Specifies the input essence whose timebase is to be converted</Description>
 <Name>Input Segment</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05020700.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05020600.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>3329</LocalIdentification>
@@ -327,7 +814,7 @@
 <Symbol>SelectedSegment</Symbol>
 <Description>Specifies the segment selected by the editor</Description>
 <Name>Selected</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05020800.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05020600.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>3841</LocalIdentification>
@@ -348,7 +835,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.06090000</Identification>
 <Symbol>ComponentObjects</Symbol>
 <Description>Specifies a vector of references to the clips and transitions in the sequence</Description>
-<Name>Components in Sequence</Name>
+<Name>Components</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05060100.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -403,8 +890,8 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.07020103.01040000</Identification>
 <Symbol>StartPosition</Symbol>
 <Description>The relative start time from an origin within the track of a clip, expressed in edit units</Description>
-<Name>Start Time Relative to Reference </Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010800.00000000</Type>
+<Name>Start Time Relative to Reference</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01012001.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>4609</LocalIdentification>
@@ -481,7 +968,7 @@
 <Symbol>StartTimecode</Symbol>
 <Description>The timecode within a track at the starting point of the essence</Description>
 <Name>Start Timecode</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010800.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.01012001.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>5377</LocalIdentification>
@@ -525,7 +1012,7 @@
 <Symbol>TimecodeStreamData</Symbol>
 <Description>Specifies the Timecode stream contains essence</Description>
 <Name>Timecode Stream Data</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.04100200.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>5634</LocalIdentification>
@@ -569,7 +1056,7 @@
 <Symbol>CutPoint</Symbol>
 <Description>Specifies the point, in edit units, in a track at which a cut occurs.</Description>
 <Name>Cut Point</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010800.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.01012001.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>6146</LocalIdentification>
@@ -601,7 +1088,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.0530050d.00000000</Identification>
 <Symbol>ControlPointValue</Symbol>
 <Description>Effect or Transformation Value at specific time</Description>
-<Name>Timepoint Value</Name>
+<Name>Control Point Value</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04100300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -632,7 +1119,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.01011503.00000000</Identification>
-<Symbol>DefinitionObjectID</Symbol>
+<Symbol>DefinitionObjectIdentification</Symbol>
 <Description>The unique identifier for the item being defined</Description>
 <Name>Definition Object ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
@@ -668,7 +1155,7 @@
 <Symbol>OperationDataDefinition</Symbol>
 <Description>Basic essence kind resulting from the defined Operation</Description>
 <Name>Operation Data Definition</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>7681</LocalIdentification>
@@ -701,7 +1188,7 @@
 <Symbol>OperationCategory</Symbol>
 <Description>Specifies the Category of the Effect or Transformation</Description>
 <Name>Operation Category</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02020101.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>7686</LocalIdentification>
@@ -745,7 +1232,7 @@
 <Symbol>ParameterType</Symbol>
 <Description>Specifies a reference to the definition of  the type of a parameter</Description>
 <Name>Parameter Data Type</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010900.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>7937</LocalIdentification>
@@ -767,7 +1254,7 @@
 <Symbol>PluginCategory</Symbol>
 <Description>Identifies the general purpose of the plugin</Description>
 <Name>Plug-In Category ID</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02020103.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>8707</LocalIdentification>
@@ -809,9 +1296,9 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.020b0000</Identification>
 <Symbol>ManufacturerInfo</Symbol>
-<Description>Specifies a reference to an object that provides information about the manufacturere</Description>
+<Description>Specifies a reference to an object that provides information about the manufacturer</Description>
 <Name>Manufacturer Information Object</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05021200.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05020400.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>8711</LocalIdentification>
@@ -987,7 +1474,7 @@
 <Symbol>FileDescriptorClass</Symbol>
 <Description>Specifies a reference to the file essence descriptor used by the codec</Description>
 <Name>Codec Essence Descriptor</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010100.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>8961</LocalIdentification>
@@ -996,7 +1483,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.03010000</Identification>
 <Symbol>CodecDataDefinitions</Symbol>
-<Description>Specifies references to the basic essence kinds supported by the codec </Description>
+<Description>Specifies references to the basic essence kinds supported by the codec</Description>
 <Name>Codec Essence Kinds</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05040300.00000000</Type>
 <IsOptional>false</IsOptional>
@@ -1129,8 +1616,8 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.04070200.00000000</Identification>
 <Symbol>EssenceStream</Symbol>
 <Description>Specifies the stream of data as essence</Description>
-<Name>Stream Data </Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
+<Name>Essence Stream</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.04100200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>9986</LocalIdentification>
@@ -1141,7 +1628,7 @@
 <Symbol>SampleIndex</Symbol>
 <Description>Stream of byte offsets to individual samples in the essence data</Description>
 <Name>Sample Index</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.04100200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>11009</LocalIdentification>
@@ -1150,10 +1637,10 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01030404.00000000</Identification>
 <Symbol>EssenceStreamID</Symbol>
-<Description>Essence (or its container) stream ID </Description>
+<Description>Essence (or its container) stream ID</Description>
 <Name>Essence Stream ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
-<IsOptional>false</IsOptional>
+<IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>16135</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012300</MemberOf>
@@ -1161,7 +1648,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01030405.00000000</Identification>
 <Symbol>IndexStreamID</Symbol>
-<Description>Index table stream ID </Description>
+<Description>Index table stream ID</Description>
 <Name>Index Stream ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1171,7 +1658,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.06030000</Identification>
-<Symbol>EssenceLocators</Symbol>
+<Symbol>Locators</Symbol>
 <Description>Specifies a vector of references to essence locators</Description>
 <Name>Essence Locators</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05060400.00000000</Type>
@@ -1218,7 +1705,7 @@
 <Symbol>ContainerFormat</Symbol>
 <Description>Specifies a reference to the format of Container of Essence Data</Description>
 <Name>Essence Container Format</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>12292</LocalIdentification>
@@ -1229,7 +1716,7 @@
 <Symbol>Codec</Symbol>
 <Description>Specifies a reference to the codec used to create Essence Data. Listed in SMPTE RP224</Description>
 <Name>Codec Definition</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010b00.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>12293</LocalIdentification>
@@ -1315,7 +1802,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.04010501.09000000</Identification>
 <Symbol>SampledXOffset</Symbol>
-<Description>Specifies the X offset of the sampled image relative to the stored image in pixels </Description>
+<Description>Specifies the X offset of the sampled image relative to the stored image in pixels</Description>
 <Name>Sampled X-Offset</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010700.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1326,7 +1813,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.04010501.0a000000</Identification>
 <Symbol>SampledYOffset</Symbol>
-<Description>Specifies the Y offset of the sampled image relative to the stored image in pixels </Description>
+<Description>Specifies the Y offset of the sampled image relative to the stored image in pixels</Description>
 <Name>Sampled Y-Offset</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010700.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1337,7 +1824,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.04010501.0b000000</Identification>
 <Symbol>DisplayHeight</Symbol>
-<Description>Specifies the height of the presented image relative to the sampled image in pixels </Description>
+<Description>Specifies the height of the presented image relative to the sampled image in pixels</Description>
 <Name>Display Height</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1359,7 +1846,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.04010501.0d000000</Identification>
 <Symbol>DisplayXOffset</Symbol>
-<Description>Specifies the X offset of the presented image relative to the sampled image in pixels </Description>
+<Description>Specifies the X offset of the presented image relative to the sampled image in pixels</Description>
 <Name>Display X-Offset</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010700.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1370,7 +1857,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.04010501.0e000000</Identification>
 <Symbol>DisplayYOffset</Symbol>
-<Description>Specifies the Y offset of the presented image relative to the sampled image in pixels </Description>
+<Description>Specifies the Y offset of the presented image relative to the sampled image in pixels</Description>
 <Name>Display Y-Offset</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010700.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1403,7 +1890,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.04010101.01000000</Identification>
 <Symbol>ImageAspectRatio</Symbol>
-<Description>Specifies the horizontal to vertical aspect ratio of the whole image as it is to be presented to avoid geometric distortion and hence including any black edges. </Description>
+<Description>Specifies the horizontal to vertical aspect ratio of the whole image as it is to be presented to avoid geometric distortion and hence including any black edges.</Description>
 <Name>Presentation Aspect Ratio</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010100.00000000</Type>
 <IsOptional>false</IsOptional>
@@ -1422,17 +1909,18 @@
 <LocalIdentification>12815</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</MemberOf>
 </PropertyDefinition>
-<PropertyDefinition>
+<PropertyAliasDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.04010201.01010200</Identification>
-<Symbol>CaptureGammeEquation</Symbol>
+<Symbol>TransferCharacteristic</Symbol>
 <Description>Specifies the non-linear relationship between linear scene light levels and amplitude-compressed video signal levels at signal origination.</Description>
-<Name>Capture Gamma Equation</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Name>Transfer Characteristic</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.02020102.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>12816</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</MemberOf>
-</PropertyDefinition>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010102.04010201.01010200</OriginalProperty>
+</PropertyAliasDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010109.04010201.01060100</Identification>
 <Symbol>ColorPrimaries</Symbol>
@@ -1448,7 +1936,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.04010201.01030100</Identification>
 <Symbol>CodingEquations</Symbol>
 <Description>The fundamental color coding that relates the scene CIE tri-stimulus values (X, Y, Z) to the linear video levels (R, G, B).</Description>
-<Name>Colorimetry Code</Name>
+<Name>Coding Equations</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.02020106.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -1471,7 +1959,7 @@
 <Symbol>FieldDominance</Symbol>
 <Description>Specifies whether the first frame of picture is field 1 or field 2</Description>
 <Name>Field Dominance</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02010121.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>12818</LocalIdentification>
@@ -1656,7 +2144,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.04010503.05000000</Identification>
 <Symbol>ColorRange</Symbol>
-<Description>Specifies the range of the color levels. </Description>
+<Description>Specifies the range of the color levels.</Description>
 <Name>Color Range Levels</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1711,7 +2199,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.04010503.06000000</Identification>
 <Symbol>PixelLayout</Symbol>
-<Description>Specifies pixel quantisation and order as a data structure. </Description>
+<Description>Specifies pixel quantisation and order as a data structure.</Description>
 <Name>Pixel Layout</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04020100.00000000</Type>
 <IsOptional>false</IsOptional>
@@ -1722,7 +2210,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.04010503.08000000</Identification>
 <Symbol>Palette</Symbol>
-<Description>Specifies, as a single string, the fixed length values of each color in the palette used.  </Description>
+<Description>Specifies, as a single string, the fixed length values of each color in the palette used.</Description>
 <Name>Palette</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1733,7 +2221,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.04010503.09000000</Identification>
 <Symbol>PaletteLayout</Symbol>
-<Description>Specifies pixel quantisation and order in the palette as a data structure. </Description>
+<Description>Specifies pixel quantisation and order in the palette as a data structure.</Description>
 <Name>Palette Layout</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04020100.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -1966,7 +2454,7 @@
 <Symbol>TapeFormFactor</Symbol>
 <Description>Specifies the cassette etc. shell - eg 1 inch B,  1 inch C,  90 minute Betacam,  DAT, 1/4 inch.</Description>
 <Name>Tape Shell Kind</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02010104.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>14849</LocalIdentification>
@@ -1976,7 +2464,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.04010401.01000000</Identification>
 <Symbol>VideoSignal</Symbol>
 <Description>PAL, NTSC etc</Description>
-<Name>Analog Video System Name</Name>
+<Name>Video Signal</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.02010103.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2053,7 +2541,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.07020110.02040000</Identification>
 <Symbol>FileLastModified</Symbol>
 <Description>Identifies date and time at the point of most recent modification of any item in the container</Description>
-<Name>Container Last Modification Date-Time </Name>
+<Name>Container Last Modification Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010700.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2073,7 +2561,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.02020000</Identification>
-<Symbol>Dictionaries</Symbol>
+<Symbol>Dictionary</Symbol>
 <Description>Specifies a reference to the Dictionary of Definitions Used in Container</Description>
 <Name>Dictionary</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05020200.00000000</Type>
@@ -2085,8 +2573,8 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.03010201.05000000</Identification>
 <Symbol>FormatVersion</Symbol>
-<Description>Specifies the version of the SDK</Description>
-<Name>SDK Version</Name>
+<Description>Specifies the version of the specification of the format</Description>
+<Name>Format Version</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2120,7 +2608,7 @@
 <Symbol>PrimaryPackage</Symbol>
 <Description>Specifies a reference to the primary package in this file</Description>
 <Name>Primary Package</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010600.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>15112</LocalIdentification>
@@ -2218,7 +2706,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.07020110.02030000</Identification>
 <Symbol>FileModificationDate</Symbol>
 <Description>Identifies date and time at the point of modification</Description>
-<Name>Modification Date-Time </Name>
+<Name>Modification Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010700.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2306,7 +2794,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.06010104.06050000</Identification>
 <Symbol>PackageTracks</Symbol>
 <Description>Specifies a vector of references to tracks</Description>
-<Name>Tracks</Name>
+<Name>Package Tracks</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05060500.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2317,7 +2805,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.07020110.02050000</Identification>
 <Symbol>PackageLastModified</Symbol>
 <Description>Identifies date and time at the point of most recent modification of the package</Description>
-<Name>Package Last Modification Date-Time </Name>
+<Name>Package Last Modification Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010700.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2328,7 +2816,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010102.07020110.01030000</Identification>
 <Symbol>CreationTime</Symbol>
 <Description>Identifies date and time at the point of creation.</Description>
-<Name>Creation Date-Time </Name>
+<Name>Creation Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010700.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2373,7 +2861,7 @@
 <Symbol>PackageUsage</Symbol>
 <Description>Indicates the role of a Package (also known as Mob) as a sub-clip, adjusted clip, template clip or other</Description>
 <Name>Package Usage Kind</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02020104.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>17416</LocalIdentification>
@@ -2516,7 +3004,7 @@
 <Symbol>Origin</Symbol>
 <Description>Specifies the point, in edit units, in a track from which relative times are measured.</Description>
 <Name>Origin</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010800.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.01012001.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>19202</LocalIdentification>
@@ -2604,7 +3092,7 @@
 <Symbol>Interpolation</Symbol>
 <Description>Specifies a reference to the definition of the interpolation to be used</Description>
 <Name>Interpolation</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010500.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>19969</LocalIdentification>
@@ -2637,7 +3125,7 @@
 <Symbol>IndirectValue</Symbol>
 <Description>Freeform textual value for an assigned category</Description>
 <Name>Assigned Category Value</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.04100300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>20483</LocalIdentification>
@@ -2657,8 +3145,8 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01070105.00000000</Identification>
 <Symbol>DescribedTrackIDs</Symbol>
-<Description>Specifies an unordered list of track ID values that identify descriptive metadata tracks by containment</Description>
-<Name>Descriptive Metadata Track IDs</Name>
+<Description>Specifies an unordered list of track ID values that identify the tracks which are described</Description>
+<Name>Described Track IDs</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04030200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2723,7 +3211,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010105.04020101.04000000</Identification>
 <Symbol>ChannelCount</Symbol>
-<Description>The number of channels represented in the waveform data. </Description>
+<Description>The number of channels represented in the waveform data.</Description>
 <Name>Channel Count</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>false</IsOptional>
@@ -2811,8 +3299,8 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010105.01070106.00000000</Identification>
 <Symbol>DescriptiveClipDescribedTrackIDs</Symbol>
-<Description>Specifies an unordered list of 'n' track ID values that identify metadata source tracks by reference</Description>
-<Name>Source Track IDs</Name>
+<Description>Specifies an unordered list of track ID values that identify the tracks which are described</Description>
+<Name>Descriptive Clip Described Track IDs</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04030200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -2868,7 +3356,7 @@
 <Symbol>Emphasis</Symbol>
 <Description>The AES-3 emphasis in use</Description>
 <Name>Emphasis</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02010123.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>15629</LocalIdentification>
@@ -2890,7 +3378,7 @@
 <Symbol>AuxBitsMode</Symbol>
 <Description>Specifies the use of AES-3 Auxiliary Bits</Description>
 <Name>Auxiliary Bits Mode</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.02010124.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>15624</LocalIdentification>
@@ -3066,7 +3554,7 @@
 <Symbol>PeakEnvelopeTimestamp</Symbol>
 <Description>Timestamp of the creation of the peak data</Description>
 <Name>Peak Envelope Timestamp</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.03010700.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>15664</LocalIdentification>
@@ -3110,7 +3598,7 @@
 <Symbol>KLVDataType</Symbol>
 <Description>Specifies a reference to the definition of  the type of a KLV packet</Description>
 <Name>KLV Data Type</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010900.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>19730</LocalIdentification>
@@ -3164,8 +3652,8 @@
 <Identification>urn:smpte:ul:060e2b34.01010108.04070400.00000000</Identification>
 <Symbol>ChunkData</Symbol>
 <Description>The data bytes of a RIFF chunk</Description>
-<Name>RIFF Chunk Data </Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
+<Name>RIFF Chunk Data</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.04100200.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>20227</LocalIdentification>
@@ -3462,7 +3950,7 @@
 <Symbol>RP217DataStreamPID</Symbol>
 <Description>Identifier that is the transport_stream_id in ISO/IEC 13818-1 (MPEG-2 Systems) for the Data stream per RP217</Description>
 <Name>RP217 Data Stream PID</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04100500.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>22017</LocalIdentification>
@@ -3473,7 +3961,7 @@
 <Symbol>RP217VideoStreamPID</Symbol>
 <Description>Identifier that is the transport_stream_id in ISO/IEC 13818-1 (MPEG-2 Systems) for the Video stream per RP217</Description>
 <Name>RP217 Video Stream PID</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04100500.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>22018</LocalIdentification>
@@ -3670,8 +4158,8 @@
 <Identification>urn:smpte:ul:060e2b34.0101010a.04010603.0b000000</Identification>
 <Symbol>PictureComponentSizing</Symbol>
 <Description>Array of picture components where each component comprises 3 bytes named Ssizi, XRSizi, YRSizi (as defined in ISO/IEC 15444-1 Annex A.5.1). The array of 3-byte groups is preceded by the array header comprising a 4-byte value of the number of components followed by a 4-byte value of ‘3’.</Description>
-<Name>Picture Component Sizing </Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04020800.00000000</Type>
+<Name>Picture Component Sizing</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.04020900.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -3832,6 +4320,50 @@
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01015f00</MemberOf>
 </PropertyDefinition>
 <PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.05200701.0d000000</Identification>
+<Symbol>ApplicationPluginInstanceID</Symbol>
+<Description>UUID of this application metadata plug-in.</Description>
+<Name>Application Plug-In Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.04060803.00000000</Identification>
+<Symbol>ApplicationScheme</Symbol>
+<Description>Contains the Universal Label of the Application Metadata scheme contained in this Plug-In Object.</Description>
+<Name>Application Scheme</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.05200701.0f000000</Identification>
+<Symbol>ApplicationEnvironmentID</Symbol>
+<Description>Identifies the application to which the information in this Plug-In Object applies.</Description>
+<Name>Application Environment ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.05200701.0b000000</Identification>
+<Symbol>LinkedApplicationPluginInstanceID</Symbol>
+<Description>Weak Reference to the Application PlugIn Object that (directly or indirectly) strongly references this Application Metadata Referenced Object Set.</Description>
+<Name>Linked Application Plug-In Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05090400.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016200</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.0101010c.01011512.00000000</Identification>
 <Symbol>ResourceID</Symbol>
 <Description>A UUID that identifies a resource.</Description>
@@ -3890,7 +4422,7 @@
 <PropertyAliasDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01030404.00000000</Identification>
 <Symbol>EssenceStreamID</Symbol>
-<Description>Essence (or its container) stream ID </Description>
+<Description>Essence (or its container) stream ID</Description>
 <Name>Essence Stream ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>false</IsOptional>
@@ -3899,6 +4431,17 @@
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016500</MemberOf>
 <OriginalProperty>urn:smpte:ul:060e2b34.01010104.01030404.00000000</OriginalProperty>
 </PropertyAliasDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.06010104.010b0000</Identification>
+<Symbol>BaseClass</Symbol>
+<Description>Class identifier of the immediate superclass defined in an MXF specification that this object extends.</Description>
+<Name>Base Class</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016600</MemberOf>
+</PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.0101010e.01030701.01000000</Identification>
 <Symbol>MCALabelDictionaryID</Symbol>
@@ -3989,9 +4532,9 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.0101010e.01051200.00000000</Identification>
-<Symbol>MCATitleSubVersion </Symbol>
+<Symbol>MCATitleSubVersion</Symbol>
 <Description>Sub-version of the program to which the audio belongs such as a localized rendition that has the same cut as depicted in MCA Version.</Description>
-<Name>MCA Title Sub-Version </Name>
+<Name>MCA Title Sub-Version</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -4045,7 +4588,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.0101010e.03020102.21000000</Identification>
 <Symbol>MCAAudioElementKind</Symbol>
-<Description>The MCA Audio Element Kind item shall indicate the kind of audio element contained in the audio essence as described in SMPTE RP 428-4. </Description>
+<Description>The MCA Audio Element Kind item shall indicate the kind of audio element contained in the audio essence as described in SMPTE RP 428-4.</Description>
 <Name>MCA Audio Element Kind</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -4076,16 +4619,182 @@
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016c00</MemberOf>
 </PropertyDefinition>
 <PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01030000</Identification>
+<Symbol>AVCConstantBPictureFlag</Symbol>
+<Description>TRUE if the number of B Pictures is always constant.</Description>
+<Name>AVC Constant B Picture Flag</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01040100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01040000</Identification>
+<Symbol>AVCCodedContentKind</Symbol>
+<Description>Enumerated value specifying Picture type and Coding type.</Description>
+<Name>AVC Coded Content Kind</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.0201012c.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01060000</Identification>
+<Symbol>AVCClosedGOPIndicator</Symbol>
+<Description>TRUE if all GOPs are started with IDR Picture.</Description>
+<Name>AVC Closed GOP Indicator</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01040100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01070000</Identification>
+<Symbol>AVCIdenticalGOPIndicator</Symbol>
+<Description>TRUE if every GOP in the sequence has the same number of pictures and the same types of pictures in  the same order.</Description>
+<Name>AVC Identical GOP Indicator</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01040100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01080000</Identification>
+<Symbol>AVCMaximumGOPSize</Symbol>
+<Description>Specifies the maximum occurring spacing between I Pictures. A value of 0 or the absence of this property indicates either there is no limit to the maximum GOP or the maximum GOP is unknown.</Description>
+<Name>AVC Maximum GOP Size</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01090000</Identification>
+<Symbol>AVCMaximumBPictureCount</Symbol>
+<Description>Specifies the maximum number of B Pictures between P or I Pictures.</Description>
+<Name>AVC Maximum B-Picture Count</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.010a0000</Identification>
+<Symbol>AVCProfile</Symbol>
+<Description>Specifies the AVC video profile.</Description>
+<Name>AVC Profile</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.010b0000</Identification>
+<Symbol>AVCMaximumBitRate</Symbol>
+<Description>Maximum bit rate of the AVC stream in bit/s</Description>
+<Name>AVC Maximum Bit Rate</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.010c0000</Identification>
+<Symbol>AVCProfileConstraint</Symbol>
+<Description>Specifies the AVC video profile constraint flags.</Description>
+<Name>AVC Profile Constraint</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.010d0000</Identification>
+<Symbol>AVCLevel</Symbol>
+<Description>Specifies the AVC level.</Description>
+<Name>AVC Level</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.010e0000</Identification>
+<Symbol>AVCDecodingDelay</Symbol>
+<Description>Specifies the delay required for decoded pictures in number of access units.</Description>
+<Name>AVC Decoding Delay</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.010f0000</Identification>
+<Symbol>AVCMaximumRefFrames</Symbol>
+<Description>Specifies the maximum number of reference frames.</Description>
+<Name>AVC Maximum Ref Frames</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01100000</Identification>
+<Symbol>AVCSequenceParameterSetFlag</Symbol>
+<Description>Specifies the location and the constancy of sequence parameter sets</Description>
+<Name>AVC Sequence Parameter Set Flag</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01110000</Identification>
+<Symbol>AVCPictureParameterSetFlag</Symbol>
+<Description>Specifies the location and the constancy of picture parameter sets</Description>
+<Name>AVC Picture Parameter Set Flag</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04010606.01140000</Identification>
+<Symbol>AVCAverageBitRate</Symbol>
+<Description>Average bit rate of the AVC stream in bit/s</Description>
+<Name>AVC Average Bit Rate</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01016e00</MemberOf>
+</PropertyDefinition>
+<PropertyAliasDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
 <Symbol>InstanceID</Symbol>
-<Description>The ISO/IEC 11578 (Annex A) 16 byte Globally Unique Identifier</Description>
-<Name>GUID</Name>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>15370</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01017f00</MemberOf>
-</PropertyDefinition>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010101.01011502.00000000</OriginalProperty>
+</PropertyAliasDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010107.01000000</Identification>
 <Symbol>ParentClass</Symbol>
@@ -4124,7 +4833,7 @@
 <Symbol>PropertyType</Symbol>
 <Description>Specifies the data type defined for the key</Description>
 <Name>Property Type</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05010900.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>11</LocalIdentification>
@@ -4190,7 +4899,7 @@
 <Symbol>ReferencedType</Symbol>
 <Description>Specifies a reference to the target class of a Strong Reference type</Description>
 <Name>Target Class of Strong Reference</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05010c00.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010100.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>17</LocalIdentification>
@@ -4201,7 +4910,7 @@
 <Symbol>WeakReferencedType</Symbol>
 <Description>Specifies a reference to the target class of a Weak Reference type</Description>
 <Name>Target Class of Weak Reference</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.05010c00.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.05010100.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>18</LocalIdentification>
@@ -4234,7 +4943,7 @@
 <Symbol>ElementNames</Symbol>
 <Description>Specifies, as a single string value, a list of names zero delineated between each name in an enumeration</Description>
 <Name>Element Name List</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.04010500.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>21</LocalIdentification>
@@ -4364,9 +5073,9 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010107.13000000</Identification>
 <Symbol>MetaDefinitionIdentification</Symbol>
-<Description>Specifies a SMPTE label or AUID that identifies a dictionary definition</Description>
-<Name>Dictionary Identifier</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01300100.00000000</Type>
+<Description>Specifies the unique identifier for the item being defined</Description>
+<Name>MetaDefinition Identification</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>true</IsUniqueIdentifier>
 <LocalIdentification>5</LocalIdentification>
@@ -4375,8 +5084,8 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.03020401.02010000</Identification>
 <Symbol>MetaDefinitionName</Symbol>
-<Description>Descriptive name assigned to a metadata item</Description>
-<Name>Metadata Item Name</Name>
+<Description>Specifies the display name of the item being defined</Description>
+<Name>MetaDefinition Name</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -4386,8 +5095,8 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010102.06010107.14010000</Identification>
 <Symbol>MetaDefinitionDescription</Symbol>
-<Description>Specifies a readable description of a dictionary definition</Description>
-<Name>Dictionary Description</Name>
+<Description>Provides an explanation of the use of the item being defined</Description>
+<Name>MetaDefinition Description</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -4416,6 +5125,85 @@
 <LocalIdentification>4</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02250000</MemberOf>
 </PropertyDefinition>
+<PropertyAliasDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
+<Symbol>InstanceID</Symbol>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>15370</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</MemberOf>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010101.01011502.00000000</OriginalProperty>
+</PropertyAliasDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.06010107.1b000000</Identification>
+<Symbol>ExtensionSchemeID</Symbol>
+<Description>Globally unique identification of the ExtensionScheme</Description>
+<Name>Extension Scheme ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>36</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.06010107.1c000000</Identification>
+<Symbol>SymbolSpaceURI</Symbol>
+<Description>Namespace URI for the Extension Scheme</Description>
+<Name>Symbol Space URI</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>37</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.06010107.1d000000</Identification>
+<Symbol>PreferredPrefix</Symbol>
+<Description>Preferred namespace tag when SMPTE ST 2001-1 Reg-XML encoding is used</Description>
+<Name>Preferred Prefix</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>38</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.06010107.1e000000</Identification>
+<Symbol>ExtensionDescription</Symbol>
+<Description>Description of the Extension Scheme</Description>
+<Name>Extension Description</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>39</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010d.06010107.1f000000</Identification>
+<Symbol>MetaDefinitions</Symbol>
+<Description>References all the MetaDefinitions in this Extension Scheme when they are contained in the MXF file</Description>
+<Name>Meta-Definitions</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05051300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>40</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</MemberOf>
+</PropertyDefinition>
+<PropertyAliasDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
+<Symbol>InstanceID</Symbol>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>15370</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.03000000</MemberOf>
+<OriginalProperty>urn:smpte:ul:060e2b34.01010101.01011502.00000000</OriginalProperty>
+</PropertyAliasDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.0101010a.06010107.16000000</Identification>
 <Symbol>RootMetaDictionary</Symbol>
@@ -4443,7 +5231,7 @@
 <Symbol>RootObjectDirectory</Symbol>
 <Description>Specifies a reference to a directory of Object locations</Description>
 <Name>Root Object Directory</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04010100.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.04100100.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>33</LocalIdentification>
@@ -4463,8 +5251,8 @@
 <PropertyAliasDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.01011502.00000000</Identification>
 <Symbol>InstanceID</Symbol>
-<Description>The ISO/IEC 11578 (Annex A) 16 byte Globally Unique Identifier</Description>
-<Name>GUID</Name>
+<Description>Unique ID of an instance</Description>
+<Name>Instance ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01030300.00000000</Type>
 <IsOptional>false</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -4508,8 +5296,8 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.04060201.00000000</Identification>
 <Symbol>EditUnitByteCount</Symbol>
-<Description>The length of an edit unit (in Bytes) in the container</Description>
-<Name>Edit Unit Length</Name>
+<Description>Defines the byte count of each and every Edit Unit of stored Essence indexed by this Index Table Segment</Description>
+<Name>Edit Unit Byte Count</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -4519,7 +5307,7 @@
 <PropertyAliasDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01030405.00000000</Identification>
 <Symbol>IndexStreamID</Symbol>
-<Description>Index table stream ID </Description>
+<Description>Index table stream ID</Description>
 <Name>Index Stream ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -4531,7 +5319,7 @@
 <PropertyAliasDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01030404.00000000</Identification>
 <Symbol>EssenceStreamID</Symbol>
-<Description>Essence (or its container) stream ID </Description>
+<Description>Essence (or its container) stream ID</Description>
 <Name>Essence Stream ID</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>false</IsOptional>
@@ -4555,7 +5343,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010105.04040401.07000000</Identification>
 <Symbol>PositionTableCount</Symbol>
 <Description>Number of temporal position offsets indexed, per edit unit, minus one</Description>
-<Name>Position Table Count </Name>
+<Name>Position Table Count</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01010100.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -4567,7 +5355,7 @@
 <Symbol>DeltaEntryArray</Symbol>
 <Description>Array of values used to identify elements of Essence within an edit unit</Description>
 <Name>Delta Entry Array</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.04010900.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.04020800.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>16137</LocalIdentification>
@@ -4605,6 +5393,28 @@
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>16144</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010201.01100100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.05200701.11000000</Identification>
+<Symbol>LinkedDescriptiveObjectPluginID</Symbol>
+<Description>Weak Reference to the DM Segment that (directly or indirectly) strongly references this Description instance</Description>
+<Name>Linked Descriptive Object Plug-In ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05090500.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010400.00000000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010c.05200701.0c000000</Identification>
+<Symbol>LinkedDescriptiveFrameworkPluginID</Symbol>
+<Description>Weak Reference to the DM Segment that (directly or indirectly) strongly references this Description instance</Description>
+<Name>Linked Descriptive Framework Plug-In ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05090500.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.00000000</MemberOf>
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.05010101.01000000</Identification>
@@ -4720,7 +5530,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010107.07020110.01040000</Identification>
 <Symbol>ClipCreationDateTime</Symbol>
 <Description>Identifies date and time of creation of a clip</Description>
-<Name>Clip Creation Date-Time </Name>
+<Name>Clip Creation Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.03010700.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -5039,7 +5849,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010101.07020102.07020000</Identification>
 <Symbol>EventStartDateTime</Symbol>
 <Description>The absolute beginning date and time of the project, mission, scene, editing event, license, publication etc</Description>
-<Name>Local Event Start Date-Time </Name>
+<Name>Local Event Start Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100400.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -5050,7 +5860,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010101.07020102.09020000</Identification>
 <Symbol>EventEndDateTime</Symbol>
 <Description>The absolute ending date and time of the project, mission, scene, editing event, license, publication etc</Description>
-<Name>Local Event End Date-Time </Name>
+<Name>Local Event End Date-Time</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100400.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -5179,6 +5989,17 @@
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.01150100</MemberOf>
 </PropertyDefinition>
 <PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010105.06010104.03401301</Identification>
+<Symbol>AwardParticipants</Symbol>
+<Description>An unordered list of generalized weak (global) references to Participant sets for Awards</Description>
+<Name>Award Participant Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.01150100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010107.03010102.02120000</Identification>
 <Symbol>ExtendedCaptionsLanguageCode</Symbol>
 <Description>The RFC-3066-compliant code that specifies the base ISO code for the language as well as regional and script variant information used for textual captions displayed on-screen</Description>
@@ -5272,6 +6093,17 @@
 <Description>Specifies a vector of an ordered set of references to Locators for related material of any kind</Description>
 <Name>Related Material Locators</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05060400.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.01170100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010107.06010104.03401303</Identification>
+<Symbol>AnnotationParticipants</Symbol>
+<Description>An unordered list of generalized weak (global) references to Participant sets for Annotation</Description>
+<Name>Annotation Participant Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070100.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -5564,6 +6396,28 @@
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.01180100</MemberOf>
 </PropertyDefinition>
 <PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010105.06010104.03401400</Identification>
+<Symbol>Persons</Symbol>
+<Description>An unordered list of generalized weak (global) references to  Person sets</Description>
+<Name>Person Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.01180100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010105.06010104.03401501</Identification>
+<Symbol>ParticipantOrganizations</Symbol>
+<Description>An unordered list of generalized weak (global) references to  Organisation sets for Participant Roles</Description>
+<Name>Participant Organization Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.01180100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010105.06010104.05401400</Identification>
 <Symbol>PersonObjects</Symbol>
 <Description>An unordered list of one or more strong references to Person sets</Description>
@@ -5611,7 +6465,7 @@
 <Identification>urn:smpte:ul:060e2b34.01010103.02300603.01020100</Identification>
 <Symbol>FirstGivenName</Symbol>
 <Description>The first given name for an individual</Description>
-<Name>First Given Name </Name>
+<Name>First Given Name</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
@@ -5723,6 +6577,17 @@
 <Description>Citizenship of an individual with its attendant duties, rights, and privileges</Description>
 <Name>Citizenship</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.011a0200</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010105.06010104.03401502</Identification>
+<Symbol>PersonOrganizations</Symbol>
+<Description>An unordered list of generalized weak (global) references to  Organisation sets for Persons</Description>
+<Name>Person Organization Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070200.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -5994,7 +6859,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.07012001.10030200</Identification>
-<Symbol>FaxNumber</Symbol>
+<Symbol>FaxNumber_ISO7</Symbol>
 <Description>Fax number</Description>
 <Name>Fax Number</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100400.00000000</Type>
@@ -6042,6 +6907,17 @@
 <Description>An unordered list of strong references to Rights sets</Description>
 <Name>Rights Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05050f00.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.011c0100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010105.06010104.03401302</Identification>
+<Symbol>ContractParticipants</Symbol>
+<Description>An unordered list of generalized weak (global) references to Participant sets for Contract</Description>
+<Name>Contract Participant Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070100.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -6325,7 +7201,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010104.01020201.00000000</Identification>
-<Symbol>SMPTEULLocator</Symbol>
+<Symbol>SMPTEUniversalLabelLocator</Symbol>
 <Description>SMPTE Universal Label Locators - the value is a UL in a public Registry</Description>
 <Name>SMPTE UL</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01030100.00000000</Type>
@@ -6348,7 +7224,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010103.03020302.02010000</Identification>
 <Symbol>DescriptiveComment</Symbol>
-<Description>The comment or note as text.  E.g.  Head banding, </Description>
+<Description>The comment or note as text.  E.g.  Head banding,</Description>
 <Name>Descriptive Comment</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
 <IsOptional>true</IsOptional>
@@ -6468,7 +7344,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010107.03010102.03110000</Identification>
-<Symbol>SecondaryExtendedSpokenLanguageCode</Symbol>
+<Symbol>PrimaryExtendedSpokenLanguageCode</Symbol>
 <Description>ISO 639 Language Code for the original secondary spoken language</Description>
 <Name>Primary Extended Spoken Language Code</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01200400.00000000</Type>
@@ -6479,7 +7355,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010107.03010102.03120000</Identification>
-<Symbol>OriginalExtendedSpokenLanguageCode</Symbol>
+<Symbol>SecondaryExtendedSpokenLanguageCode</Symbol>
 <Description>The RFC-3066-compliant code that specifies the base ISO code for the language as well as regional variant information for the secondary spoken language</Description>
 <Name>Secondary Extended Spoken Language Code</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01200400.00000000</Type>
@@ -6490,7 +7366,7 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010107.03010102.03130000</Identification>
-<Symbol>SecondaryOriginalExtendedSpokenLanguageCode</Symbol>
+<Symbol>OriginalExtendedSpokenLanguageCode</Symbol>
 <Description>The RFC-3066-compliant code that specifies the base ISO code for the language as well as regional variant information for the original primary spoken language</Description>
 <Name>Original Extended Spoken Primary Language Code</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.01200400.00000000</Type>
@@ -6549,6 +7425,17 @@
 <Description>A strong reference to the Contacts List set</Description>
 <Name>Contacts List Set</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.05022200.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.017f0100</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.01010105.06010104.03401600</Identification>
+<Symbol>Locations</Symbol>
+<Description>An unordered list of generalized weak (global) references to Location sets</Description>
+<Name>Location Sets</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.05070300.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -6707,6 +7594,17 @@
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
 <MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.02020000</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.01011514.00000000</Identification>
+<Symbol>EIDRDMSEssenceID</Symbol>
+<Description>EIDR Identifier for the essence associated with the Descriptive Framework Set</Description>
+<Name>EIDR DMS Essence ID</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01200800.00000000</Type>
+<IsOptional>false</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010401.05010000</MemberOf>
 </PropertyDefinition>
 </MetaDefinitions>
 </Baseline>

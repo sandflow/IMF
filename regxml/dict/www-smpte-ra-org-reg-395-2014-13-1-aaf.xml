@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Created: Mon Dec 29 20:49:30 PST 2014--><!--By: regxmllib build 2dd6533bebd2d1094011d178f2cc861d77415ada--><!--See: https://github.com/sandflow/regxmllib--><Baseline xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" rootElement="MXF" rootObject="Preface">
-<SchemeID>urn:uuid:3d413f65-4676-5f02-7f18-4e5586471d02</SchemeID>
-<SchemeURI>http://www.smpte-ra.org/reg/395/2014/13/1</SchemeURI>
+<!--Created: Mon May 04 22:16:37 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><Baseline xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" rootElement="MXF" rootObject="Preface">
+<SchemeID>urn:uuid:21177fc2-e9cd-5fb5-7f18-50a997da0981</SchemeID>
+<SchemeURI>http://www.smpte-ra.org/reg/395/2014/13/1/aaf</SchemeURI>
 <MetaDefinitions>
 <ClassDefinition>
 <Identification>urn:smpte:ul:060e2b34.027f0101.0d010101.01010100</Identification>
@@ -775,7 +775,7 @@
 <Symbol>ApplicationPlugInObject</Symbol>
 <Description>Application Plug-In Object</Description>
 <Name>Application Plug-In Object</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01010100</ParentClass>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01016600</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
@@ -783,7 +783,7 @@
 <Symbol>ApplicationReferencedObject</Symbol>
 <Description>Application Referenced Object</Description>
 <Name>Application Referenced Object</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01010100</ParentClass>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01016600</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
@@ -919,14 +919,6 @@
 <Symbol>AuxDataEssenceDescriptor</Symbol>
 <Description>Aux Data Essence Descriptor</Description>
 <Name>Aux Data Essence Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
-<IsConcrete>true</IsConcrete>
-</ClassDefinition>
-<ClassDefinition>
-<Identification>urn:smpte:ul:060e2b34.027f0101.0d010101.01017400</Identification>
-<Symbol>VC2PictureEssenceSubDescriptor</Symbol>
-<Description>VC-2 Picture Essence Sub-Descriptor</Description>
-<Name>VC-2 Picture Essence Sub-Descriptor</Name>
 <ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
@@ -1112,6 +1104,12 @@
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
+<Identification>urn:smpte:ul:060e2b34.027f0101.0d010101.02260000</Identification>
+<Symbol>ExtensionScheme</Symbol>
+<Name>Extension Scheme</Name>
+<IsConcrete>true</IsConcrete>
+</ClassDefinition>
+<ClassDefinition>
 <Identification>urn:smpte:ul:060e2b34.027f0101.0d010101.03000000</Identification>
 <Symbol>Root</Symbol>
 <Description>Root</Description>
@@ -1123,7 +1121,6 @@
 <Symbol>IndexTableSegment</Symbol>
 <Description>IndexTableSegment</Description>
 <Name>IndexTableSegment</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010201.01100000</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
@@ -1500,6 +1497,14 @@
 <Description>Text-based Object</Description>
 <Name>Text-based Object</Name>
 <ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010400.00000000</ParentClass>
+<IsConcrete>true</IsConcrete>
+</ClassDefinition>
+<ClassDefinition>
+<Identification>urn:smpte:ul:060e2b34.027f0101.0d010401.05010000</Identification>
+<Symbol>EIDRFramework</Symbol>
+<Description>EIDR Descriptive Metadata Framework</Description>
+<Name>EIDR Framework</Name>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010401.00000000</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 </MetaDefinitions>

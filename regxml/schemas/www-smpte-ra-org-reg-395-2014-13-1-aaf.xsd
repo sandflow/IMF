@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon Dec 29 20:49:31 PST 2014--><!--By: regxmllib build 2dd6533bebd2d1094011d178f2cc861d77415ada--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1" xmlns:reg="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon May 04 22:16:38 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-<xs:import namespace="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
 <xs:element abstract="true" name="InterchangeObject">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -20,7 +22,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -34,7 +38,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -52,7 +58,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -61,14 +69,16 @@
 <xs:element name="EssenceGroup">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:AvailableRepresentations"/>
+<xs:element ref="r0:Choices"/>
 <xs:element minOccurs="0" ref="r0:StillFrame"/>
 <xs:element minOccurs="0" ref="r0:ComponentKLVData"/>
 <xs:element minOccurs="0" ref="r0:ComponentLength"/>
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -84,7 +94,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -101,7 +113,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -118,7 +132,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -132,7 +148,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -151,7 +169,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -166,7 +186,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -184,7 +206,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -200,7 +224,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -216,7 +242,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -231,7 +259,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -249,7 +279,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -272,7 +304,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -290,7 +324,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -310,7 +346,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -327,7 +365,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -344,7 +384,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -362,7 +404,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -378,7 +422,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -389,7 +435,9 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:EssenceDataObjects"/>
 <xs:element ref="r0:Packages"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -401,7 +449,9 @@
 <xs:element ref="r0:ControlPointTime"/>
 <xs:element minOccurs="0" ref="r0:EditHint"/>
 <xs:element ref="r0:ControlPointValue"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -411,9 +461,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -423,9 +475,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -442,9 +496,11 @@
 <xs:element minOccurs="0" ref="r0:Bypass"/>
 <xs:element ref="r0:OperationInputCount"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -456,9 +512,11 @@
 <xs:element minOccurs="0" ref="r0:ParameterDisplayUnits"/>
 <xs:element ref="r0:ParameterType"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -488,9 +546,11 @@
 <xs:element ref="r0:PluginVersion"/>
 <xs:element minOccurs="0" ref="r0:ImplementedClass"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -502,9 +562,11 @@
 <xs:element ref="r0:CodecDataDefinitions"/>
 <xs:element ref="r0:FileDescriptorClass"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -515,9 +577,11 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:EssenceIsIdentified"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -527,9 +591,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -547,7 +613,9 @@
 <xs:element minOccurs="0" ref="r0:ContainerDefinitions"/>
 <xs:element minOccurs="0" ref="r0:CodecDefinitions"/>
 <xs:element minOccurs="0" ref="r0:PluginDefinitions"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -556,12 +624,14 @@
 <xs:element name="EssenceData">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:EssenceStreamID"/>
+<xs:element minOccurs="0" ref="r0:EssenceStreamID"/>
 <xs:element minOccurs="0" ref="r0:IndexStreamID"/>
 <xs:element ref="r0:LinkedPackageID"/>
 <xs:element minOccurs="0" ref="r0:SampleIndex"/>
 <xs:element minOccurs="0" ref="r0:EssenceStream"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -571,8 +641,10 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -587,8 +659,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -604,8 +678,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -644,15 +720,17 @@
 <xs:element minOccurs="0" ref="r0:SampledHeight"/>
 <xs:element minOccurs="0" ref="r0:SampledXOffset"/>
 <xs:element minOccurs="0" ref="r0:StoredF2Offset"/>
-<xs:element minOccurs="0" ref="r0:CaptureGammeEquation"/>
+<xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
 <xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
 <xs:element minOccurs="0" ref="r0:EssenceLength"/>
 <xs:element minOccurs="0" ref="r0:SampleRate"/>
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -701,15 +779,17 @@
 <xs:element minOccurs="0" ref="r0:SampledHeight"/>
 <xs:element minOccurs="0" ref="r0:SampledXOffset"/>
 <xs:element minOccurs="0" ref="r0:StoredF2Offset"/>
-<xs:element minOccurs="0" ref="r0:CaptureGammeEquation"/>
+<xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
 <xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
 <xs:element minOccurs="0" ref="r0:EssenceLength"/>
 <xs:element minOccurs="0" ref="r0:SampleRate"/>
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -756,15 +836,17 @@
 <xs:element minOccurs="0" ref="r0:SampledHeight"/>
 <xs:element minOccurs="0" ref="r0:SampledXOffset"/>
 <xs:element minOccurs="0" ref="r0:StoredF2Offset"/>
-<xs:element minOccurs="0" ref="r0:CaptureGammeEquation"/>
+<xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
 <xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
 <xs:element minOccurs="0" ref="r0:EssenceLength"/>
 <xs:element minOccurs="0" ref="r0:SampleRate"/>
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -779,8 +861,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -801,8 +885,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -818,8 +904,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -837,8 +925,10 @@
 <xs:element minOccurs="0" ref="r0:FilmFormat"/>
 <xs:element minOccurs="0" ref="r0:FilmBatchNumber"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -856,8 +946,10 @@
 <xs:element minOccurs="0" ref="r0:TapeManufacturer"/>
 <xs:element minOccurs="0" ref="r1:TapeFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -867,7 +959,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:ContentStorageObject"/>
-<xs:element minOccurs="0" ref="r0:Dictionaries"/>
+<xs:element minOccurs="0" ref="r0:Dictionary"/>
 <xs:element ref="r0:FileLastModified"/>
 <xs:element ref="r0:EssenceContainers"/>
 <xs:element ref="r0:OperationalPattern"/>
@@ -877,7 +969,9 @@
 <xs:element ref="r0:DescriptiveSchemes"/>
 <xs:element ref="r0:IdentificationList"/>
 <xs:element ref="r0:FormatVersion"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -895,7 +989,9 @@
 <xs:element ref="r0:GenerationID"/>
 <xs:element minOccurs="0" ref="r0:ToolkitVersion"/>
 <xs:element ref="r0:ApplicationProductID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -904,7 +1000,9 @@
 <xs:element abstract="true" name="Locator">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -914,7 +1012,9 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:URL"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -924,7 +1024,9 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:LocationName"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -942,7 +1044,9 @@
 <xs:element minOccurs="0" ref="r0:PackageAttributes"/>
 <xs:element ref="r0:PackageID"/>
 <xs:element ref="r0:PackageTracks"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -964,7 +1068,9 @@
 <xs:element minOccurs="0" ref="r0:PackageAttributes"/>
 <xs:element ref="r0:PackageID"/>
 <xs:element ref="r0:PackageTracks"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -982,7 +1088,9 @@
 <xs:element minOccurs="0" ref="r0:PackageAttributes"/>
 <xs:element ref="r0:PackageID"/>
 <xs:element ref="r0:PackageTracks"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1001,7 +1109,9 @@
 <xs:element minOccurs="0" ref="r0:PackageAttributes"/>
 <xs:element ref="r0:PackageID"/>
 <xs:element ref="r0:PackageTracks"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1014,7 +1124,9 @@
 <xs:element minOccurs="0" ref="r0:TrackName"/>
 <xs:element minOccurs="0" ref="r0:EssenceTrackNumber"/>
 <xs:element ref="r0:TrackSegment"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1029,7 +1141,9 @@
 <xs:element minOccurs="0" ref="r0:TrackName"/>
 <xs:element minOccurs="0" ref="r0:EssenceTrackNumber"/>
 <xs:element ref="r0:TrackSegment"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1042,7 +1156,9 @@
 <xs:element minOccurs="0" ref="r0:TrackName"/>
 <xs:element minOccurs="0" ref="r0:EssenceTrackNumber"/>
 <xs:element ref="r0:TrackSegment"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1062,7 +1178,9 @@
 <xs:element minOccurs="0" ref="r0:TrackName"/>
 <xs:element minOccurs="0" ref="r0:EssenceTrackNumber"/>
 <xs:element ref="r0:TrackSegment"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1072,7 +1190,9 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:ParameterDefinitionReference"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1083,7 +1203,9 @@
 <xs:all>
 <xs:element ref="r0:Value"/>
 <xs:element ref="r0:ParameterDefinitionReference"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1095,7 +1217,9 @@
 <xs:element ref="r0:Interpolation"/>
 <xs:element ref="r0:PointList"/>
 <xs:element ref="r0:ParameterDefinitionReference"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1106,7 +1230,9 @@
 <xs:all>
 <xs:element ref="r0:IndirectValue"/>
 <xs:element ref="r0:Tag"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1116,7 +1242,9 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:KLVDataValue"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1135,7 +1263,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1160,8 +1290,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1177,8 +1309,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1194,8 +1328,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1219,7 +1355,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1238,8 +1376,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1284,8 +1424,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1323,8 +1465,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1334,8 +1478,10 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1345,8 +1491,10 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1356,8 +1504,10 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1368,9 +1518,11 @@
 <xs:all>
 <xs:element ref="r0:TaggedValueParentProperties"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1382,9 +1534,11 @@
 <xs:element minOccurs="0" ref="r0:KLVDataType"/>
 <xs:element ref="r0:KLVDataParentProperties"/>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1396,8 +1550,10 @@
 <xs:element ref="r0:MIMEType"/>
 <xs:element minOccurs="0" ref="r0:CharSet"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1409,7 +1565,9 @@
 <xs:element ref="r0:ChunkID"/>
 <xs:element ref="r0:ChunkData"/>
 <xs:element ref="r0:ChunkLength"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1430,8 +1588,10 @@
 <xs:element minOccurs="0" ref="r0:QltyQualityParameter"/>
 <xs:element minOccurs="0" ref="r0:QltyOperatorComment"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1490,15 +1650,17 @@
 <xs:element minOccurs="0" ref="r0:SampledHeight"/>
 <xs:element minOccurs="0" ref="r0:SampledXOffset"/>
 <xs:element minOccurs="0" ref="r0:StoredF2Offset"/>
-<xs:element minOccurs="0" ref="r0:CaptureGammeEquation"/>
+<xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
 <xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
 <xs:element minOccurs="0" ref="r0:EssenceLength"/>
 <xs:element minOccurs="0" ref="r0:SampleRate"/>
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1515,8 +1677,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1533,8 +1697,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1554,8 +1720,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1573,8 +1741,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1592,8 +1762,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1615,7 +1787,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1641,7 +1815,9 @@
 <xs:element minOccurs="0" ref="r0:ComponentUserComments"/>
 <xs:element ref="r0:ComponentDataDefinition"/>
 <xs:element minOccurs="0" ref="r0:ComponentAttributes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1650,7 +1826,9 @@
 <xs:element abstract="true" name="SubDescriptor">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1673,7 +1851,9 @@
 <xs:element minOccurs="0" ref="r0:CodingStyleDefault"/>
 <xs:element minOccurs="0" ref="r0:QuantizationDefault"/>
 <xs:element minOccurs="0" ref="r0:J2CLayout"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1689,8 +1869,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1706,8 +1888,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1732,8 +1916,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1759,8 +1945,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1819,15 +2007,17 @@
 <xs:element minOccurs="0" ref="r0:SampledHeight"/>
 <xs:element minOccurs="0" ref="r0:SampledXOffset"/>
 <xs:element minOccurs="0" ref="r0:StoredF2Offset"/>
-<xs:element minOccurs="0" ref="r0:CaptureGammeEquation"/>
+<xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
 <xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
 <xs:element minOccurs="0" ref="r0:EssenceLength"/>
 <xs:element minOccurs="0" ref="r0:SampleRate"/>
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1836,7 +2026,9 @@
 <xs:element name="PackageMarker">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1845,7 +2037,13 @@
 <xs:element name="ApplicationPlugInObject">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:ApplicationEnvironmentID"/>
+<xs:element ref="r0:ApplicationScheme"/>
+<xs:element ref="r0:ApplicationPluginInstanceID"/>
+<xs:element ref="r0:BaseClass"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1854,7 +2052,11 @@
 <xs:element name="ApplicationReferencedObject">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:LinkedApplicationPluginInstanceID"/>
+<xs:element ref="r0:BaseClass"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1863,7 +2065,9 @@
 <xs:element name="StereoscopicPictureSubDescriptor">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1882,8 +2086,10 @@
 <xs:element minOccurs="0" ref="r0:Codec"/>
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
-<xs:element minOccurs="0" ref="r0:EssenceLocators"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1892,10 +2098,12 @@
 <xs:element name="DCTimedTextResourceSubDescriptor">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:EssenceStreamID"/>
+<xs:element minOccurs="0" ref="r0:EssenceStreamID"/>
 <xs:element ref="r0:MIMEType"/>
 <xs:element ref="r0:AncillaryResourceID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1904,7 +2112,10 @@
 <xs:element name="ApplicationObject">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:BaseClass"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1913,7 +2124,9 @@
 <xs:element name="ContainerConstraintsSubDescriptor">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1922,7 +2135,9 @@
 <xs:element name="MPEG4VisualSubDescriptor">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1932,9 +2147,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1946,7 +2163,7 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
-<xs:element minOccurs="0" ref="r0:MCATitleSubVersion "/>
+<xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
 <xs:element minOccurs="0" ref="r0:RFC5646AudioLanguageCode"/>
@@ -1957,7 +2174,9 @@
 <xs:element minOccurs="0" ref="r0:MCAAudioContentKind"/>
 <xs:element minOccurs="0" ref="r0:MCAEpisode"/>
 <xs:element minOccurs="0" ref="r0:MCAChannelID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1970,7 +2189,7 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
-<xs:element minOccurs="0" ref="r0:MCATitleSubVersion "/>
+<xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
 <xs:element minOccurs="0" ref="r0:RFC5646AudioLanguageCode"/>
@@ -1981,7 +2200,9 @@
 <xs:element minOccurs="0" ref="r0:MCAAudioContentKind"/>
 <xs:element minOccurs="0" ref="r0:MCAEpisode"/>
 <xs:element minOccurs="0" ref="r0:MCAChannelID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -1994,7 +2215,7 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
-<xs:element minOccurs="0" ref="r0:MCATitleSubVersion "/>
+<xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
 <xs:element minOccurs="0" ref="r0:RFC5646AudioLanguageCode"/>
@@ -2005,7 +2226,9 @@
 <xs:element minOccurs="0" ref="r0:MCAAudioContentKind"/>
 <xs:element minOccurs="0" ref="r0:MCAEpisode"/>
 <xs:element minOccurs="0" ref="r0:MCAChannelID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2017,7 +2240,7 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
-<xs:element minOccurs="0" ref="r0:MCATitleSubVersion "/>
+<xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
 <xs:element minOccurs="0" ref="r0:RFC5646AudioLanguageCode"/>
@@ -2028,7 +2251,9 @@
 <xs:element minOccurs="0" ref="r0:MCAAudioContentKind"/>
 <xs:element minOccurs="0" ref="r0:MCAEpisode"/>
 <xs:element minOccurs="0" ref="r0:MCAChannelID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2037,7 +2262,24 @@
 <xs:element name="AVCSubDescriptor">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:AVCProfile"/>
+<xs:element minOccurs="0" ref="r0:AVCMaximumBitRate"/>
+<xs:element minOccurs="0" ref="r0:AVCProfileConstraint"/>
+<xs:element minOccurs="0" ref="r0:AVCLevel"/>
+<xs:element ref="r0:AVCDecodingDelay"/>
+<xs:element minOccurs="0" ref="r0:AVCMaximumRefFrames"/>
+<xs:element minOccurs="0" ref="r0:AVCSequenceParameterSetFlag"/>
+<xs:element minOccurs="0" ref="r0:AVCPictureParameterSetFlag"/>
+<xs:element minOccurs="0" ref="r0:AVCAverageBitRate"/>
+<xs:element minOccurs="0" ref="r0:AVCMaximumBPictureCount"/>
+<xs:element minOccurs="0" ref="r0:AVCMaximumGOPSize"/>
+<xs:element minOccurs="0" ref="r0:AVCIdenticalGOPIndicator"/>
+<xs:element minOccurs="0" ref="r0:AVCClosedGOPIndicator"/>
+<xs:element minOccurs="0" ref="r0:AVCCodedContentKind"/>
+<xs:element minOccurs="0" ref="r0:AVCConstantBPictureFlag"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2047,9 +2289,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2059,9 +2303,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2071,9 +2317,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2083,9 +2331,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2095,21 +2345,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
-<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
-</xs:all>
-<xs:attribute ref="reg:uid" use="required"/>
-</xs:complexType>
-</xs:element>
-<xs:element name="VC2PictureEssenceSubDescriptor">
-<xs:complexType>
-<xs:all>
-<xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
-<xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
-<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2119,9 +2359,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2131,9 +2373,11 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:DefinitionObjectName"/>
-<xs:element ref="r0:DefinitionObjectID"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
 <xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2142,7 +2386,7 @@
 <xs:element abstract="true" name="AbstractObject">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
 </xs:complexType>
@@ -2371,9 +2615,23 @@
 <xs:attribute ref="reg:uid" use="required"/>
 </xs:complexType>
 </xs:element>
+<xs:element name="ExtensionScheme">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:PreferredPrefix"/>
+<xs:element minOccurs="0" ref="r0:ExtensionDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element ref="r0:SymbolSpaceURI"/>
+<xs:element ref="r0:ExtensionSchemeID"/>
+<xs:element minOccurs="0" ref="r0:MetaDefinitions"/>
+</xs:all>
+<xs:attribute ref="reg:uid" use="required"/>
+</xs:complexType>
+</xs:element>
 <xs:element name="Root">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:RootObjectDirectory"/>
 <xs:element ref="r0:RootPreface"/>
 <xs:element minOccurs="0" ref="r0:RootFormatVersion"/>
@@ -2385,12 +2643,12 @@
 <xs:element name="IndexTableSegment">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:EssenceStreamID"/>
+<xs:element minOccurs="0" ref="r0:EssenceStreamID"/>
 <xs:element minOccurs="0" ref="r0:EditUnitByteCount"/>
 <xs:element minOccurs="0" ref="r0:IndexEntryArray"/>
 <xs:element minOccurs="0" ref="r0:CBEStartOffset"/>
 <xs:element ref="r0:IndexStartPosition"/>
-<xs:element ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:PositionTableCount"/>
 <xs:element ref="r0:IndexDuration"/>
 <xs:element minOccurs="0" ref="r0:IndexStreamID"/>
@@ -2405,7 +2663,10 @@
 <xs:element abstract="true" name="DescriptiveObject">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2414,7 +2675,10 @@
 <xs:element abstract="true" name="DescriptiveFramework">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2435,17 +2699,21 @@
 <xs:element minOccurs="0" ref="r0:CaptionsDescriptionObjects"/>
 <xs:element minOccurs="0" ref="r0:PictureFormatObject"/>
 <xs:element minOccurs="0" ref="r0:FrameworkThesaurusName"/>
-<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:SecondaryExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:PrimaryExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:ContactsListObject"/>
 <xs:element minOccurs="0" ref="r0:MetadataServerLocators"/>
 <xs:element minOccurs="0" ref="r0:TitlesObjects"/>
 <xs:element minOccurs="0" ref="r0:ParticipantObjects"/>
+<xs:element minOccurs="0" ref="r0:Locations"/>
 <xs:element minOccurs="0" ref="r0:AnnotationObjects"/>
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
-<xs:element minOccurs="0" ref="r0:SecondaryOriginalExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2469,17 +2737,21 @@
 <xs:element minOccurs="0" ref="r0:CaptionsDescriptionObjects"/>
 <xs:element minOccurs="0" ref="r0:PictureFormatObject"/>
 <xs:element minOccurs="0" ref="r0:FrameworkThesaurusName"/>
-<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:SecondaryExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:PrimaryExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:ContactsListObject"/>
 <xs:element minOccurs="0" ref="r0:MetadataServerLocators"/>
 <xs:element minOccurs="0" ref="r0:TitlesObjects"/>
 <xs:element minOccurs="0" ref="r0:ParticipantObjects"/>
+<xs:element minOccurs="0" ref="r0:Locations"/>
 <xs:element minOccurs="0" ref="r0:AnnotationObjects"/>
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
-<xs:element minOccurs="0" ref="r0:SecondaryOriginalExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2492,17 +2764,21 @@
 <xs:element minOccurs="0" ref="r0:SceneSettingPeriodObjects"/>
 <xs:element minOccurs="0" ref="r0:SceneNumber_ISO7"/>
 <xs:element minOccurs="0" ref="r0:FrameworkThesaurusName"/>
-<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:SecondaryExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:PrimaryExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:ContactsListObject"/>
 <xs:element minOccurs="0" ref="r0:MetadataServerLocators"/>
 <xs:element minOccurs="0" ref="r0:TitlesObjects"/>
 <xs:element minOccurs="0" ref="r0:ParticipantObjects"/>
+<xs:element minOccurs="0" ref="r0:Locations"/>
 <xs:element minOccurs="0" ref="r0:AnnotationObjects"/>
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
-<xs:element minOccurs="0" ref="r0:SecondaryOriginalExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2516,7 +2792,10 @@
 <xs:element minOccurs="0" ref="r0:WorkingTitle"/>
 <xs:element minOccurs="0" ref="r0:OriginalTitle"/>
 <xs:element minOccurs="0" ref="r0:MainTitle"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2530,7 +2809,10 @@
 <xs:element minOccurs="0" ref="r0:IdentifierKind"/>
 <xs:element minOccurs="0" ref="r0:IdentificationIssuingAuthority"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2547,7 +2829,10 @@
 <xs:element minOccurs="0" ref="r0:PositionInSequence"/>
 <xs:element minOccurs="0" ref="r0:EpisodicStartNumber"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2558,7 +2843,10 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:BrandMainTitle"/>
 <xs:element minOccurs="0" ref="r0:BrandOriginalTitle"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2573,7 +2861,10 @@
 <xs:element minOccurs="0" ref="r0:EventIndication"/>
 <xs:element minOccurs="0" ref="r0:EventAnnotationObjects"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2586,7 +2877,10 @@
 <xs:element minOccurs="0" ref="r0:PublishingServiceName"/>
 <xs:element minOccurs="0" ref="r0:PublishingMediumName"/>
 <xs:element minOccurs="0" ref="r0:PublishingOrganizationName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2597,11 +2891,15 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:AwardName"/>
 <xs:element minOccurs="0" ref="r0:FestivalName"/>
+<xs:element minOccurs="0" ref="r0:AwardParticipants"/>
 <xs:element minOccurs="0" ref="r0:AwardCategory"/>
 <xs:element minOccurs="0" ref="r0:NominationCategory"/>
 <xs:element minOccurs="0" ref="r0:FestivalDateTime"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2613,7 +2911,10 @@
 <xs:element minOccurs="0" ref="r0:CaptionKind"/>
 <xs:element minOccurs="0" ref="r0:ExtendedCaptionsLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2622,6 +2923,7 @@
 <xs:element name="DMS1Annotation">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:AnnotationParticipants"/>
 <xs:element minOccurs="0" ref="r0:RelatedMaterialDescription"/>
 <xs:element minOccurs="0" ref="r0:AnnotationCueWordsObject"/>
 <xs:element minOccurs="0" ref="r0:RelatedMaterialLocators"/>
@@ -2630,7 +2932,10 @@
 <xs:element minOccurs="0" ref="r0:AnnotationDescription"/>
 <xs:element minOccurs="0" ref="r0:AnnotationSynopsis"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2643,7 +2948,10 @@
 <xs:element minOccurs="0" ref="r0:SettingDateTime"/>
 <xs:element minOccurs="0" ref="r0:SettingPeriodDescription"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2656,7 +2964,10 @@
 <xs:element minOccurs="0" ref="r0:ScriptingKind"/>
 <xs:element minOccurs="0" ref="r0:ScriptingText"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2668,7 +2979,10 @@
 <xs:element minOccurs="0" ref="r0:ContentClassification"/>
 <xs:element minOccurs="0" ref="r0:ClassificationNameValueObjects"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2685,7 +2999,10 @@
 <xs:element minOccurs="0" ref="r0:ShotDescription"/>
 <xs:element minOccurs="0" ref="r0:ShotComment"/>
 <xs:element minOccurs="0" ref="r0:ShotDuration"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2698,7 +3015,10 @@
 <xs:element minOccurs="0" ref="r0:KeypointKind"/>
 <xs:element minOccurs="0" ref="r0:KeypointValue"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2709,7 +3029,10 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:InCueWords"/>
 <xs:element minOccurs="0" ref="r0:OutCueWords"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2719,12 +3042,17 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:ContributionStatus"/>
+<xs:element minOccurs="0" ref="r0:Persons"/>
+<xs:element minOccurs="0" ref="r0:ParticipantOrganizations"/>
 <xs:element minOccurs="0" ref="r0:ParticipantID"/>
 <xs:element minOccurs="0" ref="r0:JobFunction"/>
 <xs:element minOccurs="0" ref="r0:JobFunctionCode"/>
 <xs:element minOccurs="0" ref="r0:RoleName"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2736,7 +3064,10 @@
 <xs:element minOccurs="0" ref="r0:LocationObjects"/>
 <xs:element minOccurs="0" ref="r0:OrganizationObjects"/>
 <xs:element minOccurs="0" ref="r0:PersonObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2746,9 +3077,6 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:Citizenship"/>
-<xs:element minOccurs="0" ref="r0:FamilyName"/>
-<xs:element minOccurs="0" ref="r0:FirstGivenName"/>
-<xs:element minOccurs="0" ref="r0:Salutation"/>
 <xs:element minOccurs="0" ref="r0:HonorsQualifications"/>
 <xs:element minOccurs="0" ref="r0:PersonDescription"/>
 <xs:element minOccurs="0" ref="r0:OtherGivenNames"/>
@@ -2757,11 +3085,18 @@
 <xs:element minOccurs="0" ref="r0:NameSuffix"/>
 <xs:element minOccurs="0" ref="r0:FormerFamilyName"/>
 <xs:element minOccurs="0" ref="r0:Nationality"/>
+<xs:element minOccurs="0" ref="r0:FamilyName"/>
+<xs:element minOccurs="0" ref="r0:FirstGivenName"/>
+<xs:element minOccurs="0" ref="r0:PersonOrganizations"/>
+<xs:element minOccurs="0" ref="r0:Salutation"/>
 <xs:element minOccurs="0" ref="r0:AddressObjects"/>
 <xs:element ref="r0:ContactID"/>
 <xs:element minOccurs="0" ref="r0:ContactNameValueObjects"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2778,7 +3113,10 @@
 <xs:element ref="r0:ContactID"/>
 <xs:element minOccurs="0" ref="r0:ContactNameValueObjects"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2793,7 +3131,10 @@
 <xs:element ref="r0:ContactID"/>
 <xs:element minOccurs="0" ref="r0:ContactNameValueObjects"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2817,7 +3158,10 @@
 <xs:element minOccurs="0" ref="r0:AstronomicalBodyName"/>
 <xs:element minOccurs="0" ref="r0:PlaceName"/>
 <xs:element minOccurs="0" ref="r0:AddressNameValueObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2829,10 +3173,13 @@
 <xs:element minOccurs="0" ref="r0:CentralTelephoneNumber"/>
 <xs:element minOccurs="0" ref="r0:MobileTelephoneNumber"/>
 <xs:element minOccurs="0" ref="r0:ContactWebPage"/>
-<xs:element minOccurs="0" ref="r0:FaxNumber"/>
+<xs:element minOccurs="0" ref="r0:FaxNumber_ISO7"/>
 <xs:element minOccurs="0" ref="r0:EmailAddress"/>
 <xs:element minOccurs="0" ref="r0:TelephoneNumber"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2842,9 +3189,13 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:RightsObjects"/>
+<xs:element minOccurs="0" ref="r0:ContractParticipants"/>
 <xs:element minOccurs="0" ref="r0:SupplyContractNumber"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2865,7 +3216,10 @@
 <xs:element minOccurs="0" ref="r0:RightsManagementAuthority"/>
 <xs:element minOccurs="0" ref="r0:IntellectualPropertyDescription"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2877,7 +3231,10 @@
 <xs:element minOccurs="0" ref="r0:PerceivedDisplayFormat"/>
 <xs:element minOccurs="0" ref="r0:ViewportAspectRatio"/>
 <xs:element minOccurs="0" ref="r0:ColorDescriptor"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2896,7 +3253,10 @@
 <xs:element minOccurs="0" ref="r0:DeviceParametersNameValueObjects"/>
 <xs:element minOccurs="0" ref="r0:DeviceManufacturerName"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2907,8 +3267,11 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:ItemValue"/>
 <xs:element minOccurs="0" ref="r0:ItemName"/>
-<xs:element minOccurs="0" ref="r0:SMPTEULLocator"/>
+<xs:element minOccurs="0" ref="r0:SMPTEUniversalLabelLocator"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2924,7 +3287,10 @@
 <xs:element minOccurs="0" ref="r0:GraphicUsage"/>
 <xs:element minOccurs="0" ref="r0:GenerationCloneNumber"/>
 <xs:element minOccurs="0" ref="r0:LogoFlag"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2935,7 +3301,10 @@
 <xs:all>
 <xs:element minOccurs="0" ref="r0:ProjectName"/>
 <xs:element minOccurs="0" ref="r0:ProjectNumber"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2945,17 +3314,21 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:FrameworkThesaurusName"/>
-<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:SecondaryExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:PrimaryExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:ContactsListObject"/>
 <xs:element minOccurs="0" ref="r0:MetadataServerLocators"/>
 <xs:element minOccurs="0" ref="r0:TitlesObjects"/>
 <xs:element minOccurs="0" ref="r0:ParticipantObjects"/>
+<xs:element minOccurs="0" ref="r0:Locations"/>
 <xs:element minOccurs="0" ref="r0:AnnotationObjects"/>
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
-<xs:element minOccurs="0" ref="r0:SecondaryOriginalExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2969,17 +3342,21 @@
 <xs:element minOccurs="0" ref="r0:CaptionsDescriptionObjects"/>
 <xs:element minOccurs="0" ref="r0:PictureFormatObject"/>
 <xs:element minOccurs="0" ref="r0:FrameworkThesaurusName"/>
-<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:SecondaryExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:PrimaryExtendedSpokenLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:ContactsListObject"/>
 <xs:element minOccurs="0" ref="r0:MetadataServerLocators"/>
 <xs:element minOccurs="0" ref="r0:TitlesObjects"/>
 <xs:element minOccurs="0" ref="r0:ParticipantObjects"/>
+<xs:element minOccurs="0" ref="r0:Locations"/>
 <xs:element minOccurs="0" ref="r0:AnnotationObjects"/>
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
-<xs:element minOccurs="0" ref="r0:SecondaryOriginalExtendedSpokenLanguageCode"/>
+<xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2988,7 +3365,10 @@
 <xs:element abstract="true" name="DMS1Object">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -2997,7 +3377,10 @@
 <xs:element abstract="true" name="TextLanguage">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3007,7 +3390,10 @@
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3020,7 +3406,10 @@
 <xs:element ref="r0:ContactID"/>
 <xs:element minOccurs="0" ref="r0:ContactNameValueObjects"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3030,7 +3419,10 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:CryptographicContextObject"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3044,7 +3436,10 @@
 <xs:element ref="r0:CryptographicKeyID"/>
 <xs:element ref="r0:MICAlgorithm"/>
 <xs:element ref="r0:CipherAlgorithm"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3053,7 +3448,10 @@
 <xs:element name="TextBasedFramework">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3062,7 +3460,10 @@
 <xs:element name="GenericStreamTextBasedSet">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3071,7 +3472,10 @@
 <xs:element name="UTF8TextBasedSet">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3080,7 +3484,10 @@
 <xs:element name="UTF16TextBasedSet">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
@@ -3089,7 +3496,23 @@
 <xs:element name="TextBasedObject">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:uid" use="required"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="EIDRFramework">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:EIDRDMSEssenceID"/>
+<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
 <xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>

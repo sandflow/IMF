@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created: Mon May 04 22:16:36 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><Baseline xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" rootElement="MXF" rootObject="Preface">
+<SchemeID>urn:uuid:3c1f888d-e658-5f03-7fe0-c96d7c354c75</SchemeID>
+<SchemeURI>http://www.smpte-ra.org/reg/395/2014</SchemeURI>
+<MetaDefinitions>
+<ClassDefinition>
+<Identification>urn:smpte:ul:060e2b34.027f0101.0c020101.01010000</Identification>
+<Symbol>LensUnitAcquisitionMetadata</Symbol>
+<Description>Lens Unit Acquisition Metadata</Description>
+<Name>Lens Unit Acquisition Metadata</Name>
+<IsConcrete>true</IsConcrete>
+</ClassDefinition>
+<ClassDefinition>
+<Identification>urn:smpte:ul:060e2b34.027f0101.0c020101.02010000</Identification>
+<Symbol>CameraUnitAcquisitionMetadata</Symbol>
+<Description>Camera Unit Acquisition Metadata</Description>
+<Name>Camera Unit Acquisition Metadata</Name>
+<IsConcrete>true</IsConcrete>
+</ClassDefinition>
+<ClassDefinition>
+<Identification>urn:smpte:ul:060e2b34.027f0101.0c020101.7f010000</Identification>
+<Symbol>UserDefinedAcquisitionMetadata</Symbol>
+<Description>UserDefinedAcquisitionMetadata</Description>
+<Name>UserDefinedAcquisitionMetadata</Name>
+<IsConcrete>true</IsConcrete>
+</ClassDefinition>
+</MetaDefinitions>
+</Baseline>

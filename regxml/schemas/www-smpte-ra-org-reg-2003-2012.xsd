@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon Dec 29 20:49:31 PST 2014--><!--By: regxmllib build 2dd6533bebd2d1094011d178f2cc861d77415ada--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1" xmlns:reg="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon May 04 22:16:38 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r3="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r4="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.ebu.ch/ebucore/smpte/class13/group"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/12/as11"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-<xs:import namespace="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
 <xs:simpleType name="UInt8">
 <xs:union>
 <xs:simpleType>
@@ -146,6 +149,22 @@
 <xs:restriction base="r0:Int32"/>
 </xs:simpleType>
 <xs:element name="PhaseFrameType" type="r0:PhaseFrameType"/>
+<xs:simpleType name="Float">
+<xs:restriction base="xs:float"/>
+</xs:simpleType>
+<xs:element name="Float" type="r0:Float"/>
+<xs:simpleType name="Double">
+<xs:restriction base="xs:double"/>
+</xs:simpleType>
+<xs:element name="Double" type="r0:Double"/>
+<xs:simpleType name="HalfFloat">
+<xs:restriction base="xs:float"/>
+</xs:simpleType>
+<xs:element name="HalfFloat" type="r0:HalfFloat"/>
+<xs:simpleType name="LensSerialHalfFloat">
+<xs:restriction base="xs:decimal"/>
+</xs:simpleType>
+<xs:element name="LensSerialHalfFloat" type="r0:LensSerialHalfFloat"/>
 <xs:simpleType name="AUID">
 <xs:restriction base="xs:anyURI">
 <xs:pattern value="urn:smpte:ul:([0-9a-fA-F]{8}\.){3}[0-9a-fA-F]{8}"/>
@@ -204,6 +223,22 @@
 </xs:simpleContent>
 </xs:complexType>
 <xs:element name="ISO7" type="r0:ISO7"/>
+<xs:complexType name="UTF8Character">
+<xs:simpleContent>
+<xs:extension base="xs:string">
+<xs:attribute ref="reg:escaped" use="optional"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+<xs:element name="UTF8Character" type="r0:UTF8Character"/>
+<xs:complexType name="UTF8String">
+<xs:simpleContent>
+<xs:extension base="xs:string">
+<xs:attribute ref="reg:escaped" use="optional"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+<xs:element name="UTF8String" type="r0:UTF8String"/>
 <xs:complexType name="ISO3166_Country">
 <xs:complexContent>
 <xs:extension base="r0:ISO7"/>
@@ -576,6 +611,46 @@
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="TitleAlignmentType" type="r0:TitleAlignmentType"/>
+<xs:simpleType name="AVCContentScanningType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="AVCContentScanning_NotKnown"/>
+<xs:enumeration value="AVCContentScanning_ProgressiveFramePicture"/>
+<xs:enumeration value="AVCContentScanning_InterlaceFieldPicture"/>
+<xs:enumeration value="AVCContentScanning_InterlaceFramePicture"/>
+<xs:enumeration value="AVCContentScanning_Interlace_FrameFieldPicture"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="AVCContentScanningType" type="r0:AVCContentScanningType"/>
+<xs:simpleType name="MPEG4VisualCodedContentType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="MPEG4VisualCodedContent_Unknown"/>
+<xs:enumeration value="MPEG4VisualCodedContent_Progressive"/>
+<xs:enumeration value="MPEG4VisualCodedContent_Interlaced"/>
+<xs:enumeration value="MPEG4VisualCodedContent_Mixed"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="MPEG4VisualCodedContentType" type="r0:MPEG4VisualCodedContentType"/>
+<xs:simpleType name="TIFFByteOrderType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="TIFFByteOrder_BigEndian"/>
+<xs:enumeration value="TIFFByteOrder_LittleEndian"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TIFFByteOrderType" type="r0:TIFFByteOrderType"/>
+<xs:simpleType name="TIFFCompressionKindType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="TIFFCompressionKind_NoCompression"/>
+<xs:enumeration value="TIFFCompressionKind_LosslessHuffmanJPEG"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TIFFCompressionKindType" type="r0:TIFFCompressionKindType"/>
+<xs:simpleType name="TIFFPhotometricInterpretationKindType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="TIFFPhotometricInterpretationKind_ColorFilterArray"/>
+<xs:enumeration value="TIFFPhotometricInterpretationKind_LinearRaw"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="TIFFPhotometricInterpretationKindType" type="r0:TIFFPhotometricInterpretationKindType"/>
 <xs:simpleType name="OperationCategoryType">
 <xs:restriction base="reg:AUID"/>
 </xs:simpleType>
@@ -612,10 +687,10 @@
 <xs:restriction base="xs:token"/>
 </xs:simpleType>
 <xs:element name="PublishingMediumCode" type="r0:PublishingMediumCode"/>
-<xs:simpleType name="dupJobFunctionCode0">
+<xs:simpleType name="JobFunctionCode">
 <xs:restriction base="xs:token"/>
 </xs:simpleType>
-<xs:element name="dupJobFunctionCode0" type="r0:dupJobFunctionCode0"/>
+<xs:element name="JobFunctionCode" type="r0:JobFunctionCode"/>
 <xs:simpleType name="ObjectTypeCode">
 <xs:restriction base="xs:token"/>
 </xs:simpleType>
@@ -724,6 +799,15 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="J2KComponentSizing" type="r0:J2KComponentSizing"/>
+<xs:complexType name="ASMLEKeyIDMapping">
+<xs:sequence>
+<xs:element name="ASMLEKeyID" type="r0:UInt32"/>
+<xs:element name="ASMKey" type="r0:UInt8Array16"/>
+<xs:element name="ASMExpireTime" type="r0:UInt32"/>
+<xs:element name="ASMAttributeData" type="r0:UInt64"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ASMLEKeyIDMapping" type="r0:ASMLEKeyIDMapping"/>
 <xs:complexType name="UInt8Array">
 <xs:sequence>
 <xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:UInt8"/>
@@ -820,6 +904,24 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="ExtUMID" type="r0:ExtUMID"/>
+<xs:complexType name="UInt8Array16">
+<xs:sequence>
+<xs:element maxOccurs="16" minOccurs="16" ref="r0:UInt8"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UInt8Array16" type="r0:UInt8Array16"/>
+<xs:complexType name="UInt16Array">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:UInt16"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UInt16Array" type="r0:UInt16Array"/>
+<xs:complexType name="HalfFloatArray10">
+<xs:sequence>
+<xs:element maxOccurs="10" minOccurs="10" ref="r0:HalfFloat"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="HalfFloatArray10" type="r0:HalfFloatArray10"/>
 <xs:complexType name="RGBALayout">
 <xs:sequence>
 <xs:element maxOccurs="8" minOccurs="8" ref="r0:RGBAComponent"/>
@@ -856,12 +958,18 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="ExtUMIDArray" type="r0:ExtUMIDArray"/>
-<xs:complexType name="dupIndexEntryArray1">
+<xs:complexType name="IndexEntryArray">
 <xs:sequence>
 <xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:IndexEntry"/>
 </xs:sequence>
 </xs:complexType>
-<xs:element name="dupIndexEntryArray1" type="r0:dupIndexEntryArray1"/>
+<xs:element name="IndexEntryArray" type="r0:IndexEntryArray"/>
+<xs:complexType name="DeltaEntryArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:DeltaEntry"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="DeltaEntryArray" type="r0:DeltaEntryArray"/>
 <xs:complexType name="J2KComponentSizingArray">
 <xs:sequence>
 <xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:J2KComponentSizing"/>
@@ -886,6 +994,12 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="LocalTagEntryBatch" type="r0:LocalTagEntryBatch"/>
+<xs:complexType name="ASMLEKeyIDMappingSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:ASMLEKeyIDMapping"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ASMLEKeyIDMappingSet" type="r0:ASMLEKeyIDMappingSet"/>
 <xs:simpleType name="DataValue">
 <xs:restriction base="reg:HexByteArrayType"/>
 </xs:simpleType>
@@ -915,36 +1029,26 @@
 </xs:extension>
 </xs:simpleContent>
 </xs:complexType>
-<xs:complexType name="UNKNOWN">
-<xs:sequence>
-<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:UInt8"/>
-</xs:sequence>
-</xs:complexType>
-<xs:element name="UNKNOWN" type="r0:UNKNOWN"/>
-<xs:complexType name="IndexEntry">
-<xs:attribute ref="reg:stream" use="optional"/>
-<xs:attribute ref="xlink:href" use="optional"/>
-<xs:attribute ref="reg:byteOrder" use="optional"/>
-</xs:complexType>
+<xs:simpleType name="IndexEntry">
+<xs:restriction base="r0:DataValue"/>
+</xs:simpleType>
 <xs:element name="IndexEntry" type="r0:IndexEntry"/>
-<xs:complexType name="S312M">
-<xs:attribute ref="reg:stream" use="optional"/>
-<xs:attribute ref="xlink:href" use="optional"/>
-<xs:attribute ref="reg:byteOrder" use="optional"/>
-</xs:complexType>
+<xs:simpleType name="S312M">
+<xs:restriction base="r0:DataValue"/>
+</xs:simpleType>
 <xs:element name="S312M" type="r0:S312M"/>
-<xs:complexType name="S327M">
-<xs:attribute ref="reg:stream" use="optional"/>
-<xs:attribute ref="xlink:href" use="optional"/>
-<xs:attribute ref="reg:byteOrder" use="optional"/>
-</xs:complexType>
+<xs:simpleType name="S327M">
+<xs:restriction base="r0:DataValue"/>
+</xs:simpleType>
 <xs:element name="S327M" type="r0:S327M"/>
-<xs:complexType name="BiM">
-<xs:attribute ref="reg:stream" use="optional"/>
-<xs:attribute ref="xlink:href" use="optional"/>
-<xs:attribute ref="reg:byteOrder" use="optional"/>
-</xs:complexType>
+<xs:simpleType name="BiM">
+<xs:restriction base="r0:DataValue"/>
+</xs:simpleType>
 <xs:element name="BiM" type="r0:BiM"/>
+<xs:simpleType name="DeltaEntry">
+<xs:restriction base="r0:DataValue"/>
+</xs:simpleType>
+<xs:element name="DeltaEntry" type="r0:DeltaEntry"/>
 <xs:simpleType name="ClassDefinitionWeakReference">
 <xs:restriction base="reg:TargetType"/>
 </xs:simpleType>
@@ -993,6 +1097,10 @@
 <xs:restriction base="reg:TargetType"/>
 </xs:simpleType>
 <xs:element name="PropertyDefinitionWeakReference" type="r0:PropertyDefinitionWeakReference"/>
+<xs:simpleType name="TypeDefinitionExtendibleEnumerationWeakReference">
+<xs:restriction base="reg:TargetType"/>
+</xs:simpleType>
+<xs:element name="TypeDefinitionExtendibleEnumerationWeakReference" type="r0:TypeDefinitionExtendibleEnumerationWeakReference"/>
 <xs:complexType name="ContentStorageStrongReference">
 <xs:choice>
 <xs:element ref="r1:ContentStorage"/>
@@ -1283,11 +1391,16 @@
 <xs:element name="RIFFChunkStrongReference" type="r0:RIFFChunkStrongReference"/>
 <xs:complexType name="DescriptiveFrameworkStrongReference">
 <xs:choice>
+<xs:element ref="r2:DM_AS_11_Segmentation_Framework"/>
+<xs:element ref="r3:ebucoreMain"/>
 <xs:element ref="r1:ProductionFramework"/>
 <xs:element ref="r1:ClipFramework"/>
 <xs:element ref="r1:SceneFramework"/>
 <xs:element ref="r1:CryptographicFramework"/>
 <xs:element ref="r1:TextBasedFramework"/>
+<xs:element ref="r1:EIDRFramework"/>
+<xs:element ref="r2:DM_AS_11_Core_Framework"/>
+<xs:element ref="r4:DM_AS_11_UKDPP_Framework"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="DescriptiveFrameworkStrongReference" type="r0:DescriptiveFrameworkStrongReference"/>
@@ -1305,6 +1418,107 @@
 <xs:element name="TaggedValueDefinitionStrongReference" type="r0:TaggedValueDefinitionStrongReference"/>
 <xs:complexType name="DescriptiveObjectStrongReference">
 <xs:choice>
+<xs:element ref="r3:contact"/>
+<xs:element ref="r3:audioStreamFormat"/>
+<xs:element ref="r3:captioning"/>
+<xs:element ref="r3:title"/>
+<xs:element ref="r3:statusGroup"/>
+<xs:element ref="r3:technicalAttributeUInt8"/>
+<xs:element ref="r3:temporal"/>
+<xs:element ref="r3:track"/>
+<xs:element ref="r3:type"/>
+<xs:element ref="r3:height"/>
+<xs:element ref="r3:audioProgramme"/>
+<xs:element ref="r3:medium"/>
+<xs:element ref="r3:audioTrackUID"/>
+<xs:element ref="r3:publicationService"/>
+<xs:element ref="r3:technicalAttributeRational"/>
+<xs:element ref="r3:role"/>
+<xs:element ref="r3:technicalAttributeInt16"/>
+<xs:element ref="r3:part"/>
+<xs:element ref="r3:imageFormat"/>
+<xs:element ref="r3:genre"/>
+<xs:element ref="r3:dimension"/>
+<xs:element ref="r3:loudnessMetadata"/>
+<xs:element ref="r3:rights"/>
+<xs:element ref="r3:technicalAttributeInt32"/>
+<xs:element ref="r3:audioObject"/>
+<xs:element ref="r3:region"/>
+<xs:element ref="r3:coverage"/>
+<xs:element ref="r3:basicRelation"/>
+<xs:element ref="r3:publicationChannel"/>
+<xs:element ref="r3:technicalAttributeAnyURI"/>
+<xs:element ref="r3:publicationEvent"/>
+<xs:element ref="r3:signingFormat"/>
+<xs:element ref="r3:audioBlockMatrix"/>
+<xs:element ref="r3:format"/>
+<xs:element ref="r3:date"/>
+<xs:element ref="r3:locator"/>
+<xs:element ref="r3:details"/>
+<xs:element ref="r3:technicalAttributeUInt64"/>
+<xs:element ref="r3:metadataSchemaInformation"/>
+<xs:element ref="r3:technicalAttributeString"/>
+<xs:element ref="r3:codec"/>
+<xs:element ref="r3:metadataFormat"/>
+<xs:element ref="r3:subtitling"/>
+<xs:element ref="r3:location"/>
+<xs:element ref="r3:textualAnnotation"/>
+<xs:element ref="r3:audioChannelFormat"/>
+<xs:element ref="r3:audioFormatExtended"/>
+<xs:element ref="r3:technicalAttributeFloat"/>
+<xs:element ref="r3:aspectRatio"/>
+<xs:element ref="r3:objectType"/>
+<xs:element ref="r3:periodOfTime"/>
+<xs:element ref="r3:technicalAttributeInt8"/>
+<xs:element ref="r3:alternativeTitle"/>
+<xs:element ref="r3:organization"/>
+<xs:element ref="r3:dataFormat"/>
+<xs:element ref="r3:videoNoiseFilter"/>
+<xs:element ref="r3:audioBlockMatrixCoefficient"/>
+<xs:element ref="r3:planning"/>
+<xs:element ref="r3:width"/>
+<xs:element ref="r3:audioFormat"/>
+<xs:element ref="r3:targetAudience"/>
+<xs:element ref="r3:IDRef"/>
+<xs:element ref="r3:technicalAttributeUInt16"/>
+<xs:element ref="r3:packageInfo"/>
+<xs:element ref="r3:formatGroup"/>
+<xs:element ref="r3:version"/>
+<xs:element ref="r3:customRelation"/>
+<xs:element ref="r3:typeGroup"/>
+<xs:element ref="r3:audioTrackFormat"/>
+<xs:element ref="r3:entity"/>
+<xs:element ref="r3:countryType"/>
+<xs:element ref="r3:subject"/>
+<xs:element ref="r3:publicationHistory"/>
+<xs:element ref="r3:videoFormat"/>
+<xs:element ref="r3:partMetadata"/>
+<xs:element ref="r3:time"/>
+<xs:element ref="r3:description"/>
+<xs:element ref="r3:spatial"/>
+<xs:element ref="r3:audioContent"/>
+<xs:element ref="r3:technicalAttributeUInt32"/>
+<xs:element ref="r3:audioPackFormat"/>
+<xs:element ref="r3:compoundName"/>
+<xs:element ref="r3:language"/>
+<xs:element ref="r3:hash"/>
+<xs:element ref="r3:publicationMedium"/>
+<xs:element ref="r3:audioMXFLookup"/>
+<xs:element ref="r3:rating"/>
+<xs:element ref="r3:ancillaryData"/>
+<xs:element ref="r3:coordinates"/>
+<xs:element ref="r3:coreMetadata"/>
+<xs:element ref="r3:timecodeFormat"/>
+<xs:element ref="r3:department"/>
+<xs:element ref="r3:audioBlockFormat"/>
+<xs:element ref="r3:basicLink"/>
+<xs:element ref="r3:technicalAttributeInt64"/>
+<xs:element ref="r3:containerFormat"/>
+<xs:element ref="r3:dateType"/>
+<xs:element ref="r3:technicalAttributeBoolean"/>
+<xs:element ref="r3:address"/>
+<xs:element ref="r3:identifier"/>
+<xs:element ref="r3:rational"/>
 <xs:element ref="r1:NameValue"/>
 <xs:element ref="r1:Project"/>
 <xs:element ref="r1:Processing"/>
@@ -1348,6 +1562,14 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="CueWordsStrongReference" type="r0:CueWordsStrongReference"/>
+<xs:complexType name="GeographicAreaStrongReference">
+<xs:choice/>
+</xs:complexType>
+<xs:element name="GeographicAreaStrongReference" type="r0:GeographicAreaStrongReference"/>
+<xs:complexType name="GeographicPolygonStrongReference">
+<xs:choice/>
+</xs:complexType>
+<xs:element name="GeographicPolygonStrongReference" type="r0:GeographicPolygonStrongReference"/>
 <xs:complexType name="SubDescriptorStrongReference">
 <xs:choice>
 <xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
@@ -1381,6 +1603,67 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="NameValueStrongReference" type="r0:NameValueStrongReference"/>
+<xs:complexType name="TextBasedObjectStrongReference">
+<xs:choice>
+<xs:element ref="r1:TextBasedObject"/>
+<xs:element ref="r1:GenericStreamTextBasedSet"/>
+<xs:element ref="r1:UTF8TextBasedSet"/>
+<xs:element ref="r1:UTF16TextBasedSet"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="TextBasedObjectStrongReference" type="r0:TextBasedObjectStrongReference"/>
+<xs:complexType name="EntryStrongReference">
+<xs:choice/>
+</xs:complexType>
+<xs:element name="EntryStrongReference" type="r0:EntryStrongReference"/>
+<xs:complexType name="RegisterAdministrationStrongReference">
+<xs:choice/>
+</xs:complexType>
+<xs:element name="RegisterAdministrationStrongReference" type="r0:RegisterAdministrationStrongReference"/>
+<xs:complexType name="EntryAdministrationStrongReference">
+<xs:choice/>
+</xs:complexType>
+<xs:element name="EntryAdministrationStrongReference" type="r0:EntryAdministrationStrongReference"/>
+<xs:complexType name="PackageMarkerStrongReference">
+<xs:choice>
+<xs:element ref="r1:PackageMarker"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="PackageMarkerStrongReference" type="r0:PackageMarkerStrongReference"/>
+<xs:complexType name="ApplicationPluginObjectStrongReference">
+<xs:choice>
+<xs:element ref="r1:ApplicationPlugInObject"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="ApplicationPluginObjectStrongReference" type="r0:ApplicationPluginObjectStrongReference"/>
+<xs:complexType name="ExtensionSchemeStrongReference">
+<xs:choice>
+<xs:element ref="r1:ExtensionScheme"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="ExtensionSchemeStrongReference" type="r0:ExtensionSchemeStrongReference"/>
+<xs:complexType name="MetaDefinitionStrongReference">
+<xs:choice>
+<xs:element ref="r1:ClassDefinition"/>
+<xs:element ref="r1:TypeDefinitionRename"/>
+<xs:element ref="r1:TypeDefinitionStream"/>
+<xs:element ref="r1:TypeDefinitionRecord"/>
+<xs:element ref="r1:TypeDefinitionVariableArray"/>
+<xs:element ref="r1:TypeDefinitionFixedArray"/>
+<xs:element ref="r1:TypeDefinitionString"/>
+<xs:element ref="r1:TypeDefinitionSet"/>
+<xs:element ref="r1:TypeDefinitionStrongObjectReference"/>
+<xs:element ref="r1:TypeDefinitionInteger"/>
+<xs:element ref="r1:TypeDefinitionEnumeration"/>
+<xs:element ref="r1:TypeDefinitionWeakObjectReference"/>
+<xs:element ref="r1:TypeDefinitionCharacter"/>
+<xs:element ref="r1:TypeDefinitionExtendibleEnumeration"/>
+<xs:element ref="r1:TypeDefinitionIndirect"/>
+<xs:element ref="r1:TypeDefinitionOpaque"/>
+<xs:element ref="r1:PropertyDefinition"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="MetaDefinitionStrongReference" type="r0:MetaDefinitionStrongReference"/>
 <xs:complexType name="DataDefinitionWeakReferenceSet">
 <xs:sequence>
 <xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:DataDefinitionWeakReference"/>
@@ -1405,6 +1688,12 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="PropertyDefinitionWeakReferenceSet" type="r0:PropertyDefinitionWeakReferenceSet"/>
+<xs:complexType name="TypeDefinitionExtendibleEnumerationWeakReferenceSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:TypeDefinitionExtendibleEnumerationWeakReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="TypeDefinitionExtendibleEnumerationWeakReferenceSet" type="r0:TypeDefinitionExtendibleEnumerationWeakReferenceSet"/>
 <xs:complexType name="OperationDefinitionWeakReferenceVector">
 <xs:sequence>
 <xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:OperationDefinitionWeakReference"/>
@@ -1525,6 +1814,107 @@
 <xs:element name="TaggedValueDefinitionStrongReferenceSet" type="r0:TaggedValueDefinitionStrongReferenceSet"/>
 <xs:complexType name="DescriptiveObjectStrongReferenceSet">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r3:contact"/>
+<xs:element ref="r3:audioStreamFormat"/>
+<xs:element ref="r3:captioning"/>
+<xs:element ref="r3:title"/>
+<xs:element ref="r3:statusGroup"/>
+<xs:element ref="r3:technicalAttributeUInt8"/>
+<xs:element ref="r3:temporal"/>
+<xs:element ref="r3:track"/>
+<xs:element ref="r3:type"/>
+<xs:element ref="r3:height"/>
+<xs:element ref="r3:audioProgramme"/>
+<xs:element ref="r3:medium"/>
+<xs:element ref="r3:audioTrackUID"/>
+<xs:element ref="r3:publicationService"/>
+<xs:element ref="r3:technicalAttributeRational"/>
+<xs:element ref="r3:role"/>
+<xs:element ref="r3:technicalAttributeInt16"/>
+<xs:element ref="r3:part"/>
+<xs:element ref="r3:imageFormat"/>
+<xs:element ref="r3:genre"/>
+<xs:element ref="r3:dimension"/>
+<xs:element ref="r3:loudnessMetadata"/>
+<xs:element ref="r3:rights"/>
+<xs:element ref="r3:technicalAttributeInt32"/>
+<xs:element ref="r3:audioObject"/>
+<xs:element ref="r3:region"/>
+<xs:element ref="r3:coverage"/>
+<xs:element ref="r3:basicRelation"/>
+<xs:element ref="r3:publicationChannel"/>
+<xs:element ref="r3:technicalAttributeAnyURI"/>
+<xs:element ref="r3:publicationEvent"/>
+<xs:element ref="r3:signingFormat"/>
+<xs:element ref="r3:audioBlockMatrix"/>
+<xs:element ref="r3:format"/>
+<xs:element ref="r3:date"/>
+<xs:element ref="r3:locator"/>
+<xs:element ref="r3:details"/>
+<xs:element ref="r3:technicalAttributeUInt64"/>
+<xs:element ref="r3:metadataSchemaInformation"/>
+<xs:element ref="r3:technicalAttributeString"/>
+<xs:element ref="r3:codec"/>
+<xs:element ref="r3:metadataFormat"/>
+<xs:element ref="r3:subtitling"/>
+<xs:element ref="r3:location"/>
+<xs:element ref="r3:textualAnnotation"/>
+<xs:element ref="r3:audioChannelFormat"/>
+<xs:element ref="r3:audioFormatExtended"/>
+<xs:element ref="r3:technicalAttributeFloat"/>
+<xs:element ref="r3:aspectRatio"/>
+<xs:element ref="r3:objectType"/>
+<xs:element ref="r3:periodOfTime"/>
+<xs:element ref="r3:technicalAttributeInt8"/>
+<xs:element ref="r3:alternativeTitle"/>
+<xs:element ref="r3:organization"/>
+<xs:element ref="r3:dataFormat"/>
+<xs:element ref="r3:videoNoiseFilter"/>
+<xs:element ref="r3:audioBlockMatrixCoefficient"/>
+<xs:element ref="r3:planning"/>
+<xs:element ref="r3:width"/>
+<xs:element ref="r3:audioFormat"/>
+<xs:element ref="r3:targetAudience"/>
+<xs:element ref="r3:IDRef"/>
+<xs:element ref="r3:technicalAttributeUInt16"/>
+<xs:element ref="r3:packageInfo"/>
+<xs:element ref="r3:formatGroup"/>
+<xs:element ref="r3:version"/>
+<xs:element ref="r3:customRelation"/>
+<xs:element ref="r3:typeGroup"/>
+<xs:element ref="r3:audioTrackFormat"/>
+<xs:element ref="r3:entity"/>
+<xs:element ref="r3:countryType"/>
+<xs:element ref="r3:subject"/>
+<xs:element ref="r3:publicationHistory"/>
+<xs:element ref="r3:videoFormat"/>
+<xs:element ref="r3:partMetadata"/>
+<xs:element ref="r3:time"/>
+<xs:element ref="r3:description"/>
+<xs:element ref="r3:spatial"/>
+<xs:element ref="r3:audioContent"/>
+<xs:element ref="r3:technicalAttributeUInt32"/>
+<xs:element ref="r3:audioPackFormat"/>
+<xs:element ref="r3:compoundName"/>
+<xs:element ref="r3:language"/>
+<xs:element ref="r3:hash"/>
+<xs:element ref="r3:publicationMedium"/>
+<xs:element ref="r3:audioMXFLookup"/>
+<xs:element ref="r3:rating"/>
+<xs:element ref="r3:ancillaryData"/>
+<xs:element ref="r3:coordinates"/>
+<xs:element ref="r3:coreMetadata"/>
+<xs:element ref="r3:timecodeFormat"/>
+<xs:element ref="r3:department"/>
+<xs:element ref="r3:audioBlockFormat"/>
+<xs:element ref="r3:basicLink"/>
+<xs:element ref="r3:technicalAttributeInt64"/>
+<xs:element ref="r3:containerFormat"/>
+<xs:element ref="r3:dateType"/>
+<xs:element ref="r3:technicalAttributeBoolean"/>
+<xs:element ref="r3:address"/>
+<xs:element ref="r3:identifier"/>
+<xs:element ref="r3:rational"/>
 <xs:element ref="r1:NameValue"/>
 <xs:element ref="r1:Project"/>
 <xs:element ref="r1:Processing"/>
@@ -1568,6 +1958,40 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="NameValueStrongReferenceSet" type="r0:NameValueStrongReferenceSet"/>
+<xs:complexType name="ApplicationPluginObjectStrongReferenceSet">
+<xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r1:ApplicationPlugInObject"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="ApplicationPluginObjectStrongReferenceSet" type="r0:ApplicationPluginObjectStrongReferenceSet"/>
+<xs:complexType name="ExtensionSchemeStrongReferenceSet">
+<xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r1:ExtensionScheme"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="ExtensionSchemeStrongReferenceSet" type="r0:ExtensionSchemeStrongReferenceSet"/>
+<xs:complexType name="MetaDefinitionStrongReferenceSet">
+<xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r1:ClassDefinition"/>
+<xs:element ref="r1:TypeDefinitionRename"/>
+<xs:element ref="r1:TypeDefinitionStream"/>
+<xs:element ref="r1:TypeDefinitionRecord"/>
+<xs:element ref="r1:TypeDefinitionVariableArray"/>
+<xs:element ref="r1:TypeDefinitionFixedArray"/>
+<xs:element ref="r1:TypeDefinitionString"/>
+<xs:element ref="r1:TypeDefinitionSet"/>
+<xs:element ref="r1:TypeDefinitionStrongObjectReference"/>
+<xs:element ref="r1:TypeDefinitionInteger"/>
+<xs:element ref="r1:TypeDefinitionEnumeration"/>
+<xs:element ref="r1:TypeDefinitionWeakObjectReference"/>
+<xs:element ref="r1:TypeDefinitionCharacter"/>
+<xs:element ref="r1:TypeDefinitionExtendibleEnumeration"/>
+<xs:element ref="r1:TypeDefinitionIndirect"/>
+<xs:element ref="r1:TypeDefinitionOpaque"/>
+<xs:element ref="r1:PropertyDefinition"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="MetaDefinitionStrongReferenceSet" type="r0:MetaDefinitionStrongReferenceSet"/>
 <xs:complexType name="ComponentStrongReferenceVector">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
 <xs:element ref="r1:TimecodeStream12M"/>
@@ -1706,6 +2130,107 @@
 <xs:element name="RIFFChunkStrongReferenceVector" type="r0:RIFFChunkStrongReferenceVector"/>
 <xs:complexType name="DescriptiveObjectStrongReferenceVector">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r3:contact"/>
+<xs:element ref="r3:audioStreamFormat"/>
+<xs:element ref="r3:captioning"/>
+<xs:element ref="r3:title"/>
+<xs:element ref="r3:statusGroup"/>
+<xs:element ref="r3:technicalAttributeUInt8"/>
+<xs:element ref="r3:temporal"/>
+<xs:element ref="r3:track"/>
+<xs:element ref="r3:type"/>
+<xs:element ref="r3:height"/>
+<xs:element ref="r3:audioProgramme"/>
+<xs:element ref="r3:medium"/>
+<xs:element ref="r3:audioTrackUID"/>
+<xs:element ref="r3:publicationService"/>
+<xs:element ref="r3:technicalAttributeRational"/>
+<xs:element ref="r3:role"/>
+<xs:element ref="r3:technicalAttributeInt16"/>
+<xs:element ref="r3:part"/>
+<xs:element ref="r3:imageFormat"/>
+<xs:element ref="r3:genre"/>
+<xs:element ref="r3:dimension"/>
+<xs:element ref="r3:loudnessMetadata"/>
+<xs:element ref="r3:rights"/>
+<xs:element ref="r3:technicalAttributeInt32"/>
+<xs:element ref="r3:audioObject"/>
+<xs:element ref="r3:region"/>
+<xs:element ref="r3:coverage"/>
+<xs:element ref="r3:basicRelation"/>
+<xs:element ref="r3:publicationChannel"/>
+<xs:element ref="r3:technicalAttributeAnyURI"/>
+<xs:element ref="r3:publicationEvent"/>
+<xs:element ref="r3:signingFormat"/>
+<xs:element ref="r3:audioBlockMatrix"/>
+<xs:element ref="r3:format"/>
+<xs:element ref="r3:date"/>
+<xs:element ref="r3:locator"/>
+<xs:element ref="r3:details"/>
+<xs:element ref="r3:technicalAttributeUInt64"/>
+<xs:element ref="r3:metadataSchemaInformation"/>
+<xs:element ref="r3:technicalAttributeString"/>
+<xs:element ref="r3:codec"/>
+<xs:element ref="r3:metadataFormat"/>
+<xs:element ref="r3:subtitling"/>
+<xs:element ref="r3:location"/>
+<xs:element ref="r3:textualAnnotation"/>
+<xs:element ref="r3:audioChannelFormat"/>
+<xs:element ref="r3:audioFormatExtended"/>
+<xs:element ref="r3:technicalAttributeFloat"/>
+<xs:element ref="r3:aspectRatio"/>
+<xs:element ref="r3:objectType"/>
+<xs:element ref="r3:periodOfTime"/>
+<xs:element ref="r3:technicalAttributeInt8"/>
+<xs:element ref="r3:alternativeTitle"/>
+<xs:element ref="r3:organization"/>
+<xs:element ref="r3:dataFormat"/>
+<xs:element ref="r3:videoNoiseFilter"/>
+<xs:element ref="r3:audioBlockMatrixCoefficient"/>
+<xs:element ref="r3:planning"/>
+<xs:element ref="r3:width"/>
+<xs:element ref="r3:audioFormat"/>
+<xs:element ref="r3:targetAudience"/>
+<xs:element ref="r3:IDRef"/>
+<xs:element ref="r3:technicalAttributeUInt16"/>
+<xs:element ref="r3:packageInfo"/>
+<xs:element ref="r3:formatGroup"/>
+<xs:element ref="r3:version"/>
+<xs:element ref="r3:customRelation"/>
+<xs:element ref="r3:typeGroup"/>
+<xs:element ref="r3:audioTrackFormat"/>
+<xs:element ref="r3:entity"/>
+<xs:element ref="r3:countryType"/>
+<xs:element ref="r3:subject"/>
+<xs:element ref="r3:publicationHistory"/>
+<xs:element ref="r3:videoFormat"/>
+<xs:element ref="r3:partMetadata"/>
+<xs:element ref="r3:time"/>
+<xs:element ref="r3:description"/>
+<xs:element ref="r3:spatial"/>
+<xs:element ref="r3:audioContent"/>
+<xs:element ref="r3:technicalAttributeUInt32"/>
+<xs:element ref="r3:audioPackFormat"/>
+<xs:element ref="r3:compoundName"/>
+<xs:element ref="r3:language"/>
+<xs:element ref="r3:hash"/>
+<xs:element ref="r3:publicationMedium"/>
+<xs:element ref="r3:audioMXFLookup"/>
+<xs:element ref="r3:rating"/>
+<xs:element ref="r3:ancillaryData"/>
+<xs:element ref="r3:coordinates"/>
+<xs:element ref="r3:coreMetadata"/>
+<xs:element ref="r3:timecodeFormat"/>
+<xs:element ref="r3:department"/>
+<xs:element ref="r3:audioBlockFormat"/>
+<xs:element ref="r3:basicLink"/>
+<xs:element ref="r3:technicalAttributeInt64"/>
+<xs:element ref="r3:containerFormat"/>
+<xs:element ref="r3:dateType"/>
+<xs:element ref="r3:technicalAttributeBoolean"/>
+<xs:element ref="r3:address"/>
+<xs:element ref="r3:identifier"/>
+<xs:element ref="r3:rational"/>
 <xs:element ref="r1:NameValue"/>
 <xs:element ref="r1:Project"/>
 <xs:element ref="r1:Processing"/>
@@ -1758,4 +2283,64 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="SubDescriptorStrongReferenceVector" type="r0:SubDescriptorStrongReferenceVector"/>
+<xs:complexType name="RegisterEntryStrongReferenceVector">
+<xs:choice maxOccurs="unbounded" minOccurs="0"/>
+</xs:complexType>
+<xs:element name="RegisterEntryStrongReferenceVector" type="r0:RegisterEntryStrongReferenceVector"/>
+<xs:complexType name="ParticipantGlobalReferenceSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:ParticipantGlobalReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ParticipantGlobalReferenceSet" type="r0:ParticipantGlobalReferenceSet"/>
+<xs:complexType name="OrganizationGlobalReferenceSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:OrganizationGlobalReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="OrganizationGlobalReferenceSet" type="r0:OrganizationGlobalReferenceSet"/>
+<xs:complexType name="LocationGlobalReferenceSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:LocationGlobalReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LocationGlobalReferenceSet" type="r0:LocationGlobalReferenceSet"/>
+<xs:complexType name="ParticipantGlobalReferenceVector">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:ParticipantGlobalReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="ParticipantGlobalReferenceVector" type="r0:ParticipantGlobalReferenceVector"/>
+<xs:complexType name="OrganizationGlobalReferenceVector">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:OrganizationGlobalReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="OrganizationGlobalReferenceVector" type="r0:OrganizationGlobalReferenceVector"/>
+<xs:complexType name="LocationGlobalReferenceVector">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:LocationGlobalReference"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="LocationGlobalReferenceVector" type="r0:LocationGlobalReferenceVector"/>
+<xs:simpleType name="ParticipantGlobalReference">
+<xs:restriction base="reg:TargetType"/>
+</xs:simpleType>
+<xs:element name="ParticipantGlobalReference" type="r0:ParticipantGlobalReference"/>
+<xs:simpleType name="OrganizationGlobalReference">
+<xs:restriction base="reg:TargetType"/>
+</xs:simpleType>
+<xs:element name="OrganizationGlobalReference" type="r0:OrganizationGlobalReference"/>
+<xs:simpleType name="LocationGlobalReference">
+<xs:restriction base="reg:TargetType"/>
+</xs:simpleType>
+<xs:element name="LocationGlobalReference" type="r0:LocationGlobalReference"/>
+<xs:simpleType name="ApplicationPluginObjectGlobalReference">
+<xs:restriction base="reg:TargetType"/>
+</xs:simpleType>
+<xs:element name="ApplicationPluginObjectGlobalReference" type="r0:ApplicationPluginObjectGlobalReference"/>
+<xs:simpleType name="DescriptiveMarkerGlobalReference">
+<xs:restriction base="reg:TargetType"/>
+</xs:simpleType>
+<xs:element name="DescriptiveMarkerGlobalReference" type="r0:DescriptiveMarkerGlobalReference"/>
 </xs:schema>
