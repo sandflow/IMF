@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon May 04 22:16:38 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r3="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r4="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sun May 17 14:34:48 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r3="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r4="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.ebu.ch/ebucore/smpte/class13/group"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/12/as11"/>
@@ -1563,11 +1563,15 @@
 </xs:complexType>
 <xs:element name="CueWordsStrongReference" type="r0:CueWordsStrongReference"/>
 <xs:complexType name="GeographicAreaStrongReference">
-<xs:choice/>
+<xs:choice>
+<!--Reference type urn:smpte:ul:060e2b34.027f0101.0e020302.01000000 not found.-->
+</xs:choice>
 </xs:complexType>
 <xs:element name="GeographicAreaStrongReference" type="r0:GeographicAreaStrongReference"/>
 <xs:complexType name="GeographicPolygonStrongReference">
-<xs:choice/>
+<xs:choice>
+<!--Reference type urn:smpte:ul:060e2b34.027f0101.0e020302.02000000 not found.-->
+</xs:choice>
 </xs:complexType>
 <xs:element name="GeographicPolygonStrongReference" type="r0:GeographicPolygonStrongReference"/>
 <xs:complexType name="SubDescriptorStrongReference">
@@ -1613,15 +1617,21 @@
 </xs:complexType>
 <xs:element name="TextBasedObjectStrongReference" type="r0:TextBasedObjectStrongReference"/>
 <xs:complexType name="EntryStrongReference">
-<xs:choice/>
+<xs:choice>
+<!--Reference type urn:smpte:ul:060e2b34.027f0101.0c010101.01010300 not found.-->
+</xs:choice>
 </xs:complexType>
 <xs:element name="EntryStrongReference" type="r0:EntryStrongReference"/>
 <xs:complexType name="RegisterAdministrationStrongReference">
-<xs:choice/>
+<xs:choice>
+<!--Reference type urn:smpte:ul:060e2b34.027f0101.0c010101.01010800 not found.-->
+</xs:choice>
 </xs:complexType>
 <xs:element name="RegisterAdministrationStrongReference" type="r0:RegisterAdministrationStrongReference"/>
 <xs:complexType name="EntryAdministrationStrongReference">
-<xs:choice/>
+<xs:choice>
+<!--Reference type urn:smpte:ul:060e2b34.027f0101.0c010101.01010400 not found.-->
+</xs:choice>
 </xs:complexType>
 <xs:element name="EntryAdministrationStrongReference" type="r0:EntryAdministrationStrongReference"/>
 <xs:complexType name="PackageMarkerStrongReference">
@@ -2286,6 +2296,7 @@
 <xs:complexType name="RegisterEntryStrongReferenceVector">
 <xs:choice maxOccurs="unbounded" minOccurs="0"/>
 </xs:complexType>
+<!--Subclass urn:smpte:ul:060e2b34.027f0101.0c010101.01010300 not found.-->
 <xs:element name="RegisterEntryStrongReferenceVector" type="r0:RegisterEntryStrongReferenceVector"/>
 <xs:complexType name="ParticipantGlobalReferenceSet">
 <xs:sequence>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Mon May 04 22:16:38 PDT 2015--><!--By: regxmllib build feb340aa9c2fd6aff790cf76712fbd2060a7e487--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.ebu.ch/ebucore/smpte/class13/element" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sun May 17 14:34:48 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.ebu.ch/ebucore/smpte/class13/element" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
 <xs:import namespace="http://www.ebu.ch/ebucore/smpte/class13/element"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
@@ -17,6 +17,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="coreMetadata">
@@ -50,6 +51,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="metadataSchemaInformation">
@@ -70,6 +72,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="identifier">
@@ -87,6 +90,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="title">
@@ -105,6 +109,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="alternativeTitle">
@@ -125,6 +130,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="subject">
@@ -143,6 +149,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="description">
@@ -164,6 +171,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="date">
@@ -191,6 +199,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="dateType">
@@ -207,6 +216,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="type">
@@ -225,6 +235,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="objectType">
@@ -238,6 +249,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="genre">
@@ -252,6 +264,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="targetAudience">
@@ -272,6 +285,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="language">
@@ -288,6 +302,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="coverage">
@@ -304,6 +319,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="spatial">
@@ -317,6 +333,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="location">
@@ -336,6 +353,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="coordinates">
@@ -351,6 +369,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="temporal">
@@ -366,6 +385,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="periodOfTime">
@@ -386,6 +406,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="rights">
@@ -413,6 +434,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="version">
@@ -427,6 +449,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="rating">
@@ -453,6 +476,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="publicationEvent">
@@ -482,6 +506,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="publicationHistory">
@@ -496,6 +521,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="publicationChannel">
@@ -512,6 +538,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="publicationMedium">
@@ -527,6 +554,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="publicationService">
@@ -544,6 +572,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="entity">
@@ -560,6 +589,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="contact">
@@ -595,6 +625,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="organization">
@@ -619,6 +650,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="department">
@@ -633,6 +665,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="details">
@@ -651,6 +684,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="address">
@@ -668,6 +702,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="region">
@@ -682,6 +717,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="compoundName">
@@ -697,6 +733,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="role">
@@ -711,6 +748,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="countryType">
@@ -724,6 +762,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="customRelation">
@@ -744,6 +783,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="basicRelation">
@@ -778,6 +818,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="planning">
@@ -792,6 +833,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="typeGroup">
@@ -812,6 +854,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="formatGroup">
@@ -832,6 +875,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="statusGroup">
@@ -852,6 +896,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="textualAnnotation">
@@ -866,6 +911,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="basicLink">
@@ -879,6 +925,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="format">
@@ -929,6 +976,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="videoFormat">
@@ -980,6 +1028,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="imageFormat">
@@ -1021,6 +1070,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioFormat">
@@ -1065,6 +1115,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="track">
@@ -1081,6 +1132,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="dataFormat">
@@ -1121,6 +1173,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="captioning">
@@ -1143,6 +1196,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="subtitling">
@@ -1165,6 +1219,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="ancillaryData">
@@ -1183,6 +1238,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="signingFormat">
@@ -1205,6 +1261,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeString">
@@ -1220,6 +1277,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeInt8">
@@ -1235,6 +1293,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeInt16">
@@ -1250,6 +1309,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeInt32">
@@ -1265,6 +1325,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeInt64">
@@ -1280,6 +1341,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeUInt8">
@@ -1295,6 +1357,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeUInt16">
@@ -1310,6 +1373,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeUInt32">
@@ -1325,6 +1389,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeUInt64">
@@ -1340,6 +1405,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeFloat">
@@ -1355,6 +1421,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeRational">
@@ -1369,6 +1436,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeAnyURI">
@@ -1383,6 +1451,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="technicalAttributeBoolean">
@@ -1397,6 +1466,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="dimension">
@@ -1411,6 +1481,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="packageInfo">
@@ -1428,6 +1499,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="medium">
@@ -1442,6 +1514,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="codec">
@@ -1459,6 +1532,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="rational">
@@ -1474,6 +1548,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="aspectRatio">
@@ -1489,6 +1564,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="height">
@@ -1503,6 +1579,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="width">
@@ -1517,6 +1594,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="part">
@@ -1530,6 +1608,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="partMetadata">
@@ -1551,6 +1630,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="hash">
@@ -1565,6 +1645,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="locator">
@@ -1579,6 +1660,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="containerFormat">
@@ -1612,6 +1694,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioFormatExtended">
@@ -1638,6 +1721,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioProgramme">
@@ -1659,6 +1743,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="IDRef">
@@ -1672,6 +1757,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="loudnessMetadata">
@@ -1690,6 +1776,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioContent">
@@ -1708,6 +1795,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioObject">
@@ -1730,6 +1818,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioPackFormat">
@@ -1749,6 +1838,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioChannelFormat">
@@ -1766,6 +1856,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioBlockFormat">
@@ -1794,6 +1885,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioBlockMatrixCoefficient">
@@ -1811,6 +1903,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioStreamFormat">
@@ -1829,6 +1922,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioTrackFormat">
@@ -1845,6 +1939,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioTrackUID">
@@ -1863,6 +1958,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioMXFLookup">
@@ -1878,6 +1974,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="audioBlockMatrix">
@@ -1891,6 +1988,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="time">
@@ -1908,6 +2006,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="metadataFormat">
@@ -1938,6 +2037,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="timecodeFormat">
@@ -1969,6 +2069,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 <xs:element name="videoNoiseFilter">
@@ -1983,6 +2084,7 @@
 <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
 </xs:all>
 <xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
 </xs:schema>
