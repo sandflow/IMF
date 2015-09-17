@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Created: Sun May 17 14:34:47 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
+<!--Created: Thu Sep 17 15:28:37 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
 <SchemeID>urn:uuid:75177d78-00c7-5fe8-7fbb-63a2c90fc617</SchemeID>
 <SchemeURI>http://www.ebu.ch/ebucore/smpte/class13/type</SchemeURI>
 <MetaDefinitions>
@@ -277,7 +277,7 @@
 <Identification>urn:smpte:ul:060e2b34.01040101.0d020101.012e0000</Identification>
 <Symbol>dateTypeStrongReference</Symbol>
 <Name>dateTypeStrongReference</Name>
-<ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02010c.00000000</ReferencedType>
+<ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02010d.00000000</ReferencedType>
 </TypeDefinitionStrongObjectReference>
 <TypeDefinitionStrongObjectReference>
 <Identification>urn:smpte:ul:060e2b34.01040101.0d020101.012f0000</Identification>
@@ -362,12 +362,6 @@
 <Symbol>countryTypeStrongReference</Symbol>
 <Name>countryTypeStrongReference</Name>
 <ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02012a.00000000</ReferencedType>
-</TypeDefinitionStrongObjectReference>
-<TypeDefinitionStrongObjectReference>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.013d0000</Identification>
-<Symbol>planningEventStrongReference</Symbol>
-<Name>planningEventStrongReference</Name>
-<ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02011c.00000000</ReferencedType>
 </TypeDefinitionStrongObjectReference>
 <TypeDefinitionStrongObjectReference>
 <Identification>urn:smpte:ul:060e2b34.01040101.0d020101.013e0000</Identification>
@@ -615,27 +609,6 @@
 <Name>timecodeFormatStrongReference</Name>
 <ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02015a.00000000</ReferencedType>
 </TypeDefinitionStrongObjectReference>
-<TypeDefinitionWeakObjectReference>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.02010000</Identification>
-<Symbol>partWeakReference</Symbol>
-<Name>partWeakReference</Name>
-<ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02014b.00000000</ReferencedType>
-<TargetSet/>
-</TypeDefinitionWeakObjectReference>
-<TypeDefinitionWeakObjectReference>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.02020000</Identification>
-<Symbol>formatWeakReference</Symbol>
-<Name>formatWeakReference</Name>
-<ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02014b.00000000</ReferencedType>
-<TargetSet/>
-</TypeDefinitionWeakObjectReference>
-<TypeDefinitionWeakObjectReference>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.02030000</Identification>
-<Symbol>rightsWeakReference</Symbol>
-<Name>rightsWeakReference</Name>
-<ReferencedType>urn:smpte:ul:060e2b34.027f0101.0d02014b.00000000</ReferencedType>
-<TargetSet/>
-</TypeDefinitionWeakObjectReference>
 <TypeDefinitionSet>
 <Identification>urn:smpte:ul:060e2b34.01040101.0d020101.03010000</Identification>
 <Symbol>identifierStrongReferenceSet</Symbol>
@@ -827,12 +800,6 @@
 <Symbol>countryTypeStrongReferenceSet</Symbol>
 <Name>countryTypeStrongReferenceSet</Name>
 <ElementType>urn:smpte:ul:060e2b34.01040101.0d020101.013c0000</ElementType>
-</TypeDefinitionSet>
-<TypeDefinitionSet>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.03210000</Identification>
-<Symbol>planningEventStrongReferenceSet</Symbol>
-<Name>planningEventStrongReferenceSet</Name>
-<ElementType>urn:smpte:ul:060e2b34.01040101.0d020101.013d0000</ElementType>
 </TypeDefinitionSet>
 <TypeDefinitionSet>
 <Identification>urn:smpte:ul:060e2b34.01040101.0d020101.03220000</Identification>
@@ -1073,24 +1040,6 @@
 <Symbol>timecodeFormatStrongReferenceSet</Symbol>
 <Name>timecodeFormatStrongReferenceSet</Name>
 <ElementType>urn:smpte:ul:060e2b34.01040101.0d020101.01660000</ElementType>
-</TypeDefinitionSet>
-<TypeDefinitionSet>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.04010000</Identification>
-<Symbol>partWeakReferenceSet</Symbol>
-<Name>partWeakReferenceSet</Name>
-<ElementType>urn:smpte:ul:060e2b34.01040101.0d020101.02010000</ElementType>
-</TypeDefinitionSet>
-<TypeDefinitionSet>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.04020000</Identification>
-<Symbol>formatWeakReferenceSet</Symbol>
-<Name>formatWeakReferenceSet</Name>
-<ElementType>urn:smpte:ul:060e2b34.01040101.0d020101.02020000</ElementType>
-</TypeDefinitionSet>
-<TypeDefinitionSet>
-<Identification>urn:smpte:ul:060e2b34.01040101.0d020101.04030000</Identification>
-<Symbol>rightsWeakReferenceSet</Symbol>
-<Name>rightsWeakReferenceSet</Name>
-<ElementType>urn:smpte:ul:060e2b34.01040101.0d020101.02030000</ElementType>
 </TypeDefinitionSet>
 </MetaDefinitions>
 </Extension>

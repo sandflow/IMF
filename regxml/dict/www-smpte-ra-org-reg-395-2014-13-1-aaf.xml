@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Created: Sun May 17 14:34:47 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
+<!--Created: Thu Sep 17 15:28:37 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
 <SchemeID>urn:uuid:21177fc2-e9cd-5fb5-7f18-50a997da0981</SchemeID>
 <SchemeURI>http://www.smpte-ra.org/reg/395/2014/13/1/aaf</SchemeURI>
 <MetaDefinitions>
@@ -839,7 +839,7 @@
 <Symbol>TIFFPictureEssenceDescriptor</Symbol>
 <Description>TIFF Picture Essence Descriptor</Description>
 <Name>TIFF Picture Essence Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
@@ -887,15 +887,15 @@
 <Symbol>EventTextDescriptor</Symbol>
 <Description>Event Text Descriptor</Description>
 <Name>Event Text Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
-<IsConcrete>true</IsConcrete>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01014300</ParentClass>
+<IsConcrete>false</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
 <Identification>urn:smpte:ul:060e2b34.027f0101.0d010101.01017000</Identification>
 <Symbol>STLDescriptor</Symbol>
 <Description>STL Descriptor</Description>
 <Name>STL Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01016f00</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
@@ -903,15 +903,15 @@
 <Symbol>STLSubDescriptor</Symbol>
 <Description>STL Sub-Descriptor</Description>
 <Name>STL Sub-Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01015900</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
 <Identification>urn:smpte:ul:060e2b34.027f0101.0d010101.01017200</Identification>
-<Symbol>_3DSubDescriptor</Symbol>
-<Description>3D Sub-Descriptor</Description>
-<Name>3D Sub-Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
+<Symbol>OperationsStereoscopicSubDescriptor</Symbol>
+<Description>Operations Stereoscopic Sub-Descriptor</Description>
+<Name>Operations Stereoscopic Sub-Descriptor</Name>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01015900</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>
@@ -919,7 +919,7 @@
 <Symbol>AuxDataEssenceDescriptor</Symbol>
 <Description>Aux Data Essence Descriptor</Description>
 <Name>Aux Data Essence Descriptor</Name>
-<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01011a00</ParentClass>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01014300</ParentClass>
 <IsConcrete>true</IsConcrete>
 </ClassDefinition>
 <ClassDefinition>

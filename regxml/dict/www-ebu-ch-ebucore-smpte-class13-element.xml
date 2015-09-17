@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Created: Sun May 17 14:34:47 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
+<!--Created: Thu Sep 17 15:28:36 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
 <SchemeID>urn:uuid:22120cb9-8896-5f21-7fc7-7277c8da7fa5</SchemeID>
 <SchemeURI>http://www.ebu.ch/ebucore/smpte/class13/element</SchemeURI>
 <MetaDefinitions>
@@ -1955,7 +1955,7 @@
 <Symbol>publicationMediumObject</Symbol>
 <Description>A strong reference to the definition of a medium of publication</Description>
 <Name>Publication Medium Set</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.0d020101.01130000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.0d020101.010d0000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -6165,10 +6165,10 @@
 </PropertyDefinition>
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02013c.03000000</Identification>
-<Symbol>packageLocator</Symbol>
+<Symbol>packageLocatorObject</Symbol>
 <Description>A strong reference to a locator from where the package can be accessed</Description>
 <Name>Package Locator</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01100200.00000000</Type>
+<Type>urn:smpte:ul:060e2b34.01040101.0d020101.011b0000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>
@@ -7002,7 +7002,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014a.08000000</Identification>
 <Symbol>audioProgrammeAudioContentIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio content</Description>
+<Description>A batch of references to related audio content</Description>
 <Name>Audio Programme Audio Content IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7145,7 +7145,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014d.05000000</Identification>
 <Symbol>audioContentAudioObjectIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio objects</Description>
+<Description>A batch of references to related audio objects</Description>
 <Name>Audio Content Audio Object IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7244,7 +7244,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014e.08000000</Identification>
 <Symbol>audioObjectAudioPackFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio pack formats</Description>
+<Description>A batch of references to related audio pack formats</Description>
 <Name>Audio Object Audio Pack Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7255,7 +7255,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014e.09000000</Identification>
 <Symbol>audioObjectAudioObjectIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio objects</Description>
+<Description>A batch of references to related audio objects</Description>
 <Name>Audio Object Audio Object IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7266,7 +7266,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014e.0a000000</Identification>
 <Symbol>audioObjectAudioTrackUIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio track UIDs</Description>
+<Description>A batch of references to related audio track UIDs</Description>
 <Name>Audio Object Audio Track UIDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7332,7 +7332,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014f.06000000</Identification>
 <Symbol>audioPackAudioChannelFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio channel formats</Description>
+<Description>A batch of references to related audio channel formats</Description>
 <Name>Audio Pack Audio Channel Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7343,7 +7343,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d02014f.07000000</Identification>
 <Symbol>audioPackAudioPackFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio pack formats</Description>
+<Description>A batch of references to related audio pack formats</Description>
 <Name>Audio Pack Audio Pack Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7398,7 +7398,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020150.05000000</Identification>
 <Symbol>audioChannelAudioBlockFormatObjects</Symbol>
-<Description>A batch of strong references to related audio block formats</Description>
+<Description>A batch of references to related audio block formats</Description>
 <Name>Audio Channel Audio Block Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7673,7 +7673,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020153.04000000</Identification>
 <Symbol>audioStreamAudioChannelFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio channel formats</Description>
+<Description>A batch of references to related audio channel formats</Description>
 <Name>Audio Stream Audio Channel Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7684,7 +7684,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020153.05000000</Identification>
 <Symbol>audioStreamAudioStreamFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio stream formats</Description>
+<Description>A batch of references to related audio stream formats</Description>
 <Name>Audio Stream Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7695,7 +7695,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020153.06000000</Identification>
 <Symbol>audioStreamAudioTrackFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio track formats</Description>
+<Description>A batch of references to related audio track formats</Description>
 <Name>Audio Stream Audio Track Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7739,7 +7739,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020154.04000000</Identification>
 <Symbol>audioTrackAudioStreamFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio stream formats</Description>
+<Description>A batch of references to related audio stream formats</Description>
 <Name>Audio Track Audio Stream Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7794,7 +7794,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020155.05000000</Identification>
 <Symbol>audioTrackAudioTrackFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio track formats</Description>
+<Description>A batch of references to related audio track formats</Description>
 <Name>Audio Track Audio Track Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7805,7 +7805,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020155.06000000</Identification>
 <Symbol>audioTrackAudioPackFormatIDRefObjects</Symbol>
-<Description>A batch of strong references to related audio pack formats</Description>
+<Description>A batch of references to related audio pack formats</Description>
 <Name>Audio Track Audio Pack Format IDRef Sets</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.03450000</Type>
 <IsOptional>true</IsOptional>
@@ -7816,7 +7816,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020156.01000000</Identification>
 <Symbol>audioMXFLookupPackageUIDRefObject</Symbol>
-<Description>A strong reference to a package</Description>
+<Description>A reference to a package</Description>
 <Name>Audio MXF Lookup Package UIDRef Set</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.01610000</Type>
 <IsOptional>true</IsOptional>
@@ -7827,7 +7827,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020156.02000000</Identification>
 <Symbol>audioMXFLookupTrackIDRefObject</Symbol>
-<Description>A strong reference to a track</Description>
+<Description>A reference to a track</Description>
 <Name>Audio MXF LookupTrack IDRef Set</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.01610000</Type>
 <IsOptional>true</IsOptional>
@@ -7838,7 +7838,7 @@
 <PropertyDefinition>
 <Identification>urn:smpte:ul:060e2b34.01010101.0d020156.03000000</Identification>
 <Symbol>audioMXFLookupChannelIDRefObject</Symbol>
-<Description>A strong reference to a channel</Description>
+<Description>A reference to a channel</Description>
 <Name>Audio MXF Lookup Channel IDRef Set</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.0d020101.01610000</Type>
 <IsOptional>true</IsOptional>

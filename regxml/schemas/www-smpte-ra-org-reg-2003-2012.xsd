@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sun May 17 14:34:48 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r3="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r4="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Sep 17 15:28:16 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r3="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r4="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.ebu.ch/ebucore/smpte/class13/group"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/12/as11"/>
@@ -630,6 +630,43 @@
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="MPEG4VisualCodedContentType" type="r0:MPEG4VisualCodedContentType"/>
+<xs:simpleType name="ColorCorrectionFilterWheelSettingType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="ColorCorrectionFilterWheelSetting_CrossEffectFilter"/>
+<xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter3200K"/>
+<xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter4300K"/>
+<xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter6300K"/>
+<xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter5600K"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="ColorCorrectionFilterWheelSettingType" type="r0:ColorCorrectionFilterWheelSettingType"/>
+<xs:simpleType name="ImageSensorReadoutModeType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="ImageSensorReadoutMode_InterlacedField"/>
+<xs:enumeration value="ImageSensorReadoutMode_InterlacedFrame"/>
+<xs:enumeration value="ImageSensorReadoutMode_ProgressiveFrame"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="ImageSensorReadoutModeType" type="r0:ImageSensorReadoutModeType"/>
+<xs:simpleType name="AutoWhiteBalanceModeType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="AutoWhiteBalanceMode_PresetWhiteBalanceSetup"/>
+<xs:enumeration value="AutoWhiteBalanceMode_AutomaticWhiteBalanceSetup"/>
+<xs:enumeration value="AutoWhiteBalanceMode_HoldWhiteBalanceSetup"/>
+<xs:enumeration value="AutoWhiteBalanceMode_OnePushWhiteBalanceSetup"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="AutoWhiteBalanceModeType" type="r0:AutoWhiteBalanceModeType"/>
+<xs:simpleType name="AutoFocusSensingAreaSettingType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="AutoFocusSensingAreaSetting_ManualFocusMode"/>
+<xs:enumeration value="AutoFocusSensingAreaSetting_CenterSensitiveAutoFocusMode"/>
+<xs:enumeration value="AutoFocusSensingAreaSetting_FullScreenSensingAutoFocusMode"/>
+<xs:enumeration value="AutoFocusSensingAreaSetting_MultiSpotSensingAutoFocusMode"/>
+<xs:enumeration value="AutoFocusSensingAreaSetting_SingleSpotSensingAutoFocusMode"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="AutoFocusSensingAreaSettingType" type="r0:AutoFocusSensingAreaSettingType"/>
 <xs:simpleType name="TIFFByteOrderType">
 <xs:restriction base="xs:token">
 <xs:enumeration value="TIFFByteOrder_BigEndian"/>
@@ -675,6 +712,10 @@
 <xs:restriction base="reg:AUID"/>
 </xs:simpleType>
 <xs:element name="CodingEquationsType" type="r0:CodingEquationsType"/>
+<xs:simpleType name="AutoExposureModeType">
+<xs:restriction base="reg:AUID"/>
+</xs:simpleType>
+<xs:element name="AutoExposureModeType" type="r0:AutoExposureModeType"/>
 <xs:simpleType name="ContractTypeCode">
 <xs:restriction base="xs:token"/>
 </xs:simpleType>
@@ -916,12 +957,18 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="UInt16Array" type="r0:UInt16Array"/>
-<xs:complexType name="HalfFloatArray10">
+<xs:complexType name="HalfFloatArray">
 <xs:sequence>
-<xs:element maxOccurs="10" minOccurs="10" ref="r0:HalfFloat"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:HalfFloat"/>
 </xs:sequence>
 </xs:complexType>
-<xs:element name="HalfFloatArray10" type="r0:HalfFloatArray10"/>
+<xs:element name="HalfFloatArray" type="r0:HalfFloatArray"/>
+<xs:complexType name="UUIDArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:UUID"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UUIDArray" type="r0:UUIDArray"/>
 <xs:complexType name="RGBALayout">
 <xs:sequence>
 <xs:element maxOccurs="8" minOccurs="8" ref="r0:RGBAComponent"/>
@@ -1119,14 +1166,17 @@
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
+<xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
 <xs:element ref="r1:VBIDataDescriptor"/>
 <xs:element ref="r1:ANCDataDescriptor"/>
 <xs:element ref="r1:HTMLParsedTextDescriptor"/>
 <xs:element ref="r1:XMLDescriptor"/>
+<xs:element ref="r1:STLDescriptor"/>
 <xs:element ref="r1:MultipleDescriptor"/>
 <xs:element ref="r1:HTMLDescriptor"/>
 <xs:element ref="r1:RGBADescriptor"/>
+<xs:element ref="r1:TIFFPictureEssenceDescriptor"/>
 <xs:element ref="r1:CDCIDescriptor"/>
 <xs:element ref="r1:MPEGVideoDescriptor"/>
 <xs:element ref="r1:VC1VideoDescriptor"/>
@@ -1362,14 +1412,17 @@
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
+<xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
 <xs:element ref="r1:VBIDataDescriptor"/>
 <xs:element ref="r1:ANCDataDescriptor"/>
 <xs:element ref="r1:HTMLParsedTextDescriptor"/>
 <xs:element ref="r1:XMLDescriptor"/>
+<xs:element ref="r1:STLDescriptor"/>
 <xs:element ref="r1:MultipleDescriptor"/>
 <xs:element ref="r1:HTMLDescriptor"/>
 <xs:element ref="r1:RGBADescriptor"/>
+<xs:element ref="r1:TIFFPictureEssenceDescriptor"/>
 <xs:element ref="r1:CDCIDescriptor"/>
 <xs:element ref="r1:MPEGVideoDescriptor"/>
 <xs:element ref="r1:VC1VideoDescriptor"/>
@@ -1392,7 +1445,7 @@
 <xs:complexType name="DescriptiveFrameworkStrongReference">
 <xs:choice>
 <xs:element ref="r2:DM_AS_11_Segmentation_Framework"/>
-<xs:element ref="r3:ebucoreMain"/>
+<xs:element ref="r3:EBUCoreMainFramework"/>
 <xs:element ref="r1:ProductionFramework"/>
 <xs:element ref="r1:ClipFramework"/>
 <xs:element ref="r1:SceneFramework"/>
@@ -1564,13 +1617,495 @@
 <xs:element name="CueWordsStrongReference" type="r0:CueWordsStrongReference"/>
 <xs:complexType name="GeographicAreaStrongReference">
 <xs:choice>
-<!--Reference type urn:smpte:ul:060e2b34.027f0101.0e020302.01000000 not found.-->
+<xs:element ref="r1:CompositionPackage"/>
+<xs:element ref="r1:MaterialPackage"/>
+<xs:element ref="r1:SourcePackage"/>
+<xs:element ref="r3:contact"/>
+<xs:element ref="r3:audioStreamFormat"/>
+<xs:element ref="r3:captioning"/>
+<xs:element ref="r3:title"/>
+<xs:element ref="r3:statusGroup"/>
+<xs:element ref="r3:technicalAttributeUInt8"/>
+<xs:element ref="r3:temporal"/>
+<xs:element ref="r3:track"/>
+<xs:element ref="r3:type"/>
+<xs:element ref="r3:height"/>
+<xs:element ref="r3:audioProgramme"/>
+<xs:element ref="r3:medium"/>
+<xs:element ref="r3:audioTrackUID"/>
+<xs:element ref="r3:publicationService"/>
+<xs:element ref="r3:technicalAttributeRational"/>
+<xs:element ref="r3:role"/>
+<xs:element ref="r3:technicalAttributeInt16"/>
+<xs:element ref="r3:part"/>
+<xs:element ref="r3:imageFormat"/>
+<xs:element ref="r3:genre"/>
+<xs:element ref="r3:dimension"/>
+<xs:element ref="r3:loudnessMetadata"/>
+<xs:element ref="r3:rights"/>
+<xs:element ref="r3:technicalAttributeInt32"/>
+<xs:element ref="r3:audioObject"/>
+<xs:element ref="r3:region"/>
+<xs:element ref="r3:coverage"/>
+<xs:element ref="r3:basicRelation"/>
+<xs:element ref="r3:publicationChannel"/>
+<xs:element ref="r3:technicalAttributeAnyURI"/>
+<xs:element ref="r3:publicationEvent"/>
+<xs:element ref="r3:signingFormat"/>
+<xs:element ref="r3:audioBlockMatrix"/>
+<xs:element ref="r3:format"/>
+<xs:element ref="r3:date"/>
+<xs:element ref="r3:locator"/>
+<xs:element ref="r3:details"/>
+<xs:element ref="r3:technicalAttributeUInt64"/>
+<xs:element ref="r3:metadataSchemaInformation"/>
+<xs:element ref="r3:technicalAttributeString"/>
+<xs:element ref="r3:codec"/>
+<xs:element ref="r3:metadataFormat"/>
+<xs:element ref="r3:subtitling"/>
+<xs:element ref="r3:location"/>
+<xs:element ref="r3:textualAnnotation"/>
+<xs:element ref="r3:audioChannelFormat"/>
+<xs:element ref="r3:audioFormatExtended"/>
+<xs:element ref="r3:technicalAttributeFloat"/>
+<xs:element ref="r3:aspectRatio"/>
+<xs:element ref="r3:objectType"/>
+<xs:element ref="r3:periodOfTime"/>
+<xs:element ref="r3:technicalAttributeInt8"/>
+<xs:element ref="r3:alternativeTitle"/>
+<xs:element ref="r3:organization"/>
+<xs:element ref="r3:dataFormat"/>
+<xs:element ref="r3:videoNoiseFilter"/>
+<xs:element ref="r3:audioBlockMatrixCoefficient"/>
+<xs:element ref="r3:planning"/>
+<xs:element ref="r3:width"/>
+<xs:element ref="r3:audioFormat"/>
+<xs:element ref="r3:targetAudience"/>
+<xs:element ref="r3:IDRef"/>
+<xs:element ref="r3:technicalAttributeUInt16"/>
+<xs:element ref="r3:packageInfo"/>
+<xs:element ref="r3:formatGroup"/>
+<xs:element ref="r3:version"/>
+<xs:element ref="r3:customRelation"/>
+<xs:element ref="r3:typeGroup"/>
+<xs:element ref="r3:audioTrackFormat"/>
+<xs:element ref="r3:entity"/>
+<xs:element ref="r3:countryType"/>
+<xs:element ref="r3:subject"/>
+<xs:element ref="r3:publicationHistory"/>
+<xs:element ref="r3:videoFormat"/>
+<xs:element ref="r3:partMetadata"/>
+<xs:element ref="r3:time"/>
+<xs:element ref="r3:description"/>
+<xs:element ref="r3:spatial"/>
+<xs:element ref="r3:audioContent"/>
+<xs:element ref="r3:technicalAttributeUInt32"/>
+<xs:element ref="r3:audioPackFormat"/>
+<xs:element ref="r3:compoundName"/>
+<xs:element ref="r3:language"/>
+<xs:element ref="r3:hash"/>
+<xs:element ref="r3:publicationMedium"/>
+<xs:element ref="r3:audioMXFLookup"/>
+<xs:element ref="r3:rating"/>
+<xs:element ref="r3:ancillaryData"/>
+<xs:element ref="r3:coordinates"/>
+<xs:element ref="r3:coreMetadata"/>
+<xs:element ref="r3:timecodeFormat"/>
+<xs:element ref="r3:department"/>
+<xs:element ref="r3:audioBlockFormat"/>
+<xs:element ref="r3:basicLink"/>
+<xs:element ref="r3:technicalAttributeInt64"/>
+<xs:element ref="r3:containerFormat"/>
+<xs:element ref="r3:dateType"/>
+<xs:element ref="r3:technicalAttributeBoolean"/>
+<xs:element ref="r3:address"/>
+<xs:element ref="r3:identifier"/>
+<xs:element ref="r3:rational"/>
+<xs:element ref="r1:NameValue"/>
+<xs:element ref="r1:Project"/>
+<xs:element ref="r1:Processing"/>
+<xs:element ref="r1:Titles"/>
+<xs:element ref="r1:CueWords"/>
+<xs:element ref="r1:DMS1Identification"/>
+<xs:element ref="r1:GroupRelationship"/>
+<xs:element ref="r1:Keypoint"/>
+<xs:element ref="r1:Location"/>
+<xs:element ref="r1:Organization"/>
+<xs:element ref="r1:Person"/>
+<xs:element ref="r1:Rights"/>
+<xs:element ref="r1:Contract"/>
+<xs:element ref="r1:DeviceParameters"/>
+<xs:element ref="r1:DMS1Annotation"/>
+<xs:element ref="r1:Participant"/>
+<xs:element ref="r1:DMS1Event"/>
+<xs:element ref="r1:Classification"/>
+<xs:element ref="r1:Award"/>
+<xs:element ref="r1:Scripting"/>
+<xs:element ref="r1:CaptionsDescription"/>
+<xs:element ref="r1:SettingPeriod"/>
+<xs:element ref="r1:Branding"/>
+<xs:element ref="r1:Shot"/>
+<xs:element ref="r1:Address"/>
+<xs:element ref="r1:PictureFormat"/>
+<xs:element ref="r1:ContactsList"/>
+<xs:element ref="r1:Communications"/>
+<xs:element ref="r1:Publication"/>
+<xs:element ref="r1:TextBasedObject"/>
+<xs:element ref="r1:GenericStreamTextBasedSet"/>
+<xs:element ref="r1:UTF8TextBasedSet"/>
+<xs:element ref="r1:UTF16TextBasedSet"/>
+<xs:element ref="r1:CryptographicContext"/>
+<xs:element ref="r1:ControlPoint"/>
+<xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
+<xs:element ref="r1:StereoscopicPictureSubDescriptor"/>
+<xs:element ref="r1:JPEG2000SubDescriptor"/>
+<xs:element ref="r1:MCALabelSubDescriptor"/>
+<xs:element ref="r1:GroupOfSoundfieldGroupsLabelSubDescriptor"/>
+<xs:element ref="r1:AudioChannelLabelSubDescriptor"/>
+<xs:element ref="r1:SoundfieldGroupLabelSubDescriptor"/>
+<xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
+<xs:element ref="r1:MPEG4VisualSubDescriptor"/>
+<xs:element ref="r1:AVCSubDescriptor"/>
+<xs:element ref="r1:STLSubDescriptor"/>
+<xs:element ref="r1:OperationsStereoscopicSubDescriptor"/>
+<xs:element ref="r1:ParameterDefinition"/>
+<xs:element ref="r1:KLVDataDefinition"/>
+<xs:element ref="r1:OPDefinition"/>
+<xs:element ref="r1:PluginDefinition"/>
+<xs:element ref="r1:CompressionDefinition"/>
+<xs:element ref="r1:DataDefinition"/>
+<xs:element ref="r1:OperationDefinition"/>
+<xs:element ref="r1:TaggedValueDefinition"/>
+<xs:element ref="r1:InterpolationDefinition"/>
+<xs:element ref="r1:CodecDefinition"/>
+<xs:element ref="r1:ContainerDefinition"/>
+<xs:element ref="r1:ContentStorage"/>
+<xs:element ref="r1:EventTrack"/>
+<xs:element ref="r1:StaticTrack"/>
+<xs:element ref="r1:TimelineTrack"/>
+<xs:element ref="r1:ConstantValue"/>
+<xs:element ref="r1:VaryingValue"/>
+<xs:element ref="r1:TimecodeStream12M"/>
+<xs:element ref="r1:Timecode"/>
+<xs:element ref="r1:EssenceGroup"/>
+<xs:element ref="r1:GPITrigger"/>
+<xs:element ref="r1:CommentMarker"/>
+<xs:element ref="r1:DescriptiveMarker"/>
+<xs:element ref="r1:DynamicMarker"/>
+<xs:element ref="r1:DynamicClip"/>
+<xs:element ref="r1:EdgeCode"/>
+<xs:element ref="r1:Filler"/>
+<xs:element ref="r1:OperationGroup"/>
+<xs:element ref="r1:ScopeReference"/>
+<xs:element ref="r1:Selector"/>
+<xs:element ref="r1:NestedScope"/>
+<xs:element ref="r1:Pulldown"/>
+<xs:element ref="r1:Sequence"/>
+<xs:element ref="r1:SourceClip"/>
+<xs:element ref="r1:DescriptiveClip"/>
+<xs:element ref="r1:HTMLClip"/>
+<xs:element ref="r1:Transition"/>
+<xs:element ref="r1:Dictionary"/>
+<xs:element ref="r1:TaggedValue"/>
+<xs:element ref="r1:KLVData"/>
+<xs:element ref="r1:PackageMarker"/>
+<xs:element ref="r1:ApplicationObject"/>
+<xs:element ref="r1:ApplicationPlugInObject"/>
+<xs:element ref="r1:ApplicationReferencedObject"/>
+<xs:element ref="r1:EssenceData"/>
+<xs:element ref="r1:AIFCDescriptor"/>
+<xs:element ref="r1:DateTimeDescriptor"/>
+<xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r1:RP217Descriptor"/>
+<xs:element ref="r1:AuxDataEssenceDescriptor"/>
+<xs:element ref="r1:DCTimedTextDescriptor"/>
+<xs:element ref="r1:VBIDataDescriptor"/>
+<xs:element ref="r1:ANCDataDescriptor"/>
+<xs:element ref="r1:HTMLParsedTextDescriptor"/>
+<xs:element ref="r1:XMLDescriptor"/>
+<xs:element ref="r1:STLDescriptor"/>
+<xs:element ref="r1:MultipleDescriptor"/>
+<xs:element ref="r1:HTMLDescriptor"/>
+<xs:element ref="r1:RGBADescriptor"/>
+<xs:element ref="r1:TIFFPictureEssenceDescriptor"/>
+<xs:element ref="r1:CDCIDescriptor"/>
+<xs:element ref="r1:MPEGVideoDescriptor"/>
+<xs:element ref="r1:VC1VideoDescriptor"/>
+<xs:element ref="r1:TIFFDescriptor"/>
+<xs:element ref="r1:WAVEDescriptor"/>
+<xs:element ref="r1:SoundDescriptor"/>
+<xs:element ref="r1:WAVEPCMDescriptor"/>
+<xs:element ref="r1:AES3PCMDescriptor"/>
+<xs:element ref="r1:DCPCMSoundDescriptor"/>
+<xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:ImportDescriptor"/>
+<xs:element ref="r1:BWFImportDescriptor"/>
+<xs:element ref="r1:AuxiliaryDescriptor"/>
+<xs:element ref="r1:RecordingDescriptor"/>
+<xs:element ref="r1:FilmDescriptor"/>
+<xs:element ref="r1:TapeDescriptor"/>
+<xs:element ref="r2:DM_AS_11_Segmentation_Framework"/>
+<xs:element ref="r3:EBUCoreMainFramework"/>
+<xs:element ref="r1:ProductionFramework"/>
+<xs:element ref="r1:ClipFramework"/>
+<xs:element ref="r1:SceneFramework"/>
+<xs:element ref="r1:CryptographicFramework"/>
+<xs:element ref="r1:TextBasedFramework"/>
+<xs:element ref="r1:EIDRFramework"/>
+<xs:element ref="r2:DM_AS_11_Core_Framework"/>
+<xs:element ref="r4:DM_AS_11_UKDPP_Framework"/>
+<xs:element ref="r1:TextLocator"/>
+<xs:element ref="r1:NetworkLocator"/>
+<xs:element ref="r1:Preface"/>
+<xs:element ref="r1:RIFFChunk"/>
+<xs:element ref="r1:Identification"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="GeographicAreaStrongReference" type="r0:GeographicAreaStrongReference"/>
 <xs:complexType name="GeographicPolygonStrongReference">
 <xs:choice>
-<!--Reference type urn:smpte:ul:060e2b34.027f0101.0e020302.02000000 not found.-->
+<xs:element ref="r1:CompositionPackage"/>
+<xs:element ref="r1:MaterialPackage"/>
+<xs:element ref="r1:SourcePackage"/>
+<xs:element ref="r3:contact"/>
+<xs:element ref="r3:audioStreamFormat"/>
+<xs:element ref="r3:captioning"/>
+<xs:element ref="r3:title"/>
+<xs:element ref="r3:statusGroup"/>
+<xs:element ref="r3:technicalAttributeUInt8"/>
+<xs:element ref="r3:temporal"/>
+<xs:element ref="r3:track"/>
+<xs:element ref="r3:type"/>
+<xs:element ref="r3:height"/>
+<xs:element ref="r3:audioProgramme"/>
+<xs:element ref="r3:medium"/>
+<xs:element ref="r3:audioTrackUID"/>
+<xs:element ref="r3:publicationService"/>
+<xs:element ref="r3:technicalAttributeRational"/>
+<xs:element ref="r3:role"/>
+<xs:element ref="r3:technicalAttributeInt16"/>
+<xs:element ref="r3:part"/>
+<xs:element ref="r3:imageFormat"/>
+<xs:element ref="r3:genre"/>
+<xs:element ref="r3:dimension"/>
+<xs:element ref="r3:loudnessMetadata"/>
+<xs:element ref="r3:rights"/>
+<xs:element ref="r3:technicalAttributeInt32"/>
+<xs:element ref="r3:audioObject"/>
+<xs:element ref="r3:region"/>
+<xs:element ref="r3:coverage"/>
+<xs:element ref="r3:basicRelation"/>
+<xs:element ref="r3:publicationChannel"/>
+<xs:element ref="r3:technicalAttributeAnyURI"/>
+<xs:element ref="r3:publicationEvent"/>
+<xs:element ref="r3:signingFormat"/>
+<xs:element ref="r3:audioBlockMatrix"/>
+<xs:element ref="r3:format"/>
+<xs:element ref="r3:date"/>
+<xs:element ref="r3:locator"/>
+<xs:element ref="r3:details"/>
+<xs:element ref="r3:technicalAttributeUInt64"/>
+<xs:element ref="r3:metadataSchemaInformation"/>
+<xs:element ref="r3:technicalAttributeString"/>
+<xs:element ref="r3:codec"/>
+<xs:element ref="r3:metadataFormat"/>
+<xs:element ref="r3:subtitling"/>
+<xs:element ref="r3:location"/>
+<xs:element ref="r3:textualAnnotation"/>
+<xs:element ref="r3:audioChannelFormat"/>
+<xs:element ref="r3:audioFormatExtended"/>
+<xs:element ref="r3:technicalAttributeFloat"/>
+<xs:element ref="r3:aspectRatio"/>
+<xs:element ref="r3:objectType"/>
+<xs:element ref="r3:periodOfTime"/>
+<xs:element ref="r3:technicalAttributeInt8"/>
+<xs:element ref="r3:alternativeTitle"/>
+<xs:element ref="r3:organization"/>
+<xs:element ref="r3:dataFormat"/>
+<xs:element ref="r3:videoNoiseFilter"/>
+<xs:element ref="r3:audioBlockMatrixCoefficient"/>
+<xs:element ref="r3:planning"/>
+<xs:element ref="r3:width"/>
+<xs:element ref="r3:audioFormat"/>
+<xs:element ref="r3:targetAudience"/>
+<xs:element ref="r3:IDRef"/>
+<xs:element ref="r3:technicalAttributeUInt16"/>
+<xs:element ref="r3:packageInfo"/>
+<xs:element ref="r3:formatGroup"/>
+<xs:element ref="r3:version"/>
+<xs:element ref="r3:customRelation"/>
+<xs:element ref="r3:typeGroup"/>
+<xs:element ref="r3:audioTrackFormat"/>
+<xs:element ref="r3:entity"/>
+<xs:element ref="r3:countryType"/>
+<xs:element ref="r3:subject"/>
+<xs:element ref="r3:publicationHistory"/>
+<xs:element ref="r3:videoFormat"/>
+<xs:element ref="r3:partMetadata"/>
+<xs:element ref="r3:time"/>
+<xs:element ref="r3:description"/>
+<xs:element ref="r3:spatial"/>
+<xs:element ref="r3:audioContent"/>
+<xs:element ref="r3:technicalAttributeUInt32"/>
+<xs:element ref="r3:audioPackFormat"/>
+<xs:element ref="r3:compoundName"/>
+<xs:element ref="r3:language"/>
+<xs:element ref="r3:hash"/>
+<xs:element ref="r3:publicationMedium"/>
+<xs:element ref="r3:audioMXFLookup"/>
+<xs:element ref="r3:rating"/>
+<xs:element ref="r3:ancillaryData"/>
+<xs:element ref="r3:coordinates"/>
+<xs:element ref="r3:coreMetadata"/>
+<xs:element ref="r3:timecodeFormat"/>
+<xs:element ref="r3:department"/>
+<xs:element ref="r3:audioBlockFormat"/>
+<xs:element ref="r3:basicLink"/>
+<xs:element ref="r3:technicalAttributeInt64"/>
+<xs:element ref="r3:containerFormat"/>
+<xs:element ref="r3:dateType"/>
+<xs:element ref="r3:technicalAttributeBoolean"/>
+<xs:element ref="r3:address"/>
+<xs:element ref="r3:identifier"/>
+<xs:element ref="r3:rational"/>
+<xs:element ref="r1:NameValue"/>
+<xs:element ref="r1:Project"/>
+<xs:element ref="r1:Processing"/>
+<xs:element ref="r1:Titles"/>
+<xs:element ref="r1:CueWords"/>
+<xs:element ref="r1:DMS1Identification"/>
+<xs:element ref="r1:GroupRelationship"/>
+<xs:element ref="r1:Keypoint"/>
+<xs:element ref="r1:Location"/>
+<xs:element ref="r1:Organization"/>
+<xs:element ref="r1:Person"/>
+<xs:element ref="r1:Rights"/>
+<xs:element ref="r1:Contract"/>
+<xs:element ref="r1:DeviceParameters"/>
+<xs:element ref="r1:DMS1Annotation"/>
+<xs:element ref="r1:Participant"/>
+<xs:element ref="r1:DMS1Event"/>
+<xs:element ref="r1:Classification"/>
+<xs:element ref="r1:Award"/>
+<xs:element ref="r1:Scripting"/>
+<xs:element ref="r1:CaptionsDescription"/>
+<xs:element ref="r1:SettingPeriod"/>
+<xs:element ref="r1:Branding"/>
+<xs:element ref="r1:Shot"/>
+<xs:element ref="r1:Address"/>
+<xs:element ref="r1:PictureFormat"/>
+<xs:element ref="r1:ContactsList"/>
+<xs:element ref="r1:Communications"/>
+<xs:element ref="r1:Publication"/>
+<xs:element ref="r1:TextBasedObject"/>
+<xs:element ref="r1:GenericStreamTextBasedSet"/>
+<xs:element ref="r1:UTF8TextBasedSet"/>
+<xs:element ref="r1:UTF16TextBasedSet"/>
+<xs:element ref="r1:CryptographicContext"/>
+<xs:element ref="r1:ControlPoint"/>
+<xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
+<xs:element ref="r1:StereoscopicPictureSubDescriptor"/>
+<xs:element ref="r1:JPEG2000SubDescriptor"/>
+<xs:element ref="r1:MCALabelSubDescriptor"/>
+<xs:element ref="r1:GroupOfSoundfieldGroupsLabelSubDescriptor"/>
+<xs:element ref="r1:AudioChannelLabelSubDescriptor"/>
+<xs:element ref="r1:SoundfieldGroupLabelSubDescriptor"/>
+<xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
+<xs:element ref="r1:MPEG4VisualSubDescriptor"/>
+<xs:element ref="r1:AVCSubDescriptor"/>
+<xs:element ref="r1:STLSubDescriptor"/>
+<xs:element ref="r1:OperationsStereoscopicSubDescriptor"/>
+<xs:element ref="r1:ParameterDefinition"/>
+<xs:element ref="r1:KLVDataDefinition"/>
+<xs:element ref="r1:OPDefinition"/>
+<xs:element ref="r1:PluginDefinition"/>
+<xs:element ref="r1:CompressionDefinition"/>
+<xs:element ref="r1:DataDefinition"/>
+<xs:element ref="r1:OperationDefinition"/>
+<xs:element ref="r1:TaggedValueDefinition"/>
+<xs:element ref="r1:InterpolationDefinition"/>
+<xs:element ref="r1:CodecDefinition"/>
+<xs:element ref="r1:ContainerDefinition"/>
+<xs:element ref="r1:ContentStorage"/>
+<xs:element ref="r1:EventTrack"/>
+<xs:element ref="r1:StaticTrack"/>
+<xs:element ref="r1:TimelineTrack"/>
+<xs:element ref="r1:ConstantValue"/>
+<xs:element ref="r1:VaryingValue"/>
+<xs:element ref="r1:TimecodeStream12M"/>
+<xs:element ref="r1:Timecode"/>
+<xs:element ref="r1:EssenceGroup"/>
+<xs:element ref="r1:GPITrigger"/>
+<xs:element ref="r1:CommentMarker"/>
+<xs:element ref="r1:DescriptiveMarker"/>
+<xs:element ref="r1:DynamicMarker"/>
+<xs:element ref="r1:DynamicClip"/>
+<xs:element ref="r1:EdgeCode"/>
+<xs:element ref="r1:Filler"/>
+<xs:element ref="r1:OperationGroup"/>
+<xs:element ref="r1:ScopeReference"/>
+<xs:element ref="r1:Selector"/>
+<xs:element ref="r1:NestedScope"/>
+<xs:element ref="r1:Pulldown"/>
+<xs:element ref="r1:Sequence"/>
+<xs:element ref="r1:SourceClip"/>
+<xs:element ref="r1:DescriptiveClip"/>
+<xs:element ref="r1:HTMLClip"/>
+<xs:element ref="r1:Transition"/>
+<xs:element ref="r1:Dictionary"/>
+<xs:element ref="r1:TaggedValue"/>
+<xs:element ref="r1:KLVData"/>
+<xs:element ref="r1:PackageMarker"/>
+<xs:element ref="r1:ApplicationObject"/>
+<xs:element ref="r1:ApplicationPlugInObject"/>
+<xs:element ref="r1:ApplicationReferencedObject"/>
+<xs:element ref="r1:EssenceData"/>
+<xs:element ref="r1:AIFCDescriptor"/>
+<xs:element ref="r1:DateTimeDescriptor"/>
+<xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r1:RP217Descriptor"/>
+<xs:element ref="r1:AuxDataEssenceDescriptor"/>
+<xs:element ref="r1:DCTimedTextDescriptor"/>
+<xs:element ref="r1:VBIDataDescriptor"/>
+<xs:element ref="r1:ANCDataDescriptor"/>
+<xs:element ref="r1:HTMLParsedTextDescriptor"/>
+<xs:element ref="r1:XMLDescriptor"/>
+<xs:element ref="r1:STLDescriptor"/>
+<xs:element ref="r1:MultipleDescriptor"/>
+<xs:element ref="r1:HTMLDescriptor"/>
+<xs:element ref="r1:RGBADescriptor"/>
+<xs:element ref="r1:TIFFPictureEssenceDescriptor"/>
+<xs:element ref="r1:CDCIDescriptor"/>
+<xs:element ref="r1:MPEGVideoDescriptor"/>
+<xs:element ref="r1:VC1VideoDescriptor"/>
+<xs:element ref="r1:TIFFDescriptor"/>
+<xs:element ref="r1:WAVEDescriptor"/>
+<xs:element ref="r1:SoundDescriptor"/>
+<xs:element ref="r1:WAVEPCMDescriptor"/>
+<xs:element ref="r1:AES3PCMDescriptor"/>
+<xs:element ref="r1:DCPCMSoundDescriptor"/>
+<xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:ImportDescriptor"/>
+<xs:element ref="r1:BWFImportDescriptor"/>
+<xs:element ref="r1:AuxiliaryDescriptor"/>
+<xs:element ref="r1:RecordingDescriptor"/>
+<xs:element ref="r1:FilmDescriptor"/>
+<xs:element ref="r1:TapeDescriptor"/>
+<xs:element ref="r2:DM_AS_11_Segmentation_Framework"/>
+<xs:element ref="r3:EBUCoreMainFramework"/>
+<xs:element ref="r1:ProductionFramework"/>
+<xs:element ref="r1:ClipFramework"/>
+<xs:element ref="r1:SceneFramework"/>
+<xs:element ref="r1:CryptographicFramework"/>
+<xs:element ref="r1:TextBasedFramework"/>
+<xs:element ref="r1:EIDRFramework"/>
+<xs:element ref="r2:DM_AS_11_Core_Framework"/>
+<xs:element ref="r4:DM_AS_11_UKDPP_Framework"/>
+<xs:element ref="r1:TextLocator"/>
+<xs:element ref="r1:NetworkLocator"/>
+<xs:element ref="r1:Preface"/>
+<xs:element ref="r1:RIFFChunk"/>
+<xs:element ref="r1:Identification"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="GeographicPolygonStrongReference" type="r0:GeographicPolygonStrongReference"/>
@@ -1586,6 +2121,8 @@
 <xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
 <xs:element ref="r1:MPEG4VisualSubDescriptor"/>
 <xs:element ref="r1:AVCSubDescriptor"/>
+<xs:element ref="r1:STLSubDescriptor"/>
+<xs:element ref="r1:OperationsStereoscopicSubDescriptor"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="SubDescriptorStrongReference" type="r0:SubDescriptorStrongReference"/>
@@ -2111,14 +2648,17 @@
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
+<xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
 <xs:element ref="r1:VBIDataDescriptor"/>
 <xs:element ref="r1:ANCDataDescriptor"/>
 <xs:element ref="r1:HTMLParsedTextDescriptor"/>
 <xs:element ref="r1:XMLDescriptor"/>
+<xs:element ref="r1:STLDescriptor"/>
 <xs:element ref="r1:MultipleDescriptor"/>
 <xs:element ref="r1:HTMLDescriptor"/>
 <xs:element ref="r1:RGBADescriptor"/>
+<xs:element ref="r1:TIFFPictureEssenceDescriptor"/>
 <xs:element ref="r1:CDCIDescriptor"/>
 <xs:element ref="r1:MPEGVideoDescriptor"/>
 <xs:element ref="r1:VC1VideoDescriptor"/>
@@ -2290,6 +2830,8 @@
 <xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
 <xs:element ref="r1:MPEG4VisualSubDescriptor"/>
 <xs:element ref="r1:AVCSubDescriptor"/>
+<xs:element ref="r1:STLSubDescriptor"/>
+<xs:element ref="r1:OperationsStereoscopicSubDescriptor"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="SubDescriptorStrongReferenceVector" type="r0:SubDescriptorStrongReferenceVector"/>

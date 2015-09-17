@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sun May 17 14:34:48 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r1="http://www.ebu.ch/ebucore/smpte/class13/type" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ebu.ch/ebucore/smpte/class13/type" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Sep 17 15:28:17 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.ebu.ch/ebucore/smpte/class13/group" xmlns:r1="http://www.ebu.ch/ebucore/smpte/class13/type" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.ebu.ch/ebucore/smpte/class13/type" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.ebu.ch/ebucore/smpte/class13/group"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
@@ -274,7 +274,7 @@
 <xs:element name="textualAnnotationStrongReference" type="r1:textualAnnotationStrongReference"/>
 <xs:complexType name="dateTypeStrongReference">
 <xs:choice>
-<xs:element ref="r0:date"/>
+<xs:element ref="r0:dateType"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="dateTypeStrongReference" type="r1:dateTypeStrongReference"/>
@@ -362,12 +362,6 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="countryTypeStrongReference" type="r1:countryTypeStrongReference"/>
-<xs:complexType name="planningEventStrongReference">
-<xs:choice>
-<xs:element ref="r0:publicationEvent"/>
-</xs:choice>
-</xs:complexType>
-<xs:element name="planningEventStrongReference" type="r1:planningEventStrongReference"/>
 <xs:complexType name="audioFormatStrongReference">
 <xs:choice>
 <xs:element ref="r0:audioFormat"/>
@@ -614,18 +608,6 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="timecodeFormatStrongReference" type="r1:timecodeFormatStrongReference"/>
-<xs:simpleType name="partWeakReference">
-<xs:restriction base="reg:TargetType"/>
-</xs:simpleType>
-<xs:element name="partWeakReference" type="r1:partWeakReference"/>
-<xs:simpleType name="formatWeakReference">
-<xs:restriction base="reg:TargetType"/>
-</xs:simpleType>
-<xs:element name="formatWeakReference" type="r1:formatWeakReference"/>
-<xs:simpleType name="rightsWeakReference">
-<xs:restriction base="reg:TargetType"/>
-</xs:simpleType>
-<xs:element name="rightsWeakReference" type="r1:rightsWeakReference"/>
 <xs:complexType name="identifierStrongReferenceSet">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
 <xs:element ref="r0:identifier"/>
@@ -730,7 +712,7 @@
 <xs:element name="textualAnnotationStrongReferenceSet" type="r1:textualAnnotationStrongReferenceSet"/>
 <xs:complexType name="dateTypeStrongReferenceSet">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
-<xs:element ref="r0:date"/>
+<xs:element ref="r0:dateType"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="dateTypeStrongReferenceSet" type="r1:dateTypeStrongReferenceSet"/>
@@ -818,12 +800,6 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="countryTypeStrongReferenceSet" type="r1:countryTypeStrongReferenceSet"/>
-<xs:complexType name="planningEventStrongReferenceSet">
-<xs:choice maxOccurs="unbounded" minOccurs="0">
-<xs:element ref="r0:publicationEvent"/>
-</xs:choice>
-</xs:complexType>
-<xs:element name="planningEventStrongReferenceSet" type="r1:planningEventStrongReferenceSet"/>
 <xs:complexType name="audioFormatStrongReferenceSet">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
 <xs:element ref="r0:audioFormat"/>
@@ -1064,22 +1040,4 @@
 </xs:choice>
 </xs:complexType>
 <xs:element name="timecodeFormatStrongReferenceSet" type="r1:timecodeFormatStrongReferenceSet"/>
-<xs:complexType name="partWeakReferenceSet">
-<xs:sequence>
-<xs:element maxOccurs="unbounded" minOccurs="0" ref="r1:partWeakReference"/>
-</xs:sequence>
-</xs:complexType>
-<xs:element name="partWeakReferenceSet" type="r1:partWeakReferenceSet"/>
-<xs:complexType name="formatWeakReferenceSet">
-<xs:sequence>
-<xs:element maxOccurs="unbounded" minOccurs="0" ref="r1:formatWeakReference"/>
-</xs:sequence>
-</xs:complexType>
-<xs:element name="formatWeakReferenceSet" type="r1:formatWeakReferenceSet"/>
-<xs:complexType name="rightsWeakReferenceSet">
-<xs:sequence>
-<xs:element maxOccurs="unbounded" minOccurs="0" ref="r1:rightsWeakReference"/>
-</xs:sequence>
-</xs:complexType>
-<xs:element name="rightsWeakReferenceSet" type="r1:rightsWeakReferenceSet"/>
 </xs:schema>

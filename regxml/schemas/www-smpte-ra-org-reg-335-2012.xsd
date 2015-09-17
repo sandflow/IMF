@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sun May 17 14:34:48 PDT 2015--><!--By: regxmllib build a10372c61b3bcdf0cacd1b1ffa35a1ac2a082fbc--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Sep 17 15:28:16 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
@@ -15,30 +15,30 @@
 <xs:element name="ZoomRingPosition" type="r0:UInt16"/>
 <xs:element name="OpticalExtenderMagnification" type="r0:UInt16"/>
 <xs:element name="LensAttributes" type="r0:UTF8String"/>
-<xs:element name="AutoExposureMode" type="r0:AUID"/>
+<xs:element name="AutoExposureMode" type="r0:AutoExposureModeType"/>
 <xs:element name="ExposureIndexOfPhotoMeter" type="r0:UInt16"/>
-<xs:element name="AutoFocusSensingAreaSetting" type="r0:UInt8"/>
-<xs:element name="ColorCorrectionFilterWheelSetting" type="r0:UInt8"/>
+<xs:element name="AutoFocusSensingAreaSetting" type="r0:AutoFocusSensingAreaSettingType"/>
+<xs:element name="ColorCorrectionFilterWheelSetting" type="r0:ColorCorrectionFilterWheelSettingType"/>
 <xs:element name="NeutralDensityFilterWheelSetting" type="r0:UInt16"/>
 <xs:element name="ImageSensorDimensionEffectiveWidth" type="r0:UInt16"/>
-<xs:element name="ImageSensorDimensionEffectiveHeight" type="r0:UInt8"/>
+<xs:element name="ImageSensorDimensionEffectiveHeight" type="r0:UInt16"/>
 <xs:element name="CaptureFrameRate" type="r0:Rational"/>
-<xs:element name="ImageSensorReadoutMode" type="r0:UInt8"/>
+<xs:element name="ImageSensorReadoutMode" type="r0:ImageSensorReadoutModeType"/>
 <xs:element name="ShutterSpeedAngle" type="r0:UInt32"/>
 <xs:element name="ShutterSpeedTime" type="r0:Rational"/>
 <xs:element name="CameraMasterGainAdjustment" type="r0:Int16"/>
 <xs:element name="ISOSensitivity" type="r0:UInt16"/>
 <xs:element name="ColorMatrix" type="r0:RationalArray"/>
 <xs:element name="ElectricalExtenderMagnification" type="r0:UInt16"/>
-<xs:element name="AutoWhiteBalanceMode" type="r0:UInt8"/>
+<xs:element name="AutoWhiteBalanceMode" type="r0:AutoWhiteBalanceModeType"/>
 <xs:element name="WhiteBalance" type="r0:UInt16"/>
 <xs:element name="CameraMasterBlackLevel" type="r0:Int16"/>
-<xs:element name="CameraKneePoint" type="r0:UInt8"/>
+<xs:element name="CameraKneePoint" type="r0:UInt16"/>
 <xs:element name="CameraKneeSlope" type="r0:Rational"/>
 <xs:element name="CameraLuminanceDynamicRange" type="r0:UInt16"/>
 <xs:element name="TransferCharacteristic" type="r0:TransferCharacteristicType"/>
 <xs:element name="GammaForCDL" type="r0:UInt8"/>
-<xs:element name="ASCCDLV12" type="r0:HalfFloatArray10"/>
+<xs:element name="ASCCDLV12" type="r0:HalfFloatArray"/>
 <xs:element name="CameraSettingFileURI" type="r0:UTF8String"/>
 <xs:element name="CameraAttributes" type="r0:UTF8String"/>
 <xs:element name="UDAMSetIdentifier" type="r0:AUID"/>
@@ -149,6 +149,10 @@
 <xs:element name="SampleIndex" type="r0:Stream"/>
 <xs:element name="EssenceStreamID" type="r0:UInt32"/>
 <xs:element name="IndexStreamID" type="r0:UInt32"/>
+<xs:element name="PrecedingIndexTable" type="r0:Boolean"/>
+<xs:element name="SingularPartitionUsage" type="r0:Boolean"/>
+<xs:element name="FollowingIndexTable" type="r0:Boolean"/>
+<xs:element name="IsSparse" type="r0:Boolean"/>
 <xs:element name="Locators" type="r0:LocatorStrongReferenceVector"/>
 <xs:element name="SubDescriptors" type="r0:SubDescriptorStrongReferenceVector"/>
 <xs:element name="SampleRate" type="r0:Rational"/>
@@ -238,6 +242,7 @@
 <xs:element name="OperationalPattern" type="r0:AUID"/>
 <xs:element name="EssenceContainers" type="r0:AUIDSet"/>
 <xs:element name="DescriptiveSchemes" type="r0:AUIDSet"/>
+<xs:element name="IsRIPPresent" type="r0:Boolean"/>
 <xs:element name="ApplicationSupplierName" type="r0:UTF16String"/>
 <xs:element name="ApplicationName" type="r0:UTF16String"/>
 <xs:element name="ApplicationVersion" type="r0:ProductVersionType"/>
@@ -285,6 +290,9 @@
 <xs:element name="KLVDataValue" type="r0:Opaque"/>
 <xs:element name="DescribedTrackIDs" type="r0:UInt32Set"/>
 <xs:element name="DescriptiveFrameworkObject" type="r0:DescriptiveFrameworkStrongReference"/>
+<xs:element name="DescriptiveMetadataPlugInID" type="r0:UUID"/>
+<xs:element name="DescriptiveMetadataScheme" type="r0:AUID"/>
+<xs:element name="DescriptiveMetadataApplicationEnvironmentID" type="r0:UTF16String"/>
 <xs:element name="AudioSampleRate" type="r0:Rational"/>
 <xs:element name="Locked" type="r0:Boolean"/>
 <xs:element name="AudioReferenceLevel" type="r0:Int8"/>
@@ -404,7 +412,7 @@
 <xs:element name="MCATagSymbol" type="r0:UTF16String"/>
 <xs:element name="MCATagName" type="r0:UTF16String"/>
 <xs:element name="MCAChannelID" type="r0:UInt32"/>
-<xs:element name="RFC5646AudioLanguageCode" type="r0:ISO7"/>
+<xs:element name="RFC5646SpokenLanguage" type="r0:ISO7"/>
 <xs:element name="MCATitle" type="r0:UTF16String"/>
 <xs:element name="MCATitleVersion" type="r0:UTF16String"/>
 <xs:element name="MCATitleSubVersion" type="r0:UTF16String"/>
@@ -414,7 +422,7 @@
 <xs:element name="MCAAudioContentKind" type="r0:UTF16String"/>
 <xs:element name="MCAAudioElementKind" type="r0:UTF16String"/>
 <xs:element name="SoundfieldGroupLinkID" type="r0:UUID"/>
-<xs:element name="GroupOfSoundfieldGroupsLinkID" type="r0:AUIDSet"/>
+<xs:element name="GroupOfSoundfieldGroupsLinkID" type="r0:UUIDArray"/>
 <xs:element name="AVCConstantBPictureFlag" type="r0:Boolean"/>
 <xs:element name="AVCCodedContentKind" type="r0:AVCContentScanningType"/>
 <xs:element name="AVCClosedGOPIndicator" type="r0:Boolean"/>
@@ -430,6 +438,12 @@
 <xs:element name="AVCSequenceParameterSetFlag" type="r0:UInt8"/>
 <xs:element name="AVCPictureParameterSetFlag" type="r0:UInt8"/>
 <xs:element name="AVCAverageBitRate" type="r0:UInt32"/>
+<xs:element name="EventTextKind" type="r0:AUID"/>
+<xs:element name="EventTextLanguageCode" type="r0:UTF16String"/>
+<xs:element name="STLReferencePointTimecode" type="r0:PositionType"/>
+<xs:element name="STLLineNumber" type="r0:UInt8"/>
+<xs:element name="StereoscopicEyeID" type="r0:AUID"/>
+<xs:element name="StereoscopicDataEssenceCoding" type="r0:AUID"/>
 <xs:element name="ParentClass" type="r0:ClassDefinitionWeakReference"/>
 <xs:element name="Properties" type="r0:PropertyDefinitionStrongReferenceSet"/>
 <xs:element name="IsConcrete" type="r0:Boolean"/>
@@ -477,8 +491,11 @@
 <xs:element name="PositionTableCount" type="r0:UInt8"/>
 <xs:element name="DeltaEntryArray" type="r0:DeltaEntryArray"/>
 <xs:element name="IndexEntryArray" type="r0:IndexEntryArray"/>
-<xs:element name="CBEStartOffset" type="r0:UInt64"/>
-<xs:element name="VBEEndOffset" type="r0:UInt64"/>
+<xs:element name="ExtStartOffset" type="r0:UInt64"/>
+<xs:element name="VBEByteCount" type="r0:UInt64"/>
+<xs:element name="SingleIndexLocation" type="r0:Boolean"/>
+<xs:element name="SingleEssenceLocation" type="r0:Boolean"/>
+<xs:element name="ForwardIndexDirection" type="r0:Boolean"/>
 <xs:element name="LinkedDescriptiveObjectPluginID" type="r0:DescriptiveMarkerGlobalReference"/>
 <xs:element name="LinkedDescriptiveFrameworkPluginID" type="r0:DescriptiveMarkerGlobalReference"/>
 <xs:element name="IntegrationIndication" type="r0:UTF16String"/>
@@ -489,7 +506,7 @@
 <xs:element name="AwardObjects" type="r0:DescriptiveObjectStrongReferenceSet"/>
 <xs:element name="ProductionSettingPeriodObjects" type="r0:DescriptiveObjectStrongReferenceSet"/>
 <xs:element name="ClipKind" type="r0:UTF16String"/>
-<xs:element name="ClipNumber_ISO7" type="r0:ISO7"/>
+<xs:element name="ClipNumber" type="r0:ISO7"/>
 <xs:element name="ExtendedClipID" type="r0:UMID"/>
 <xs:element name="ClipCreationDateTime" type="r0:TimeStamp"/>
 <xs:element name="TakeNumber" type="r0:UInt16"/>
@@ -498,7 +515,7 @@
 <xs:element name="ClipShotObjects" type="r0:DescriptiveObjectStrongReferenceSet"/>
 <xs:element name="DeviceParametersObjects" type="r0:DescriptiveObjectStrongReferenceSet"/>
 <xs:element name="ProcessingObject" type="r0:DescriptiveObjectStrongReference"/>
-<xs:element name="SceneNumber_ISO7" type="r0:ISO7"/>
+<xs:element name="SceneNumber" type="r0:ISO7"/>
 <xs:element name="SceneSettingPeriodObjects" type="r0:DescriptiveObjectStrongReferenceSet"/>
 <xs:element name="SceneShotObjects" type="r0:DescriptiveObjectStrongReferenceSet"/>
 <xs:element name="MainTitle" type="r0:UTF16String"/>
@@ -612,7 +629,7 @@
 <xs:element name="CentralTelephoneNumber" type="r0:ISO7"/>
 <xs:element name="TelephoneNumber" type="r0:ISO7"/>
 <xs:element name="MobileTelephoneNumber" type="r0:ISO7"/>
-<xs:element name="FaxNumber_ISO7" type="r0:ISO7"/>
+<xs:element name="FaxNumber" type="r0:ISO7"/>
 <xs:element name="EmailAddress" type="r0:UTF16String"/>
 <xs:element name="ContactWebPage" type="r0:UTF16String"/>
 <xs:element name="SupplyContractNumber" type="r0:ISO7"/>
