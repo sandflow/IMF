@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://www.smpte-ra.org/schemas/2067-3/2013"
-  xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/2013"
+<xs:schema targetNamespace="http://www.smpte-ra.org/schemas/2067-3/1.1/temporary"
+  xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/1.1/temporary"
   xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
-  xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:import namespace="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"/>
   <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
@@ -190,6 +191,7 @@
           <xs:element name="TrackFileId" type="dcml:UUIDType"/>
           <xs:element name="KeyId" type="dcml:UUIDType" minOccurs="0"/>
           <xs:element name="Hash" type="xs:base64Binary" minOccurs="0"/>
+          <xs:element name="HashAlgorithm" type="ds:DigestMethodType" minOccurs="0"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
