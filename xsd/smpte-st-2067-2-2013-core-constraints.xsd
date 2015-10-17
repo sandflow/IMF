@@ -4,10 +4,12 @@
         xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/2013"
         xmlns:cc="http://www.smpte-ra.org/schemas/2067-2/2013"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
         elementFormDefault="qualified"
         attributeFormDefault="unqualified">
 
     <xs:import namespace="http://www.smpte-ra.org/schemas/2067-3/2013" /> 
+    <xs:import namespace="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"/>
 
     <xs:element name="TimedTextResourceID" type="dcml:UUIDType"/>
     <xs:element name="ApplicationIdentification"> 
