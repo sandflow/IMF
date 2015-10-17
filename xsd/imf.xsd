@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="misc/w3c-xmldsig-core.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/" schemaLocation="misc/smpte-st-433-2008-amd1-dcmlTypes.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/schemas/429-8/2007/PKL" schemaLocation="misc/smpte-st-429-8-2007-pkl.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/schemas/2067-3/2013" schemaLocation="smpte-st2067-3-2013-cpl.xsd"/>
+    <xs:import namespace="http://www.smpte-ra.org/schemas/2067-2/2013" schemaLocation="smpte-st-2067-2-2013-core-constraints.xsd"/>
+    <xs:include schemaLocation="regxml/include.xsd"/>
+</xs:schema>
