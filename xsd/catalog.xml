@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="http://www.w3.org/2000/09/xmldsig#" uri="misc/w3c-xmldsig-core.xsd"/>
+    <uri name="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/" uri="misc/smpte-st-433-2008-amd1-dcmlTypes.xsd"/>
+    <uri name="http://www.smpte-ra.org/schemas/429-8/2007/PKL" uri="misc/smpte-st-429-8-2007-pkl.xsd"/>
+    <uri name="http://www.smpte-ra.org/schemas/2067-3/2013" uri="smpte-st-2067-3-2013-cpl.xsd"/>
+    <uri name="http://www.smpte-ra.org/schemas/2067-2/2013" uri="smpte-st-2067-2-2013-core-constraints.xsd"/>
+    
+    <uri name="http://sandflow.com/ns/SMPTEST2001-1/baseline" uri="regxml/reg.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/395/2014" uri="regxml/www-smpte-ra-org-reg-395-2014.xsd"/>
+    <uri name="http://www.ebu.ch/ebucore/smpte/class13/element" uri="regxml/www-ebu-ch-ebucore-smpte-class13-element.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as_common" uri="regxml/www-smpte-ra-org-reg-395-2014-13-1-amwa-as-common.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/as11" uri="regxml/www-smpte-ra-org-reg-2003-2012-13-1-amwa-as11.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as11" uri="regxml/www-smpte-ra-org-reg-335-2012-13-1-amwa-as11.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/335/2012" uri="regxml/www-smpte-ra-org-reg-335-2012.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/2003/2012" uri="regxml/www-smpte-ra-org-reg-2003-2012.xsd"/>
+    <uri name="http://www.ebu.ch/ebucore/smpte/class13/group" uri="regxml/www-ebu-ch-ebucore-smpte-class13-group.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" uri="regxml/www-smpte-ra-org-reg-395-2014-13-1-aaf.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" uri="regxml/www-smpte-ra-org-reg-395-2014-13-1-amwa-as11.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/2003/2012/13/12/as11" uri="regxml/www-smpte-ra-org-reg-2003-2012-13-12-as11.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/335/2012/13/12/as11" uri="regxml/www-smpte-ra-org-reg-335-2012-13-12-as11.xsd"/>
+    <uri name="http://www.ebu.ch/ebucore/smpte/class13/type" uri="regxml/www-ebu-ch-ebucore-smpte-class13-type.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" uri="regxml/www-smpte-ra-org-reg-335-2012-13-1-aaf.xsd"/>
+    <uri name="http://www.smpte-ra.org/reg/395/2014/13/12/as11" uri="regxml/www-smpte-ra-org-reg-395-2014-13-12-as11.xsd"/>
+</catalog>
