@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
-        targetNamespace="http://www.smpte-ra.org/schemas/2067-2/1.1/temporary"
-        xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/1.1/temporary"
-        xmlns:cc="http://www.smpte-ra.org/schemas/2067-2/1.1/temporary"
+        targetNamespace="http://www.smpte-ra.org/schemas/2067-2/experimental-1.1-20151018"
+        xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/experimental-1.1-20151018"
+        xmlns:cc="http://www.smpte-ra.org/schemas/2067-2/experimental-1.1-20151018"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
         elementFormDefault="qualified"
         attributeFormDefault="unqualified">
 
-    <xs:import namespace="http://www.smpte-ra.org/schemas/2067-3/1.1/temporary" /> 
+    <xs:import namespace="http://www.smpte-ra.org/schemas/2067-3/experimental-1.1-20151018" /> 
     <xs:import namespace="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"/>
 
     <xs:element name="TimedTextResourceID" type="dcml:UUIDType"/>

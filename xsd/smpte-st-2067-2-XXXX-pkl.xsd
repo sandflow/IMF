@@ -1,7 +1,7 @@
-<xs:schema targetNamespace="http://www.smpte-ra.org/schemas/2067-2/1.1/temporary/PKL"
+<xs:schema targetNamespace="http://www.smpte-ra.org/schemas/2067-2/experimental-1.1-20151018/PKL"
 xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
 xmlns:xs="http://www.w3.org/2001/XMLSchema"
-xmlns:pkl="http://www.smpte-ra.org/schemas/2067-2/1.1/temporary/PKL"
+xmlns:pkl="http://www.smpte-ra.org/schemas/2067-2/experimental-1.1-20151018/PKL"
 elementFormDefault="qualified" attributeFormDefault="unqualified">
 
     <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"/>

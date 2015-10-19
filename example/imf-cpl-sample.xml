@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CompositionPlaylist xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
- xmlns="http://www.smpte-ra.org/schemas/2067-3/1.1/temporary"
- xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/1.1/temporary"
+<CompositionPlaylist
+    xmlns="http://www.smpte-ra.org/schemas/2067-3/experimental-1.1-20151018"
+ xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+ xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/experimental-1.1-20151018"
  xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
- xmlns:aXX="http://an.example/schema/"
+ xmlns:cc="http://www.smpte-ra.org/schemas/2067-2/experimental-1.1-20151018"
+ xmlns:app2e="http://www.smpte-ra.org/schemas/2067-21/experimental-1.1-20151018"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Id>urn:uuid:2502ffe2-4c64-4cf7-8e91-168344eb67df</Id>
     <IssueDate>2013-09-19T18:52:45</IssueDate>
@@ -199,6 +201,11 @@
             </RegionList>
         </Locale>
     </LocaleList>
+    <ExtensionProperties>
+        <cc:ApplicationIdentification>http://www.smpte-ra.org/schemas/2067-21/experimental-1.1-20151018</cc:ApplicationIdentification>
+        <app2e:MaxFALL>dadsasd</app2e:MaxFALL>
+        <app2e:MaxCLL>dasd</app2e:MaxCLL>
+    </ExtensionProperties>
     <SegmentList>
         <Segment>
             <Id>urn:uuid:CA3B4Cff-0FB6-b3CB-AfCB-bDDAa1146af3</Id>
@@ -217,7 +224,7 @@
                         </Resource>
                     </ResourceList>
                 </MarkerSequence>
-                <aXX:MainImageSequence>
+                <cc:MainImageSequence>
                     <Id>urn:uuid:a721ff64-b711-4320-ba8b-34f947c270c2</Id>
                     <TrackId>urn:uuid:4aceffd8-7184-45c7-9610-45b015dad6db</TrackId>
                     <ResourceList>
@@ -230,8 +237,8 @@
                             <TrackFileId>urn:uuid:6e179467-f1c6-480f-b8f0-2c8c993cce36</TrackFileId>
                         </Resource>
                     </ResourceList>
-                </aXX:MainImageSequence>
-                <aXX:MainAudioSequence>
+                </cc:MainImageSequence>
+                <cc:MainAudioSequence>
                     <Id>urn:uuid:204c1c34-6270-4ae8-8115-48aba7788068</Id>
                     <TrackId>urn:uuid:38d52c00-68d3-4056-8858-28eeaf3238d3</TrackId>
                     <ResourceList>
@@ -242,7 +249,7 @@
                             <TrackFileId>urn:uuid:b3773cf5-82a7-412f-a6a9-902b58a4af11</TrackFileId>
                         </Resource>
                     </ResourceList>
-                </aXX:MainAudioSequence>
+                </cc:MainAudioSequence>
             </SequenceList>
         </Segment>
     </SegmentList>
