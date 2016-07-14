@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Sep 17 15:28:16 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Jul 14 16:23:34 PDT 2016--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
@@ -6,12 +6,8 @@
 <xs:element name="IrisFNumber" type="r0:UInt16"/>
 <xs:element name="IrisTNumber" type="r0:UInt16"/>
 <xs:element name="IrisRingPosition" type="r0:UInt16"/>
-<xs:element name="FocusPositionFromImagePlane" type="r0:LensSerialHalfFloat"/>
-<xs:element name="FocusPositionFromFrontLensVertex" type="r0:LensSerialHalfFloat"/>
 <xs:element name="FocusRingPosition" type="r0:UInt16"/>
 <xs:element name="MacroSetting" type="r0:Boolean"/>
-<xs:element name="LensZoom35mmStillCameraEquivalent" type="r0:LensSerialHalfFloat"/>
-<xs:element name="LensZoomActualFocalLength" type="r0:LensSerialHalfFloat"/>
 <xs:element name="ZoomRingPosition" type="r0:UInt16"/>
 <xs:element name="OpticalExtenderMagnification" type="r0:UInt16"/>
 <xs:element name="LensAttributes" type="r0:UTF8String"/>
@@ -38,7 +34,6 @@
 <xs:element name="CameraLuminanceDynamicRange" type="r0:UInt16"/>
 <xs:element name="TransferCharacteristic" type="r0:TransferCharacteristicType"/>
 <xs:element name="GammaForCDL" type="r0:UInt8"/>
-<xs:element name="ASCCDLV12" type="r0:HalfFloatArray"/>
 <xs:element name="CameraSettingFileURI" type="r0:UTF8String"/>
 <xs:element name="CameraAttributes" type="r0:UTF8String"/>
 <xs:element name="UDAMSetIdentifier" type="r0:AUID"/>
@@ -695,5 +690,13 @@
 <xs:element name="CipherAlgorithm" type="r0:AUID"/>
 <xs:element name="CryptographicKeyID" type="r0:UUID"/>
 <xs:element name="MICAlgorithm" type="r0:AUID"/>
+<xs:element name="TextBasedObject" type="r0:TextBasedObjectStrongReference"/>
+<xs:element name="GenericStreamID" type="r0:UInt32"/>
+<xs:element name="UTF8TextData" type="r0:UTF8String"/>
+<xs:element name="UTF16TextData" type="r0:UTF16String"/>
+<xs:element name="TextBasedMetadataPayloadSchemeID" type="r0:AUID"/>
+<xs:element name="TextMIMEMediaType" type="r0:UTF16String"/>
+<xs:element name="RFC5646TextLanguageCode" type="r0:UTF16String"/>
+<xs:element name="TextDataDescription" type="r0:UTF16String"/>
 <xs:element name="EIDRDMSEssenceID" type="r0:CanonicalEIDRIdentifierType"/>
 </xs:schema>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Sep 17 15:28:16 CEST 2015--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Jul 14 16:23:34 PDT 2016--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
@@ -3563,6 +3563,7 @@
 <xs:element name="TextBasedFramework">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:TextBasedObject"/>
 <xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
@@ -3575,6 +3576,11 @@
 <xs:element name="GenericStreamTextBasedSet">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:GenericStreamID"/>
+<xs:element ref="r0:TextMIMEMediaType"/>
+<xs:element ref="r0:TextBasedMetadataPayloadSchemeID"/>
+<xs:element minOccurs="0" ref="r0:TextDataDescription"/>
+<xs:element ref="r0:RFC5646TextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
@@ -3587,6 +3593,11 @@
 <xs:element name="UTF8TextBasedSet">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:UTF8TextData"/>
+<xs:element ref="r0:TextMIMEMediaType"/>
+<xs:element ref="r0:TextBasedMetadataPayloadSchemeID"/>
+<xs:element minOccurs="0" ref="r0:TextDataDescription"/>
+<xs:element ref="r0:RFC5646TextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
@@ -3599,6 +3610,11 @@
 <xs:element name="UTF16TextBasedSet">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:UTF16TextData"/>
+<xs:element ref="r0:TextMIMEMediaType"/>
+<xs:element ref="r0:TextBasedMetadataPayloadSchemeID"/>
+<xs:element minOccurs="0" ref="r0:TextDataDescription"/>
+<xs:element ref="r0:RFC5646TextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
@@ -3611,6 +3627,10 @@
 <xs:element name="TextBasedObject">
 <xs:complexType>
 <xs:all>
+<xs:element ref="r0:TextMIMEMediaType"/>
+<xs:element ref="r0:TextBasedMetadataPayloadSchemeID"/>
+<xs:element minOccurs="0" ref="r0:TextDataDescription"/>
+<xs:element ref="r0:RFC5646TextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>

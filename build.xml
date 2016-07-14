@@ -1,0 +1,79 @@
+<project name="imf-artifacts" default="default" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+
+    <description>Builds regxml schemas and dicts from registers</description>
+
+    <property name="dict.dir" value="dict"/>
+    <property name="schemas.dir" value="xsd/regxml"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="register.dir" value="registers"/>
+    <property name="elements.register" value="${register.dir}/Elements.xml"/>
+    <property name="labels.register" value="${register.dir}/Labels.xml"/>
+    <property name="types.register" value="${register.dir}/Types.xml"/>
+    <property name="groups.register" value="${register.dir}/Groups.xml"/>
+    
+    <path id="lib-classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <!-- Retrive dependencies -->
+
+    <target name="deps" description="retrieve dependencies with ivy">
+        <ivy:retrieve type="jar" pattern="${lib.dir}/[artifact].[ext]" />
+    </target>
+
+    <!-- Generate RegXML XML Schemas -->
+
+    <target name="build-regxml-schema" depends="build-regxml-dict,deps">
+    
+        <fileset dir="${dict.dir}" id="dicts">
+            <include name="*.xml" />
+        </fileset>
+
+        <pathconvert property="dictpaths" refid="dicts" pathsep=" " />
+        
+        <delete>
+            <fileset dir="${schemas.dir}" includes="*.xsd"/>
+        </delete>
+
+        <java classname="com.sandflow.smpte.tools.GenerateDictionaryXMLSchema">
+            <arg value="-d"/>
+            <arg line="${dictpaths}"/>
+            <arg value="-o"/>
+            <arg value="${schemas.dir}"/>
+            <classpath>
+                <path refid="lib-classpath"/>
+            </classpath>
+        </java>
+
+    </target>
+
+    <!--Generate RegXML dictionary-->
+
+    <target name="build-regxml-dict" depends="deps">
+
+        <delete>
+            <fileset dir="${dict.dir}" includes="*.xml"/>
+        </delete>
+
+        <java classname="com.sandflow.smpte.tools.XMLRegistersToDict">
+            <arg value="-e"/>
+            <arg value="${elements.register}"/>
+            <arg value="-l"/>
+            <arg value="${labels.register}"/>
+            <arg value="-g"/>
+            <arg value="${groups.register}"/>
+            <arg value="-t"/>
+            <arg value="${types.register}"/>
+            <arg value="${dict.dir}"/>
+
+            <classpath>
+                <path refid="lib-classpath"/>
+            </classpath>
+        </java>
+    </target>
+
+
+
+</project>

@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CompositionPlaylist
-    xmlns="http://www.smpte-ra.org/schemas/2067-3/experimental-1.1-20151018"
- xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
- xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/experimental-1.1-20151018"
+<!--
+Copyright (c), Society of Motion Pictures and Television Engineers. All rights 
+reserved. 
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are 
+met: 
+
+1. Redistributions of source code must retain the above copyright 
+notice, this list of conditions and the following disclaimer. 
+
+2. Redistributions in binary form must reproduce the above copyright 
+notice, this list of conditions and the following disclaimer in the 
+documentation and/or other materials provided with the distribution. 
+
+3. Neither the name of the copyright holder nor the names of its 
+contributors may be used to endorse or promote products derived from 
+this software without specific prior written permission. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS 
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED 
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+--> 
+
+<!--
+This document is an element of
+
+   SMPTE ST 2067-3:2016,
+
+which is available at http://standards.smpte.org.
+
+
+To ensure interoperability, users are encouraged to:
+
+(a) retain this notice;
+
+(b) retrieve the recent versions of this document and its companion 
+defining engineering document. In particular, this document alone might 
+not be sufficient to ensure interoperability;
+
+(c) highlight and explain any modification they make to this document; and
+
+(d) report issues to the Director of Standards at https://www.smpte.org/about/staff.
+-->
+<CompositionPlaylist xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+ xmlns="http://www.smpte-ra.org/schemas/2067-3/2016"
+ xmlns:cpl="http://www.smpte-ra.org/schemas/2067-3/2016"
  xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
- xmlns:cc="http://www.smpte-ra.org/schemas/2067-2/experimental-1.1-20151018"
- xmlns:app2e="http://www.smpte-ra.org/schemas/2067-21/experimental-1.1-20151018"
+ xmlns:aXX="http://an.example/schema/"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <Id>urn:uuid:2502ffe2-4c64-4cf7-8e91-168344eb67df</Id>
     <IssueDate>2013-09-19T18:52:45</IssueDate>
@@ -201,11 +251,6 @@
             </RegionList>
         </Locale>
     </LocaleList>
-    <ExtensionProperties>
-        <cc:ApplicationIdentification>http://www.smpte-ra.org/schemas/2067-21/experimental-1.1-20151018</cc:ApplicationIdentification>
-        <app2e:MaxFALL>dadsasd</app2e:MaxFALL>
-        <app2e:MaxCLL>dasd</app2e:MaxCLL>
-    </ExtensionProperties>
     <SegmentList>
         <Segment>
             <Id>urn:uuid:CA3B4Cff-0FB6-b3CB-AfCB-bDDAa1146af3</Id>
@@ -224,7 +269,7 @@
                         </Resource>
                     </ResourceList>
                 </MarkerSequence>
-                <cc:MainImageSequence>
+                <aXX:MainImageSequence>
                     <Id>urn:uuid:a721ff64-b711-4320-ba8b-34f947c270c2</Id>
                     <TrackId>urn:uuid:4aceffd8-7184-45c7-9610-45b015dad6db</TrackId>
                     <ResourceList>
@@ -237,8 +282,8 @@
                             <TrackFileId>urn:uuid:6e179467-f1c6-480f-b8f0-2c8c993cce36</TrackFileId>
                         </Resource>
                     </ResourceList>
-                </cc:MainImageSequence>
-                <cc:MainAudioSequence>
+                </aXX:MainImageSequence>
+                <aXX:MainAudioSequence>
                     <Id>urn:uuid:204c1c34-6270-4ae8-8115-48aba7788068</Id>
                     <TrackId>urn:uuid:38d52c00-68d3-4056-8858-28eeaf3238d3</TrackId>
                     <ResourceList>
@@ -249,7 +294,7 @@
                             <TrackFileId>urn:uuid:b3773cf5-82a7-412f-a6a9-902b58a4af11</TrackFileId>
                         </Resource>
                     </ResourceList>
-                </cc:MainAudioSequence>
+                </aXX:MainAudioSequence>
             </SequenceList>
         </Segment>
     </SegmentList>
