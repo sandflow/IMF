@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--Created: Thu Jul 14 16:23:33 PDT 2016--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
+<!--Created: Thu Jul 14 20:51:17 PDT 2016--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
 <SchemeID>urn:uuid:e9ad45b5-abdb-5f16-7ffc-ff560e475a87</SchemeID>
 <SchemeURI>http://www.smpte-ra.org/reg/335/2012</SchemeURI>
 <MetaDefinitions>
@@ -2070,6 +2070,56 @@
 <Description>Specifies the alternate aspect ratio subset(s) of the active area, containing all of the critical action and centered on the active area.</Description>
 <Name>Alternative Center Cuts</Name>
 <Type>urn:smpte:ul:060e2b34.01040101.04030100.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200401.01010000</Identification>
+<Symbol>MasteringDisplayPrimaries</Symbol>
+<Description>Display Primaries metadata as specified in ST 2086</Description>
+<Name>Mastering Display Primaries</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.04020a00.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200401.01020000</Identification>
+<Symbol>MasteringDisplayWhitePointChromaticity</Symbol>
+<Description>
+Chromaticity of White Point metadata as specified in ST 2086
+</Description>
+<Name>Mastering Display White Point Chromaticity</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.03010c00.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200401.01030000</Identification>
+<Symbol>MasteringDisplayMaximumLuminance</Symbol>
+<Description>
+Maximum Display Mastering Luminance metadata as specified in ST 2086
+</Description>
+<Name>Mastering Display Maximum Luminance</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+<IsOptional>true</IsOptional>
+<IsUniqueIdentifier>false</IsUniqueIdentifier>
+<LocalIdentification>0</LocalIdentification>
+<MemberOf>urn:smpte:ul:060e2b34.027f0101.0d010101.01012700</MemberOf>
+</PropertyDefinition>
+<PropertyDefinition>
+<Identification>urn:smpte:ul:060e2b34.0101010e.04200401.01040000</Identification>
+<Symbol>MasteringDisplayMinimumLuminance</Symbol>
+<Description>
+Minimum Display Mastering Luminance metadata as specified in ST 2086
+</Description>
+<Name>Mastering Display Minimum Luminance</Name>
+<Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
 <IsOptional>true</IsOptional>
 <IsUniqueIdentifier>false</IsUniqueIdentifier>
 <LocalIdentification>0</LocalIdentification>

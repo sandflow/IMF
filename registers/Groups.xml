@@ -2816,6 +2816,33 @@
           <LocalTag>0</LocalTag>
           <IsOptional>true</IsOptional>
         </Record>
+     
+<!-- Begin 30MR-REQ-st2067-21-app2e-groups.xml -->
+     
+<Record>
+<UL>urn:smpte:ul:060e2b34.0101010e.04200401.01010000</UL>
+<LocalTag>0</LocalTag>
+<IsOptional>true</IsOptional>
+</Record>
+<Record>
+<UL>urn:smpte:ul:060e2b34.0101010e.04200401.01020000</UL>
+<LocalTag>0</LocalTag>
+<IsOptional>true</IsOptional>
+</Record>
+<Record>
+<UL>urn:smpte:ul:060e2b34.0101010e.04200401.01030000</UL>
+<LocalTag>0</LocalTag>
+<IsOptional>true</IsOptional>
+</Record>
+<Record>
+<UL>urn:smpte:ul:060e2b34.0101010e.04200401.01040000</UL>
+<LocalTag>0</LocalTag>
+<IsOptional>true</IsOptional>
+</Record>
+
+<!-- End 30MR-REQ-st2067-21-app2e-groups.xml -->
+        
+        
       </Contents>
     </Entry>
     <Entry>

@@ -2567,6 +2567,23 @@
       <DefiningDocument>ITU-R BT.2020</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
+    
+<!-- Begin 30MR-REQ-st2067-21-app2e-labels.xml  -->    
+    
+    <Entry>
+<Register>Labels</Register>
+<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+<Symbol>TransferCharacteristic_SMPTEST2084</Symbol>
+<UL>urn:smpte:ul:060e2b34.0401010d.04010101.010a0000</UL>
+<Kind>LEAF</Kind>
+<Name>SMPTE ST 2084 Transfer Characteristic</Name>
+<Definition>Identifies SMPTE ST 2084 transfer characteristic</Definition>
+<DefiningDocument>SMPTE ST 2084</DefiningDocument>
+<IsDeprecated>false</IsDeprecated>
+</Entry>
+
+<!-- End 30MR-REQ-st2067-21-app2e-labels.xml  -->   
+    
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
@@ -2610,6 +2627,28 @@
       <DefiningDocument>SMPTE ST 240</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
+    
+        
+<!-- Begin 30MR-REQ-st2067-21-app2e-labels.xml  -->    
+<Entry>
+<Register>Labels</Register>
+<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+<Symbol>CodingEquations_ITU2020_NCL</Symbol>
+<UL>urn:smpte:ul:060e2b34.0401010d.04010101.02060000</UL>
+<Kind>LEAF</Kind>
+<Name>
+ITU-R BT.2020 Non-Constant Luminance Coding Equations
+</Name>
+<Definition>
+Identifies ITU-R BT.2020 coding equations for non-constant luminance
+</Definition>
+<DefiningDocument>ITU-R BT.2020</DefiningDocument>
+<IsDeprecated>false</IsDeprecated>
+</Entry>
+    
+<!-- End 30MR-REQ-st2067-21-app2e-labels.xml  -->   
+    
+    
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
@@ -2664,6 +2703,36 @@
       <DefiningDocument>ITU-R BT.2020</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
+    
+<!-- Begin 30MR-REQ-st2067-21-app2e-labels.xml  -->    
+    <Entry>
+<Register>Labels</Register>
+<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+<Symbol>ColorPrimaries_P3D65</Symbol>
+<UL>urn:smpte:ul:060e2b34.0401010d.04010101.03060000</UL>
+<Kind>LEAF</Kind>
+<Name>P3D65 Color Primaries</Name>
+<Definition>Identifies P3D65 color primaries and white point</Definition>
+<DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
+<IsDeprecated>false</IsDeprecated>
+</Entry>
+    
+<!-- End 30MR-REQ-st2067-21-app2e-labels.xml  -->    
+
+<Entry>
+<Register>Labels</Register>
+<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+<Symbol>ColorPrimaries_CinemaMezzanine</Symbol>
+<UL>urn:smpte:ul:060e2b34.0401010d.04010101.03080000</UL>
+<Kind>LEAF</Kind>
+<Name>Cinema Mezzanine Color Primaries</Name>
+<Definition>
+Identifies XYZ tristimulus values as specified in ISO 11664-3
+</Definition>
+<DefiningDocument>SMPTE ST 2067-40</DefiningDocument>
+<IsDeprecated>false</IsDeprecated>
+</Entry>
+
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
