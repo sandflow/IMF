@@ -2,34 +2,24 @@
 <!--  -->
 <!-- Please fill these in if you edit this XML file -->
 <!-- author= -->
-<!-- edit_date= -->
 <!-- summary_of_edit= -->
 <!--  -->
 <!-- DO NOT EDIT THIS TAG -->
-<!-- master_commit_tag=v000000061 -->
+<!-- master_commit_tag=v000000079 -->
 <!-- DO NOT EDIT THIS TAG -->
 <!--  -->
 <!--  -->
+<!-- SMPTE METADATA REGISTER -->
+<!-- ####################### -->
 <!--  -->
-<!--  -->
-<!-- DRAFT - SMPTE METADATA REGISTERS XML -->
-<!-- ##################################### -->
-<!--  -->
-<!-- Latest XML Files + Web Views -->
-<!-- ############################ -->
-<!--  -->
-<!-- See http://vm-1042-user.virt.ch.bbc.co.uk/ for the latest XML files and Web Views (tables, etc) of this data which make it easier -->
-<!-- to explore, browse, manually check etc. Login with: -->
-<!-- username: smpte -->
-<!-- password: smpte -->
-<!-- (N.B. Best viewed with the Chrome browser) -->
+<!-- See https://registry.smpte-ra.org for SMPTE Metadata Registers resources. -->
 <!--  -->
 <!-- Editing these XML Files -->
 <!-- ####################### -->
 <!--  -->
 <!-- If you wish to edit one of these XML files please first complete the metadata tags at the top of the file. -->
 <!-- Then edit existing entries in the XML or add new entries. -->
-<!-- When editing the XML file you may delete some or all of the original entries - leaving only those that you are -->
+<!-- When editing the XML file you may delete some or all of the original entries. Leaving only those that you are -->
 <!-- working on may make editing simpler and less error prone. -->
 <!-- If you think that an entry actually needs to be deleted from the Registers please get in touch. -->
 <!-- You must not edit the UL of an entry - doing so would make it look like you want to create a new entry. -->
@@ -2567,23 +2557,29 @@
       <DefiningDocument>ITU-R BT.2020</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
-    
-<!-- Begin 30MR-REQ-st2067-21-app2e-labels.xml  -->    
-    
     <Entry>
-<Register>Labels</Register>
-<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
-<Symbol>TransferCharacteristic_SMPTEST2084</Symbol>
-<UL>urn:smpte:ul:060e2b34.0401010d.04010101.010a0000</UL>
-<Kind>LEAF</Kind>
-<Name>SMPTE ST 2084 Transfer Characteristic</Name>
-<Definition>Identifies SMPTE ST 2084 transfer characteristic</Definition>
-<DefiningDocument>SMPTE ST 2084</DefiningDocument>
-<IsDeprecated>false</IsDeprecated>
-</Entry>
-
-<!-- End 30MR-REQ-st2067-21-app2e-labels.xml  -->   
-    
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>TransferCharacteristic_SMPTEST2084</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.010a0000</UL>
+      <Kind>LEAF</Kind>
+      <Name>SMPTE ST 2084 Transfer Characteristic</Name>
+      <Definition>Identifies SMPTE ST 2084 transfer characteristic</Definition>
+      <DefiningDocument>SMPTE ST 2084</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>TransferCharacteristic_HLG_OETF</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.010b0000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Hybrid Log-Gamma OETF Transfer Characteristic</Name>
+      <Definition>Identifies the Hybrid Log-Gamma reference non-linear transfer function (opto-eletronic transfer function, OETF) defined in ITU-R BT.2100</Definition>
+      <Notes>This is identical to the reference non-linear transfer function (opto-eletronic transfer function, OETF) defined in ARIB STD-B67</Notes>
+      <DefiningDocument>ITU-R BT.2100</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
@@ -2627,28 +2623,40 @@
       <DefiningDocument>SMPTE ST 240</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
-    
-        
-<!-- Begin 30MR-REQ-st2067-21-app2e-labels.xml  -->    
-<Entry>
-<Register>Labels</Register>
-<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
-<Symbol>CodingEquations_ITU2020_NCL</Symbol>
-<UL>urn:smpte:ul:060e2b34.0401010d.04010101.02060000</UL>
-<Kind>LEAF</Kind>
-<Name>
-ITU-R BT.2020 Non-Constant Luminance Coding Equations
-</Name>
-<Definition>
-Identifies ITU-R BT.2020 coding equations for non-constant luminance
-</Definition>
-<DefiningDocument>ITU-R BT.2020</DefiningDocument>
-<IsDeprecated>false</IsDeprecated>
-</Entry>
-    
-<!-- End 30MR-REQ-st2067-21-app2e-labels.xml  -->   
-    
-    
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>CodingEquations_YCgCo</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.02040000</UL>
+      <Kind>LEAF</Kind>
+      <Name>YCgCo Coding Equations</Name>
+      <Definition>Identifies YCgCo coding equations</Definition>
+      <Notes>YCgCo is one of the "Luma and two Chroma" sample formats used in H.264. It utilises a lossless direct integer transform for efficient RGB coding.</Notes>
+      <DefiningDocument>ITU-T H.264</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>CodingEquations_GBR</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.02050000</UL>
+      <Kind>LEAF</Kind>
+      <Name>GBR Coding Equations</Name>
+      <Definition>Identifies a simple transformation of RGB to YC1C2: Y=G; C1=B; C2=R</Definition>
+      <Notes>This identifies the coding equations used for direct encoding of RGB signals, for example in: VC-2 (SMPTE ST 2042-1) and H.264 (ITU-T H.264)</Notes>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>CodingEquations_ITU2020_NCL</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.02060000</UL>
+      <Kind>LEAF</Kind>
+      <Name>ITU-R BT.2020 Non-Constant Luminance Coding Equations</Name>
+      <Definition>Identifies ITU-R BT.2020 coding equations for non-constant luminance</Definition>
+      <DefiningDocument>ITU-R BT.2020</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
@@ -2667,6 +2675,7 @@ Identifies ITU-R BT.2020 coding equations for non-constant luminance
       <Kind>LEAF</Kind>
       <Name>SMPTE 170M Color Primaries</Name>
       <Definition>Identifies SMPTE 170M color primaries and white point</Definition>
+      <Notes>This label is intended to identify the color primaries and white point used by 525-line Standard Definition Digital Television (often referred to loosely as "NTSC" because such a digital signal could be produced by digitising an analog NTSC signal) as defined in ITU-R BT.601 (note: chromaticity coordinates of the color primaries used were only introduced into ITU-R BT.601 in ITU-R BT.601-6). These are identical to the color primaries ("SMPTE C set") and white point defined in SMPTE ST 170. Note that SMPTE ST 170 is deferred to by ITU-R BT.1700 as the defining specification for the analog NTSC signal. Note that ITU-R BT.470 (as of ITU-R BT.470-7) defers to ITU-R BT.1700 as the defining specification for all video signal characteristics.</Notes>
       <DefiningDocument>SMPTE ST 170</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
@@ -2678,6 +2687,7 @@ Identifies ITU-R BT.2020 coding equations for non-constant luminance
       <Kind>LEAF</Kind>
       <Name>ITU-R BT.470 PAL Color Primaries</Name>
       <Definition>Identifies ITU-R BT.470 PAL color primaries and white point (note: used in B, D, G, H, I, N/PAL and B, D, G, H, K, K1, L/SECAM systems)</Definition>
+      <Notes>This label is intended to identify the color primaries and white point used by 625-line Standard Definition Digital Television (often referred to loosely as "PAL" because such a digital signal could be produced by digitising certain analog signals described as "PAL") as defined in ITU-R BT.601 (note: chromaticity coordinates of the color primaries used were only introduced into ITU-R BT.601 in ITU-R BT.601-6). These are identical to the color primaries and white point defined for 625-line PAL in ITU-R BT.1700. Note that ITU-R BT.470 (as of ITU-R BT.470-7) defers to ITU-R BT.1700 as the defining specification for all video signal characteristics.</Notes>
       <DefiningDocument>ITU-R BT.470</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
@@ -2703,36 +2713,51 @@ Identifies ITU-R BT.2020 coding equations for non-constant luminance
       <DefiningDocument>ITU-R BT.2020</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
-    
-<!-- Begin 30MR-REQ-st2067-21-app2e-labels.xml  -->    
     <Entry>
-<Register>Labels</Register>
-<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
-<Symbol>ColorPrimaries_P3D65</Symbol>
-<UL>urn:smpte:ul:060e2b34.0401010d.04010101.03060000</UL>
-<Kind>LEAF</Kind>
-<Name>P3D65 Color Primaries</Name>
-<Definition>Identifies P3D65 color primaries and white point</Definition>
-<DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
-<IsDeprecated>false</IsDeprecated>
-</Entry>
-    
-<!-- End 30MR-REQ-st2067-21-app2e-labels.xml  -->    
-
-<Entry>
-<Register>Labels</Register>
-<NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
-<Symbol>ColorPrimaries_CinemaMezzanine</Symbol>
-<UL>urn:smpte:ul:060e2b34.0401010d.04010101.03080000</UL>
-<Kind>LEAF</Kind>
-<Name>Cinema Mezzanine Color Primaries</Name>
-<Definition>
-Identifies XYZ tristimulus values as specified in ISO 11664-3
-</Definition>
-<DefiningDocument>SMPTE ST 2067-40</DefiningDocument>
-<IsDeprecated>false</IsDeprecated>
-</Entry>
-
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ColorPrimaries_SMPTE_DCDM</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.03050000</UL>
+      <Kind>LEAF</Kind>
+      <Name>SMPTE-DC28 DCDM Color Primaries</Name>
+      <Definition>Identifies SMPTE DC28 D-Cinema Distribution Master color primaries and white point</Definition>
+      <Notes>In DCDM the color primaries are such that the entire CIE XYZ color space can be used</Notes>
+      <DefiningDocument>SMPTE ST 428-1</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ColorPrimaries_P3D65</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.03060000</UL>
+      <Kind>LEAF</Kind>
+      <Name>P3D65 Color Primaries</Name>
+      <Definition>Identifies P3D65 color primaries and white point</Definition>
+      <DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ColorPrimaries_ACES</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.03070000</UL>
+      <Kind>LEAF</Kind>
+      <Name>ACES Color Primaries</Name>
+      <Definition>Identifies ACES SMPTE ST 2065-1 color primaries and white point</Definition>
+      <DefiningDocument>SMPTE ST 2065-1</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ColorPrimaries_CinemaMezzanine</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010101.03080000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Cinema Mezzanine Color Primaries</Name>
+      <Definition>Identifies XYZ tristimulus values as specified in ISO 11664-3</Definition>
+      <DefiningDocument>SMPTE ST 2067-40</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
@@ -8884,6 +8909,213 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC2PictureCodingScheme</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03030000</UL>
+      <Kind>NODE</Kind>
+      <Name>VC-2 Picture Coding Scheme</Name>
+      <Definition>Identifies the VC-2 Picture Coding Scheme</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC2Stream</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03030100</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC-2 Stream</Name>
+      <Definition>Identifies a bitstream as a VC-2 Stream (as defined in SMPTE ST 2042-1)</Definition>
+      <DefiningDocument>SMPTE ST 2042-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ACESPictureCodingSchemes</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03040000</UL>
+      <Kind>NODE</Kind>
+      <Name>ACES Picture Coding Schemes</Name>
+      <Definition>Identifies ACES SMPTE ST 2065-4 Picture Coding Schemes</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ACESUncompressedMonoscopicWithoutAlpha</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03040100</UL>
+      <Kind>LEAF</Kind>
+      <Name>ACES Uncompressed Monoscopic Without Alpha</Name>
+      <Definition>Identifier for ACES SMPTE ST 2065-4 monoscopic uncompressed picture coding without alpha channel</Definition>
+      <DefiningDocument>SMPTE ST 2065-5</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ACESUncompressedMonoscopicWithAlpha</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03040200</UL>
+      <Kind>LEAF</Kind>
+      <Name>ACES Uncompressed Monoscopic With Alpha</Name>
+      <Definition>Identifier for ACES SMPTE ST 2065-4 monoscopic uncompressed picture coding with alpha channel</Definition>
+      <DefiningDocument>SMPTE ST 2065-5</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5PictureCodingScheme</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050000</UL>
+      <Kind>NODE</Kind>
+      <Name>VC-5 Picture Coding Scheme</Name>
+      <Definition>Picture essence coding label for a VC-5 bitstream</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5Part3PictureCodingScheme</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050300</UL>
+      <Kind>NODE</Kind>
+      <Name>VC-5 Part 3 Picture Coding Scheme</Name>
+      <Definition>Picture essence coding label for a VC-5 Part 3 bitstream</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5Part3RGBAPicture</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050301</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC-5 Part 3 RGB(A) Picture</Name>
+      <Definition>Picture essence coding label for a VC-5 Part 3 bitstream with image format RGB(A)</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5Part3YCCAPicture</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050302</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC-5 Part 3 YCC(A) Picture</Name>
+      <Definition>Picture essence coding label for a VC-5 Part 3 bitstream with image format YCC(A)</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5Part3BayerPicture</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050303</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC-5 Part 3 Bayer Picture</Name>
+      <Definition>Picture essence coding label for a VC-5 Part 3 bitstream with Bayer image format</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5Part4PictureCodingScheme</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050400</UL>
+      <Kind>NODE</Kind>
+      <Name>VC-5 Part 4 Picture Coding Scheme</Name>
+      <Definition>Picture Essence Coding Label for a VC-5 Part 4 bitstream</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>VC5Part4YCCAPicture</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03050402</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC-5 Part 4 YCC(A) Picture</Name>
+      <Definition>Picture essence coding label for a VC-5 Part 4 bitstream with subsampled color difference components</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCodingScheme</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060000</UL>
+      <Kind>NODE</Kind>
+      <Name>ProRes Picture Coding Scheme</Name>
+      <Definition>Identifies ProRes Picture coding scheme</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCoding422Proxy</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060100</UL>
+      <Kind>LEAF</Kind>
+      <Name>ProRes Picture Coding 422 Proxy</Name>
+      <Definition>Identifies ProRes Picture coding for the 422 Proxy profile</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCoding422LT</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060200</UL>
+      <Kind>LEAF</Kind>
+      <Name>ProRes Picture Coding 422 LT</Name>
+      <Definition>Identifies ProRes Picture coding for the 422 LT profile</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCoding422</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060300</UL>
+      <Kind>LEAF</Kind>
+      <Name>ProRes Picture Coding 422</Name>
+      <Definition>Identifies ProRes Picture coding for the 422 profile</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCoding422HQ</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060400</UL>
+      <Kind>LEAF</Kind>
+      <Name>ProRes Picture Coding 422 HQ</Name>
+      <Definition>Identifies ProRes Picture coding for the 422 HQ profile</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCoding4444</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060500</UL>
+      <Kind>LEAF</Kind>
+      <Name>ProRes Picture Coding 4444</Name>
+      <Definition>Identifies ProRes Picture coding for the 4444 profile</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>ProResPictureCoding4444XQ</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04010202.03060600</UL>
+      <Kind>LEAF</Kind>
+      <Name>ProRes Picture Coding 4444 XQ</Name>
+      <Definition>Identifies ProRes Picture coding for the 4444 XQ profile</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
       <Symbol>SpecialisedCompressionSchemes</Symbol>
       <UL>urn:smpte:ul:060e2b34.04010101.04010202.70000000</UL>
       <Kind>NODE</Kind>
@@ -9569,6 +9801,188 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
       <Name>MPEG-2 AAC Compressed Audio</Name>
       <Definition>Identifies MPEG-2 Advanced Audio Coding</Definition>
       <DefiningDocument>ISO/IEC 13818-7</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_Compressed_Audio_Coding</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04000000</UL>
+      <Kind>NODE</Kind>
+      <Name>MPEG Audio Compression</Name>
+      <Definition>Identifies MPEG Audio compression</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_1_Audio_Coding</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04010000</UL>
+      <Kind>NODE</Kind>
+      <Name>MPEG-1 Audio Coding</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-1 audio coding</Definition>
+      <DefiningDocument>ISO/IEC 11172-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_1_Layer_I</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04010100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-1 Layer I</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-1 Layer I</Definition>
+      <DefiningDocument>ISO/IEC 11172-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_1_Layer_II</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04010200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-1 Layer II</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-1 Layer II</Definition>
+      <DefiningDocument>ISO/IEC 11172-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_1_Layer_III</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04010300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-1 Layer III</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-1 Layer III</Definition>
+      <DefiningDocument>ISO/IEC 11172-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_Audio_Coding</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04020000</UL>
+      <Kind>NODE</Kind>
+      <Name>MPEG-2 Audio Coding</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 Audio Coding</Definition>
+      <DefiningDocument>ISO/IEC 13818-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_Layer_I</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04020100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-2 Layer I</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 Layer I</Definition>
+      <DefiningDocument>ISO/IEC 13818-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_Layer_II</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04020200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-2 Layer II</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 Layer II</Definition>
+      <DefiningDocument>ISO/IEC 13818-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_Layer_III</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04020300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-2 Layer III</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 Layer III</Definition>
+      <DefiningDocument>ISO/IEC 13818-3</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_Advanced_Audio_Coding</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04030000</UL>
+      <Kind>NODE</Kind>
+      <Name>MPEG-2 Advanced Audio Coding</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 Advanced Audio Coding</Definition>
+      <Notes>Refer to ISO/IEC 13818-7</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_LC_AAC</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04030100</UL>
+      <Kind>LEAF</Kind>
+      <Name>Low Complexity profile MPEG-2 AAC</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 AAC Low Complexity profile</Definition>
+      <Notes>Refer to ISO/IEC 13818-7, &#167;7 "Profiles and Profile Interoperability"</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_2_AAC_SBR</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04030200</UL>
+      <Kind>LEAF</Kind>
+      <Name>Low Complexity profile MPEG-2 AAC+SBR</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-2 AAC Low Complexity + SBR</Definition>
+      <Notes>Refer to ISO/IEC 13818-7, &#167;7 "Profiles and Profile Interoperability"</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_4_Advanced_Audio_Coding</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04040000</UL>
+      <Kind>NODE</Kind>
+      <Name>MPEG-4 Advanced Audio Coding</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-4 Advanced Audio Coding</Definition>
+      <Notes>Refer to ISO/IEC 14496-3</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_4_AAC_Profile</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04040100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-4 AAC Profile</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-4 AAC LC Profile</Definition>
+      <Notes>Refer to ISO/IEC 14496-3, &#167;1.5.2 "Audio profiles and levels"</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_4_High_Efficiency_AAC_Profile</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04040200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-4 High Efficiency AAC Profile</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-4 High Efficiency AAC Profile</Definition>
+      <Notes>Refer to ISO/IEC 14496-3, &#167;1.5.2 "Audio profiles and levels"</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>MPEG_4_High_Efficiency_AAC_v2_Profile</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04020202.04040300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MPEG-4 High Efficiency AAC v2 Profile</Name>
+      <Definition>Identifies compressed audio compliant to MPEG-4 High Efficiency AAC v2 Profile</Definition>
+      <Notes>Refer to ISO/IEC 14496-3, &#167;1.5.2 "Audio profiles and levels"</Notes>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
@@ -10807,6 +11221,61 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
       <Name>SMPTE-12M 30fps Datecode User Bits No Drop Frame</Name>
       <Definition>Identifies SMPTE-12M timecode at 30fps with Datecode User Bits and No Drop Frame</Definition>
       <DefiningDocument>SMPTE ST 12-1</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>DMCVTDataCoding</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04040102.02000000</UL>
+      <Kind>NODE</Kind>
+      <Name>DMCVT Data Coding</Name>
+      <Definition>Identifies DMCVT Data Coding</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>DMCVTApplication1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04040102.02010000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DMCVT Application 1</Name>
+      <Definition>Identifies DMCVT Application 1</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>DMCVTApplication2</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04040102.02020000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DMCVT Application 2</Name>
+      <Definition>Identifies DMCVT Application 2</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>DMCVTApplication3</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04040102.02030000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DMCVT Application 3</Name>
+      <Definition>Identifies DMCVT Application 3</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012</NamespaceName>
+      <Symbol>DMCVTApplication4</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.04040102.02040000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DMCVT Application 4</Name>
+      <Definition>Identifies DMCVT Application 4</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
@@ -34426,6 +34895,290 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCVC2Pictures</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02150000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC VC-2 Pictures</Name>
+      <Definition>Identifiers for MXF-GC mappings of VC-2 Pictures (as defined in SMPTE ST 2042-1)</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCFrameWrappedVC2Pictures</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02150100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC Frame-wrapped VC-2 Pictures</Name>
+      <Definition>Identifier for a MXF-GC Frame-wrapped VC-2 Stream (as defined in SMPTE ST 2042-1)</Definition>
+      <DefiningDocument>SMPTE ST 2042-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCClipWrappedVC2Pictures</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02150200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC Clip-wrapped VC-2 Pictures</Name>
+      <Definition>Identifier for a MXF-GC Clip-wrapped VC-2 Stream (as defined in SMPTE ST 2042-1)</Definition>
+      <DefiningDocument>SMPTE ST 2042-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADIF</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02160000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC AAC ADIF</Name>
+      <Definition>Identifies container for MPEG-2/4 ADIF</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADIF_Frame_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02160100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC ADIF Frame Wrapped</Name>
+      <Definition>Identifies container for Frame Wrapped MPEG-2/4 ADIF</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADIF_Clip_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02160200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC ADIF Clip Wrapped</Name>
+      <Definition>Identifies container for Clip Wrapped MPEG-2/4 ADIF</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADIF_Custom_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02160300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC ADIF Custom Wrapped</Name>
+      <Definition>Identifies container for Custom Wrapped MPEG-2/4 ADIF</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADTS</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02170000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC AAC ADTS</Name>
+      <Definition>Identifies container for MPEG-2/4 ADTS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADTS_Frame_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02170100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC ADTS Frame Wrapped</Name>
+      <Definition>Identifies container for Frame Wrapped MPEG-2/4 ADTS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADTS_Clip_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02170200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC ADTS Clip Wrapped</Name>
+      <Definition>Identifies container for Clip Wrapped MPEG-2/4 ADTS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_ADTS_Custom_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02170300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC ADTS Custom Wrapped</Name>
+      <Definition>Identifies container for Custom Wrapped MPEG-2/4 ADTS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_LATM_LOAS</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02180000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC AAC LATM-LOAS</Name>
+      <Definition>Identifies container for MPEG-4 LATM/LOAS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_LATM_LOAS_Frame_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02180100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC LATM-LOAS Frame Wrapped</Name>
+      <Definition>Identifies container for Frame Wrapped MPEG-4 LATM/LOAS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_LATM_LOAS_Clip_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02180200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC LATM-LOAS Clip Wrapped</Name>
+      <Definition>Identifies container for Clip Wrapped MPEG-4 LATM/LOAS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXF_GC_AAC_LATM_LOAS_Custom_Wrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02180300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC AAC LATM-LOAS Custom Wrapped</Name>
+      <Definition>Identifies container for Custom Wrapped MPEG-4 LATM/LOAS</Definition>
+      <DefiningDocument>SMPTE ST 381-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCACESPictures</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02190000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC ACES Pictures</Name>
+      <Definition>Identifiers for MXF-GC mappings of ACES SMPTE ST 2065-4 Pictures</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCFrameWrappedACESPictures</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02190100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC Frame-wrapped ACES Pictures</Name>
+      <Definition>Identifier for MXF-GC, Frame-wrapped ACES SMPTE ST 2065-4 images</Definition>
+      <DefiningDocument>SMPTE ST 2065-5</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCClipWrappedACESPictures</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.02190200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC Clip-wrapped ACES Pictures</Name>
+      <Definition>Identifier for MXF-GC, Clip-wrapped ACES SMPTE ST 2065-4 images</Definition>
+      <DefiningDocument>SMPTE ST 2065-5</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCDMCVTData</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021a0000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC DMCVT Data</Name>
+      <Definition>Identifies MXF-GC DMCVT Data</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCFrameWrappedDMCVTData</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021a0100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC Frame-Wrapped DMCVT Data</Name>
+      <Definition>Identifies MXF-GC Frame-Wrapped DMCVT Data</Definition>
+      <DefiningDocument>SMPTE ST 2094-2</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCVC5EssenceContainerLabel</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021b0000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC VC-5 Essence Container Label (SMPTE ST 2073-10)</Name>
+      <Definition>Image Wrapping Type VC-5 Essence Container Label defined in SMPTE ST 2073-10</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCVC5FrameWrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021b0100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC VC-5 Essence Container Label (Frame-Wrapped)</Name>
+      <Definition>Indicates a VC-5 frame-wrapped VC-5 bitstream defined in SMPTE ST 2073-10</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCVC5ClipWrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021b0200</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC VC-5 Essence Container Label (Clip-Wrapped)</Name>
+      <Definition>Indicates a VC-5 clip-wrapped VC-5 bitstream defined in SMPTE ST 2073-10</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCVC5CustomWrapped</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021b0300</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC VC-5 Essence Container Label (Custom-Wrapped)</Name>
+      <Definition>Indicates a VC-5 custom-wrapped VC-5 bitstream defined in SMPTE ST 2073-10</Definition>
+      <DefiningDocument>SMPTE ST 2073-10</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCEssenceContainerProResPicture</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021c0000</UL>
+      <Kind>NODE</Kind>
+      <Name>MXF-GC Essence Container ProRes Picture</Name>
+      <Definition>Identifier for MXF-GC Essence Container ProRes Picture</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>MXFGCFrameWrappedEssenceContainerProResPicture</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0d010301.021c0100</UL>
+      <Kind>LEAF</Kind>
+      <Name>MXF-GC Frame-Wrapped Essence Container ProRes Picture</Name>
+      <Definition>Identifier for MXF-GC Frame-Wrapped Essence Container ProRes Picture</Definition>
+      <DefiningDocument>SMPTE RDD 44</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
       <Symbol>MXFGCGenericEssenceMappings</Symbol>
       <UL>urn:smpte:ul:060e2b34.04010101.0d010301.027f0000</UL>
       <Kind>NODE</Kind>
@@ -34648,6 +35401,17 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
     <Entry>
       <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
+      <Symbol>DMS_AS_03</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010401.03000000</UL>
+      <Kind>NODE</Kind>
+      <Name>DMS AS-03</Name>
+      <Definition>Metadata for AS_03 Delivery Format</Definition>
+      <DefiningDocument>AMWA Application Specification AS-03 MXF Program Delivery</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/aaf</NamespaceName>
       <Symbol>MXFTextBasedDMScheme</Symbol>
       <UL>urn:smpte:ul:060e2b34.0401010c.0d010401.04000000</UL>
       <Kind>NODE</Kind>
@@ -34762,6 +35526,26 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
     </Entry>
     <Entry>
       <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/as10</NamespaceName>
+      <Symbol>AS_10</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010701.0a000000</UL>
+      <Kind>NODE</Kind>
+      <Name>AS-10</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/as10</NamespaceName>
+      <Symbol>DMS_AS_10_Core</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010701.0a010000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DMS AS-10 Core</Name>
+      <Definition>AS-10 Metadata Scheme</Definition>
+      <DefiningDocument>AMWA Application Specification AS-10 MXF for Production</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/as11</NamespaceName>
       <Symbol>AS_11</Symbol>
       <UL>urn:smpte:ul:060e2b34.04010101.0d010701.0b000000</UL>
@@ -34809,6 +35593,353 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
       <Name>DMS_AS_12</Name>
       <Definition>AS_12 metadata for advertising content identification</Definition>
       <DefiningDocument>AMWA Application Specification AS-12 Commercial Delivery</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AMWARulesBasedSpecifications</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010800.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>AMWA Rules Based Specifications</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>RulesBasedSpecificationsVersion1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Rules Based Specifications Version 1</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>InterpretiveSoundEssence</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Sound Essence</Name>
+      <Definition>SMPTE Label identifiers for Sound Essence interpretive data</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AudioChannel</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01010000</UL>
+      <Kind>NODE</Kind>
+      <Name>Audio Channel</Name>
+      <Definition>SMPTE Label identifiers for Audio Channel interpretive data</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AudioDescriptionStudioSignalDataChannel</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01010100</UL>
+      <Kind>LEAF</Kind>
+      <Name>Audio Description Studio Signal Data Channel</Name>
+      <Definition>Identifies an Audio Channel carrying a data signal in the format defined by BBC R&amp;D White Paper WHP 198, intended to be used to control the fade and pan of the Main Program audio when it is being mixed with a Visually Impaired Narrative Audio Channel</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>SoundfieldGroup</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01020000</UL>
+      <Kind>NODE</Kind>
+      <Name>Soundfield Group</Name>
+      <Definition>SMPTE Label identifiers for Soundfield Groups interpretive data</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AudioDescriptionStudioSignal</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01020100</UL>
+      <Kind>LEAF</Kind>
+      <Name>Audio Description Studio Signal</Name>
+      <Definition>Identifies an Soundfield Group carrying a Visually Impaired Narrative Audio Channel and an Audio Description Studio Signal Data Channel - this is the two-channel Audio Description Studio Signal defined by BBC R&amp;D White Paper WHP 198</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>GroupOfSoundfieldGroups</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01030000</UL>
+      <Kind>NODE</Kind>
+      <Name>Group of Soundfield Groups</Name>
+      <Definition>SMPTE Label identifiers for Groups of Soundfield Groups interpretive data</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AlternativeProgram</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01030100</UL>
+      <Kind>LEAF</Kind>
+      <Name>Alternative Program</Name>
+      <Definition>Identifies an alternative, complete audio program</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AudioDescriptionProgramMix</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01030200</UL>
+      <Kind>LEAF</Kind>
+      <Name>Audio Description Program Mix</Name>
+      <Definition>Identifies a mix of the program audio with audio description audio</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AudioDescription</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01030300</UL>
+      <Kind>LEAF</Kind>
+      <Name>Audio Description</Name>
+      <Definition>Identifies a verbal description of the visual scene</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>MusicAndEffects</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01030400</UL>
+      <Kind>LEAF</Kind>
+      <Name>Music and Effects</Name>
+      <Definition>Identifies a mix of the Main Program with no dialogue</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>UnusedAudio</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.01030500</UL>
+      <Kind>LEAF</Kind>
+      <Name>Unused Audio</Name>
+      <Definition>Identifies audio that is not used. The audio could be present for backward compatibility with devices and systems that require a set number of channels, beyond what is actually required to carry the content.</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>SoundChannelLabeling</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.02000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Labels for Sound Channel Labeling</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>ConstrainedMultichannelAudioLabelingFramework</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.02010000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Constrained Multichannel Audio Labeling Framework</Name>
+      <Definition>Identifies a specific application of the MXF Multichannel Audio Framework</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>ConstrainedMultichannelAudioLabelingFramework_with_Default_Audio_Layout_A</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.02020000</UL>
+      <Kind>LEAF</Kind>
+      <Name>ConstrainedMultichannelAudioLabelingFramework with Default Audio Layout A</Name>
+      <Definition>Identifies a specific application of the MXF Multichannel Audio Framework with default audio layout 'A'</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Default_Audio_Layout_A_without_MCA_Labeling</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.02030000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Default Audio Layout A without MCA Labeling</Name>
+      <Definition>Identifies default audio layout A without use of the MXF Multichannel Audio Framework</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Specification_Identification_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Specification Identification (Work In Progress)</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_0_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03010000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 0 WIP</Name>
+      <Definition>Blocks File Format 0 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_1_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03020000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 1 WIP</Name>
+      <Definition>Blocks File Format 1 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_2_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03030000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 2 WIP</Name>
+      <Definition>Blocks File Format 2 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_5_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03060000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 5 WIP</Name>
+      <Definition>Blocks File Format 5 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_6_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03070000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 6 WIP</Name>
+      <Definition>Blocks File Format 6 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_7_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03080000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 7 WIP</Name>
+      <Definition>Blocks File Format 7 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_10_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.03090000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 10 WIP</Name>
+      <Definition>Blocks File Format 10 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_9_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.030a0000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 9 WIP</Name>
+      <Definition>Blocks File Format 9 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_11_WIP</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.030b0000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 11 WIP</Name>
+      <Definition>Blocks File Format 11 (Work in Progress)</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>MetadataPayloadSchemes</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.04000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Metadata Payload Schemes</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>DM_XML_Document</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.04010000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DM_XML_Document</Name>
+      <Definition>Descriptive Metadata XML Document in Header Metadata</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Specification_Identification</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.05000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Specification Identification</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_0</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.05010000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 0</Name>
+      <Definition>Blocks File Format 0</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_2</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.05030000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 2</Name>
+      <Definition>Blocks File Format 2</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>Blocks_FF_7</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d010801.05080000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Blocks File Format 7</Name>
+      <Definition>Blocks File Format 7</Definition>
+      <DefiningDocument>AMWA Rules-based Specification component</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
@@ -35010,6 +36141,53 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
       <Kind>NODE</Kind>
       <Name>BBC</Name>
       <Definition>Metadata registered by the British Broadcasting Corporation for public use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/4/archive</NamespaceName>
+      <Symbol>ArchivePreservationProject</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d040100.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Archive Preservation Project</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/4/archive</NamespaceName>
+      <Symbol>ArchivePreservationProjectVersion1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d040101.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Archive Preservation Project Version 1</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_DescriptiveSchemes</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d040101.01000000</UL>
+      <Kind>NODE</Kind>
+      <Name>APP Descriptive Schemes</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_DescriptiveSchemesVersion1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d040101.01010000</UL>
+      <Kind>NODE</Kind>
+      <Name>APP Descriptive Schemes Version 1</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_PreservationDescriptiveScheme</Symbol>
+      <UL>urn:smpte:ul:060e2b34.04010101.0d040101.01010100</UL>
+      <Kind>LEAF</Kind>
+      <Name>APP Preservation Descriptive Scheme</Name>
+      <Definition>APP Preservation Descriptive Scheme</Definition>
+      <DefiningDocument>BBC Research White Paper WHP 167 D3 Preservation File Format</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
@@ -35409,6 +36587,46 @@ Identifies XYZ tristimulus values as specified in ISO 11664-3
       <Kind>NODE</Kind>
       <Name>HBO</Name>
       <Definition>Metadata registered by Home Box Office, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/14/29</NamespaceName>
+      <Symbol>DTS</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0e1d0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>DTS, Inc.</Name>
+      <Definition>Metadata registered by DTS, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/14/30</NamespaceName>
+      <Symbol>FLIR</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0e1e0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>FLIR Systems, Inc.</Name>
+      <Definition>Metadata registered by FLIR Systems, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/14/31</NamespaceName>
+      <Symbol>Barco</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0e1f0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Barco</Name>
+      <Definition>Metadata registered by Barco, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Labels</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/400/2012/14/32</NamespaceName>
+      <Symbol>Apple_Inc</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0401010d.0e200000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Apple Inc.</Name>
+      <Definition>Metadata registered by Apple Inc. for private use</Definition>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>

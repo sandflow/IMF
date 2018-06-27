@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Fri Oct 07 09:05:41 PDT 2016--><!--By: regxmllib build c989a02ac80facc24e018a54c4010dd8c2d27451--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Tue Jun 26 22:01:38 PDT 2018--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/rules" xmlns:r3="http://www.smpte-ra.org/reg/335/2012/13/4/archive" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/rules"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/4/archive"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
 <xs:element abstract="true" name="InterchangeObject">
@@ -983,6 +985,7 @@
 <xs:element name="Preface">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r2:Specification_Identifiers"/>
 <xs:element ref="r0:ContentStorageObject"/>
 <xs:element minOccurs="0" ref="r0:Dictionary"/>
 <xs:element ref="r0:FileLastModified"/>
@@ -995,6 +998,10 @@
 <xs:element ref="r0:IdentificationList"/>
 <xs:element minOccurs="0" ref="r0:IsRIPPresent"/>
 <xs:element ref="r0:FormatVersion"/>
+<xs:element minOccurs="0" ref="r3:APP_VTRErrorCount"/>
+<xs:element minOccurs="0" ref="r3:APP_PSEFailureCount"/>
+<xs:element minOccurs="0" ref="r3:APP_DigiBetaDropoutCount"/>
+<xs:element minOccurs="0" ref="r3:APP_TimecodeBreakCount"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -1885,17 +1892,17 @@
 <xs:element name="JPEG2000SubDescriptor">
 <xs:complexType>
 <xs:all>
-<xs:element minOccurs="0" ref="r0:XOsiz"/>
-<xs:element minOccurs="0" ref="r0:YOsiz"/>
-<xs:element minOccurs="0" ref="r0:XTsiz"/>
-<xs:element minOccurs="0" ref="r0:Csiz"/>
-<xs:element minOccurs="0" ref="r0:PictureComponentSizing"/>
-<xs:element minOccurs="0" ref="r0:XTOsiz"/>
-<xs:element minOccurs="0" ref="r0:YTOsiz"/>
-<xs:element minOccurs="0" ref="r0:YTsiz"/>
-<xs:element minOccurs="0" ref="r0:Ysiz"/>
-<xs:element minOccurs="0" ref="r0:Rsiz"/>
-<xs:element minOccurs="0" ref="r0:Xsiz"/>
+<xs:element ref="r0:XOsiz"/>
+<xs:element ref="r0:YOsiz"/>
+<xs:element ref="r0:XTsiz"/>
+<xs:element ref="r0:Csiz"/>
+<xs:element ref="r0:PictureComponentSizing"/>
+<xs:element ref="r0:XTOsiz"/>
+<xs:element ref="r0:YTOsiz"/>
+<xs:element ref="r0:YTsiz"/>
+<xs:element ref="r0:Ysiz"/>
+<xs:element ref="r0:Rsiz"/>
+<xs:element ref="r0:Xsiz"/>
 <xs:element minOccurs="0" ref="r0:CodingStyleDefault"/>
 <xs:element minOccurs="0" ref="r0:QuantizationDefault"/>
 <xs:element minOccurs="0" ref="r0:J2CLayout"/>
@@ -2092,7 +2099,7 @@
 <xs:element minOccurs="0" ref="r0:ApplicationEnvironmentID"/>
 <xs:element ref="r0:ApplicationScheme"/>
 <xs:element ref="r0:ApplicationPluginInstanceID"/>
-<xs:element ref="r0:BaseClass"/>
+<xs:element minOccurs="0" ref="r0:BaseClass"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2106,7 +2113,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:LinkedApplicationPluginInstanceID"/>
-<xs:element ref="r0:BaseClass"/>
+<xs:element minOccurs="0" ref="r0:BaseClass"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2166,7 +2173,7 @@
 <xs:element name="ApplicationObject">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:BaseClass"/>
+<xs:element minOccurs="0" ref="r0:BaseClass"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2250,7 +2257,7 @@
 <xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
-<xs:element name="MCALabelSubDescriptor">
+<xs:element abstract="true" name="MCALabelSubDescriptor">
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:MCALinkID"/>
@@ -2458,6 +2465,84 @@
 <xs:element minOccurs="0" ref="r0:ContainerFormat"/>
 <xs:element minOccurs="0" ref="r0:SubDescriptors"/>
 <xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="VC2SubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:VC2Profile"/>
+<xs:element ref="r0:VC2MajorVersion"/>
+<xs:element ref="r0:VC2MinorVersion"/>
+<xs:element ref="r0:VC2Level"/>
+<xs:element minOccurs="0" ref="r0:VC2WaveletFilters"/>
+<xs:element minOccurs="0" ref="r0:VC2EditUnitsAreCompleteSequences"/>
+<xs:element minOccurs="0" ref="r0:VC2SequenceHeadersIdentical"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DMCVTTargetSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:DMCVTBackwardsVersion"/>
+<xs:element ref="r0:DMCVTApplicationVersionNumber"/>
+<xs:element minOccurs="0" ref="r0:DMCVTTargetedSystemDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:DMCVTTargetedSystemDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:DMCVTTargetedSystemDisplayMaximumLuminance"/>
+<xs:element minOccurs="0" ref="r0:DMCVTRowsInTargetedSystemDisplayActualPeakLuminance"/>
+<xs:element minOccurs="0" ref="r0:DMCVTTargetedSystemDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:DMCVTTargetedSystemDisplaySignalFormat"/>
+<xs:element ref="r0:DMCVTApplicationIdentifier"/>
+<xs:element minOccurs="0" ref="r0:DMCVTTargetedSystemDisplayActualPeakLuminance"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="VC5BayerPictureEssenceSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:VC5BayerComponentBlackLevel"/>
+<xs:element minOccurs="0" ref="r0:VC5BayerComponentWhiteLevel"/>
+<xs:element ref="r0:VC5BayerComponentPattern"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="VC5CDCIPictureEssenceSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:VC5AlphaSampling"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AACSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:AACChannelConfiguration"/>
+<xs:element minOccurs="0" ref="r0:AACSamplingFrequency"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2810,7 +2895,7 @@
 <xs:element abstract="true" name="DescriptiveFramework">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2845,7 +2930,7 @@
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2883,7 +2968,7 @@
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -2910,7 +2995,7 @@
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -3181,7 +3266,6 @@
 <xs:element minOccurs="0" ref="r0:ParticipantOrganizations"/>
 <xs:element ref="r0:ParticipantID"/>
 <xs:element minOccurs="0" ref="r0:JobFunction"/>
-<xs:element minOccurs="0" ref="r0:JobFunctionCode"/>
 <xs:element minOccurs="0" ref="r0:RoleName"/>
 <xs:element minOccurs="0" ref="r0:ThesaurusName"/>
 <xs:element minOccurs="0" ref="r0:LinkedDescriptiveObjectPluginID"/>
@@ -3464,7 +3548,7 @@
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -3492,7 +3576,7 @@
 <xs:element minOccurs="0" ref="r0:FrameworkTitle"/>
 <xs:element minOccurs="0" ref="r0:FrameworkExtendedTextLanguageCode"/>
 <xs:element minOccurs="0" ref="r0:OriginalExtendedSpokenLanguageCode"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -3559,7 +3643,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:CryptographicContextObject"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -3585,11 +3669,32 @@
 <xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
+<xs:element name="DMS_AS_03_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r1:AS_03_IntendedAFD"/>
+<xs:element minOccurs="0" ref="r1:AS_03_SlateTitle"/>
+<xs:element minOccurs="0" ref="r1:AS_03_NOLACode"/>
+<xs:element minOccurs="0" ref="r1:AS_03_Rating"/>
+<xs:element ref="r1:AS_03_IdentifierKind"/>
+<xs:element ref="r1:AS_03_Identifier"/>
+<xs:element ref="r1:AS_03_ShimName"/>
+<xs:element ref="r1:AS_03_SignalStandard"/>
+<xs:element minOccurs="0" ref="r1:AS_03_NielsenStreamIdentifier"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
 <xs:element name="TextBasedFramework">
 <xs:complexType>
 <xs:all>
 <xs:element minOccurs="0" ref="r0:TextBasedObject"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -3669,7 +3774,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:EIDRDMSEssenceID"/>
-<xs:element ref="r0:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r0:LinkedDescriptiveFrameworkPluginID"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>

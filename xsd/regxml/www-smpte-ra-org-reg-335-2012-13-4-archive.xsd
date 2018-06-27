@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Tue Jun 26 22:01:38 PDT 2018--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/2003/2012/13/4/archive" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/4/archive" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012/13/4/archive"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="APP_VTRErrorCount" type="r0:UInt32"/>
+<xs:element name="APP_PSEFailureCount" type="r0:UInt32"/>
+<xs:element name="APP_DigiBetaDropoutCount" type="r0:UInt32"/>
+<xs:element name="APP_TimecodeBreakCount" type="r0:UInt32"/>
+<xs:element name="APP_Format" type="r0:UTF16String"/>
+<xs:element name="APP_ProgrammeTitle" type="r0:UTF16String"/>
+<xs:element name="APP_EpisodeTitle" type="r0:UTF16String"/>
+<xs:element name="APP_TransmissionDate" type="r0:TimeStamp"/>
+<xs:element name="APP_MagazinePrefix" type="r0:UTF16String"/>
+<xs:element name="APP_ProgrammeNumber" type="r0:UTF16String"/>
+<xs:element name="APP_SpoolStatus" type="r0:UTF16String"/>
+<xs:element name="APP_StockDate" type="r0:TimeStamp"/>
+<xs:element name="APP_SpoolDescriptor" type="r0:UTF16String"/>
+<xs:element name="APP_Memo" type="r0:UTF16String"/>
+<xs:element name="APP_Duration" type="r0:Int64"/>
+<xs:element name="APP_SpoolNumber" type="r0:UTF16String"/>
+<xs:element name="APP_AccessionNumber" type="r0:UTF16String"/>
+<xs:element name="APP_CatalogueDetail" type="r0:UTF16String"/>
+<xs:element name="APP_ProductionCode" type="r0:UTF16String"/>
+<xs:element name="APP_ItemNumber" type="r0:UInt32"/>
+<xs:element name="APP_RedFlash" type="r0:Int16"/>
+<xs:element name="APP_LuminanceFlash" type="r0:Int16"/>
+<xs:element name="APP_SpatialPattern" type="r0:Int16"/>
+<xs:element name="APP_ExtendedFailure" type="r0:Boolean"/>
+<xs:element name="APP_VTRErrorCode" type="r0:UInt8"/>
+<xs:element name="APP_Strength" type="r0:Int32"/>
+<xs:element name="APP_TimecodeType" type="r1:APP_TimecodeTypeEnum"/>
+</xs:schema>

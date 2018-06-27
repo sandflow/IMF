@@ -2,34 +2,24 @@
 <!--  -->
 <!-- Please fill these in if you edit this XML file -->
 <!-- author= -->
-<!-- edit_date= -->
 <!-- summary_of_edit= -->
 <!--  -->
 <!-- DO NOT EDIT THIS TAG -->
-<!-- master_commit_tag=v000000061 -->
+<!-- master_commit_tag=v000000079 -->
 <!-- DO NOT EDIT THIS TAG -->
 <!--  -->
 <!--  -->
+<!-- SMPTE METADATA REGISTER -->
+<!-- ####################### -->
 <!--  -->
-<!--  -->
-<!-- DRAFT - SMPTE METADATA REGISTERS XML -->
-<!-- ##################################### -->
-<!--  -->
-<!-- Latest XML Files + Web Views -->
-<!-- ############################ -->
-<!--  -->
-<!-- See http://vm-1042-user.virt.ch.bbc.co.uk/ for the latest XML files and Web Views (tables, etc) of this data which make it easier -->
-<!-- to explore, browse, manually check etc. Login with: -->
-<!-- username: smpte -->
-<!-- password: smpte -->
-<!-- (N.B. Best viewed with the Chrome browser) -->
+<!-- See https://registry.smpte-ra.org for SMPTE Metadata Registers resources. -->
 <!--  -->
 <!-- Editing these XML Files -->
 <!-- ####################### -->
 <!--  -->
 <!-- If you wish to edit one of these XML files please first complete the metadata tags at the top of the file. -->
 <!-- Then edit existing entries in the XML or add new entries. -->
-<!-- When editing the XML file you may delete some or all of the original entries - leaving only those that you are -->
+<!-- When editing the XML file you may delete some or all of the original entries. Leaving only those that you are -->
 <!-- working on may make editing simpler and less error prone. -->
 <!-- If you think that an entry actually needs to be deleted from the Registers please get in touch. -->
 <!-- You must not edit the UL of an entry - doing so would make it look like you want to create a new entry. -->
@@ -59,6 +49,7 @@
       <Name>TYPES</Name>
       <Definition>Register of Basic Data Types and Composed Types</Definition>
       <Applications>AAF</Applications>
+      <DefiningDocument>SMPTE ST 2003</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
@@ -2545,6 +2536,64 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>VC2WaveletType</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0201012e.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC2 Wavelet Type</Name>
+      <Applications>MXF</Applications>
+      <DefiningDocument>SMPTE ST 2042-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01010100.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Symbol>VC2Wavelet_DeslauriersDubuc_9_7</Symbol>
+          <Name>Deslauriers-Dubuc (9,7)</Name>
+          <Value>0</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>VC2Wavelet_LeGall_5_3</Symbol>
+          <Name>LeGall (5,3)</Name>
+          <Value>1</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>VC2Wavelet_DeslauriersDubuc_13_7</Symbol>
+          <Name>Deslauriers-Dubuc (13,7)</Name>
+          <Value>2</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>VC2Wavelet_HaarNoShift</Symbol>
+          <Name>Haar with no shift</Name>
+          <Value>3</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>VC2Wavelet_HaarSingleShiftPerLevel</Symbol>
+          <Name>Haar with single shift per level</Name>
+          <Value>4</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>VC2Wavelet_FidelityFilter</Symbol>
+          <Name>Fidelity filter</Name>
+          <Value>5</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>VC2Wavelet_Daubechies_9_7_IntegerApproximation</Symbol>
+          <Name>Daubechies (9,7) integer approximation</Name>
+          <Value>6</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>ColorCorrectionFilterWheelSettingType</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.0201012f.00000000</UL>
       <Kind>LEAF</Kind>
@@ -2881,14 +2930,18 @@
           <IsDeprecated>false</IsDeprecated>
         </Facet>
         <Facet>
-            <Value>urn:smpte:ul:060e2b34.0401010e.04010101.01090000</Value>
-            <Applications>AAF[1.3:]</Applications>
-            <IsDeprecated>false</IsDeprecated>
-            </Facet>
-            <Facet>
-            <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010a0000</Value>
-            <Applications>AAF[1.3:]</Applications>
-            <IsDeprecated>false</IsDeprecated>
+          <Value>urn:smpte:ul:060e2b34.0401010e.04010101.01090000</Value>
+          <Applications>AAF[1.3:]</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010a0000</Value>
+          <Applications>AAF[1.3:]</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010b0000</Value>
+          <IsDeprecated>false</IsDeprecated>
         </Facet>
       </Facets>
     </Entry>
@@ -2996,9 +3049,21 @@
           <IsDeprecated>false</IsDeprecated>
         </Facet>
         <Facet>
-            <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03060000</Value>
-            <Applications>AAF[1.3:]</Applications>
-            <IsDeprecated>false</IsDeprecated>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03050000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03060000</Value>
+          <Applications>AAF[1.3:]</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03070000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03080000</Value>
+          <IsDeprecated>false</IsDeprecated>
         </Facet>
       </Facets>
     </Entry>
@@ -3031,9 +3096,17 @@
           <IsDeprecated>false</IsDeprecated>
         </Facet>
         <Facet>
-            <Value>urn:smpte:ul:060e2b34.0401010d.04010101.02060000</Value>
-            <Applications>AAF[1.1:]</Applications>
-            <IsDeprecated>false</IsDeprecated>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.02040000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.02050000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.02060000</Value>
+          <Applications>AAF[1.1:]</Applications>
+          <IsDeprecated>false</IsDeprecated>
         </Facet>
       </Facets>
     </Entry>
@@ -3550,6 +3623,32 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>ColorPrimary</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.03010c00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Color Primary</Name>
+      <DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Record</TypeKind>
+      <Facets>
+        <Facet>
+          <Symbol>X</Symbol>
+          <Name>X Color Coordinate</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Y</Symbol>
+          <Name>Y Color Coordinate</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>Multiples</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.04000000.00000000</UL>
       <Kind>NODE</Kind>
@@ -3824,6 +3923,21 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>VC2WaveletArray</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04011400.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>VC2 Wavelet Array</Name>
+      <Applications>MXF</Applications>
+      <DefiningDocument>SMPTE ST 2042-4</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>VariableArray</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.0201012e.00000000</BaseType>
+      <TypeQualifiers>isOrdered</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>UUIDArray</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.04011500.00000000</UL>
       <Kind>LEAF</Kind>
@@ -3968,20 +4082,20 @@
       <TypeQualifiers>isOrdered</TypeQualifiers>
     </Entry>
     <Entry>
-<Register>Types</Register>
-<NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
-<Symbol>ThreeColorPrimaries</Symbol>
-<UL>urn:smpte:ul:060e2b34.01040101.04020a00.00000000</UL>
-<Kind>LEAF</Kind>
-<Name>Three-Color Primaries</Name>
-<DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
-<IsDeprecated>false</IsDeprecated>
-<ContextScope>UnknownContext</ContextScope>
-<TypeKind>FixedArray</TypeKind>
-<TypeSize>3</TypeSize>
-<BaseType>urn:smpte:ul:060e2b34.01040101.03010c00.00000000</BaseType>
-<TypeQualifiers>isOrdered isCountImplicit isSizeImplicit</TypeQualifiers>
-</Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>ThreeColorPrimaries</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04020a00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Three-Color Primaries</Name>
+      <DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>FixedArray</TypeKind>
+      <TypeSize>3</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.03010c00.00000000</BaseType>
+      <TypeQualifiers>isOrdered isCountImplicit isSizeImplicit</TypeQualifiers>
+    </Entry>
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
@@ -4053,32 +4167,6 @@
       <BaseType>urn:smpte:ul:060e2b34.01040101.03010b00.00000000</BaseType>
       <TypeQualifiers>isIdentified</TypeQualifiers>
     </Entry>
-    <Entry>
-<Register>Types</Register>
-<NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
-<Symbol>ColorPrimary</Symbol>
-<UL>urn:smpte:ul:060e2b34.01040101.03010c00.00000000</UL>
-<Kind>LEAF</Kind>
-<Name>Color Primary</Name>
-<DefiningDocument>SMPTE ST 2067-21</DefiningDocument>
-<IsDeprecated>false</IsDeprecated>
-<ContextScope>UnknownContext</ContextScope>
-<TypeKind>Record</TypeKind>
-<Facets>
-<Facet>
-<Symbol>X</Symbol>
-<Name>X Color Coordinate</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
-<IsDeprecated>false</IsDeprecated>
-</Facet>
-<Facet>
-<Symbol>Y</Symbol>
-<Name>Y Color Coordinate</Name>
-<Type>urn:smpte:ul:060e2b34.01040101.01010200.00000000</Type>
-<IsDeprecated>false</IsDeprecated>
-</Facet>
-</Facets>
-</Entry>
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
@@ -6491,6 +6579,24 @@
       <ContextScope>UnknownContext</ContextScope>
       <TypeKind>StrongReference</TypeKind>
       <BaseType>urn:smpte:ul:060e2b34.027f0101.0d010701.0c010200</BaseType>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>AMWARulesBasedSpecifications</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d010800.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>AMWA Rules Based Specifications</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/rules</NamespaceName>
+      <Symbol>RulesBasedSpecificationsVersion1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d010801.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Rules Based Specifications Version 1</Name>
+      <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
       <Register>Types</Register>
@@ -9391,6 +9497,84 @@
     </Entry>
     <Entry>
       <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/4/archive</NamespaceName>
+      <Symbol>ArchivePreservationProject</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d040100.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Archive Preservation Project</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/4/archive</NamespaceName>
+      <Symbol>ArchivePreservationProjectVersion1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d040101.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Archive Preservation Project Version 1</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_EnumeratedTypes</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d040101.01000000</UL>
+      <Kind>NODE</Kind>
+      <Name>APP Enumerated Types</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_EnumeratedIntegerTypes</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d040101.01010000</UL>
+      <Kind>NODE</Kind>
+      <Name>APP Enumerated Integer Types</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_EnumeratedUInt16Types</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d040101.01010100</UL>
+      <Kind>NODE</Kind>
+      <Name>APP Enumerated UInt16 Types</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/4/archive</NamespaceName>
+      <Symbol>APP_TimecodeTypeEnum</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d040101.01010101</UL>
+      <Kind>LEAF</Kind>
+      <Name>APP Timecode Type Enum</Name>
+      <DefiningDocument>BBC Research White Paper WHP 233 Archive Preservation File Format: DigiBeta System</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01010200.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Symbol>TC_VITC</Symbol>
+          <Name>TC VITC</Name>
+          <Value>1</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>TC_LTC</Symbol>
+          <Name>TC LTC</Name>
+          <Value>2</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>TC_Both</Symbol>
+          <Name>TC Both</Name>
+          <Value>3</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/5</NamespaceName>
       <Symbol>IRT</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.0d050000.00000000</UL>
@@ -9961,6 +10145,46 @@
       <Kind>NODE</Kind>
       <Name>HBO</Name>
       <Definition>Metadata registered by Home Box Office, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/14/29</NamespaceName>
+      <Symbol>DTS</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0e1d0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>DTS, Inc.</Name>
+      <Definition>Metadata registered by DTS, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/14/30</NamespaceName>
+      <Symbol>FLIR</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0e1e0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>FLIR Systems, Inc.</Name>
+      <Definition>Metadata registered by FLIR Systems, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/14/31</NamespaceName>
+      <Symbol>Barco</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0e1f0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Barco</Name>
+      <Definition>Metadata registered by Barco, Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/14/32</NamespaceName>
+      <Symbol>Apple_Inc</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0e200000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Apple Inc.</Name>
+      <Definition>Metadata registered by Apple Inc. for private use</Definition>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
