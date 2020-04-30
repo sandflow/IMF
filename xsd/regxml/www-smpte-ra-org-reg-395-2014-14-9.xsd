@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Apr 30 08:42:36 PDT 2020--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/14/9" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/14/9" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/14/9"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="IADataEssenceDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:DataEssenceCoding"/>
+<xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
+<xs:element minOccurs="0" ref="r0:EssenceLength"/>
+<xs:element minOccurs="0" ref="r0:SampleRate"/>
+<xs:element minOccurs="0" ref="r0:Codec"/>
+<xs:element minOccurs="0" ref="r0:ContainerFormat"/>
+<xs:element minOccurs="0" ref="r0:SubDescriptors"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="IADataEssenceSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:IABSampleRate"/>
+<xs:element minOccurs="0" ref="r1:FirstFrame"/>
+<xs:element minOccurs="0" ref="r1:ImmersiveAudioID"/>
+<xs:element minOccurs="0" ref="r1:ImmersiveAudioVersion"/>
+<xs:element minOccurs="0" ref="r1:MaxChannelCount"/>
+<xs:element minOccurs="0" ref="r1:MaxObjectCount"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+</xs:schema>

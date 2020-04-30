@@ -1,36 +1,18 @@
-<!-- Metadata tags to support XML file editing -->
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- *****DO NOT EDIT THIS XML FILE******* -->
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- ************************************* -->
 <!--  -->
-<!-- Please fill these in if you edit this XML file -->
-<!-- author= -->
-<!-- summary_of_edit= -->
-<!--  -->
-<!-- DO NOT EDIT THIS TAG -->
-<!-- master_commit_tag=v000000079 -->
-<!-- DO NOT EDIT THIS TAG -->
-<!--  -->
+<!-- DEVELOPMENT REGISTER -->
 <!--  -->
 <!-- SMPTE METADATA REGISTER -->
 <!-- ####################### -->
 <!--  -->
-<!-- See https://registry.smpte-ra.org for SMPTE Metadata Registers resources. -->
-<!--  -->
-<!-- Editing these XML Files -->
-<!-- ####################### -->
-<!--  -->
-<!-- If you wish to edit one of these XML files please first complete the metadata tags at the top of the file. -->
-<!-- Then edit existing entries in the XML or add new entries. -->
-<!-- When editing the XML file you may delete some or all of the original entries. Leaving only those that you are -->
-<!-- working on may make editing simpler and less error prone. -->
-<!-- If you think that an entry actually needs to be deleted from the Registers please get in touch. -->
-<!-- You must not edit the UL of an entry - doing so would make it look like you want to create a new entry. -->
-<!-- Please get in touch if you think the UL of an entry in the Registers actually needs to be changed. -->
-<!--  -->
-<!-- Please create a ZIP file containing all of the XML files you have edited. -->
-<!-- This may contain zero or more XML files for each Register. -->
-<!-- Try to only make related edits in the XML files you include in the ZIP - if you have two sets of unrelated changes to make -->
-<!-- please do these in separate XML files that are packaged into two separate ZIP files. All the changes will ultimately be merged into the -->
-<!-- Registers. -->
-<!-- When ready, please send your ZIP file(s) by email (each ZIP file in its own email message). -->
+<!-- See https://registry.smpte-ra.org for SMPTE Metadata Registers resources including copies of the  -->
+<!-- SMPTE Metadata Registers that are suitable for editing. -->
 <!--  -->
 <!-- Contact -->
 <!-- ####### -->
@@ -355,6 +337,34 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>Double</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.01020200.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Double</Name>
+      <Applications>ASPA</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Float</TypeKind>
+      <TypeSize>8</TypeSize>
+      <TypeQualifiers>isNumeric isSigned</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>HalfFloat</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.01020300.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>HalfFloat</Name>
+      <Applications>ASPA</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Float</TypeKind>
+      <TypeSize>2</TypeSize>
+      <TypeQualifiers>isNumeric isSigned</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>InseparableBytestrings</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.01030000.00000000</UL>
       <Kind>NODE</Kind>
@@ -474,6 +484,21 @@
       <ContextScope>UnknownContext</ContextScope>
       <TypeKind>FixedArray</TypeKind>
       <TypeSize>16</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01010100.00000000</BaseType>
+      <TypeQualifiers>isOrdered isCountImplicit isSizeImplicit</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>UInt8Array20</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.01030400.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>UInt8Array20</Name>
+      <DefiningDocument>SMPTE ST 430-17</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>FixedArray</TypeKind>
+      <TypeSize>20</TypeSize>
       <BaseType>urn:smpte:ul:060e2b34.01040101.01010100.00000000</BaseType>
       <TypeQualifiers>isOrdered isCountImplicit isSizeImplicit</TypeQualifiers>
     </Entry>
@@ -712,9 +737,9 @@
       <UL>urn:smpte:ul:060e2b34.01040101.01200800.00000000</UL>
       <Kind>LEAF</Kind>
       <Name>Canonical EIDR Identifier Type</Name>
-      <Definition>Canonical EIDR Identifier as specified in RP 2079</Definition>
+      <Definition>Canonical EIDR Content Identifier as specified in RP 2079. NOTE: This type refers to EIDR Content Identifiers exclusively. Other types, e.g. CanonicalEIDRServiceIdentifierType, are used to refer to other kinds of EIDR Identifiers.</Definition>
       <Applications>EIDR</Applications>
-      <DefiningDocument>SMPTE RP 2079</DefiningDocument>
+      <DefiningDocument>SMPTE RP 2079:2018</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
       <ContextScope>AbstractContext</ContextScope>
       <TypeKind>Rename</TypeKind>
@@ -734,6 +759,21 @@
       <ContextScope>AbstractContext</ContextScope>
       <TypeKind>Rename</TypeKind>
       <BaseType>urn:smpte:ul:060e2b34.01040101.01100200.00000000</BaseType>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>CanonicalEIDRServiceIdentifierType</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.01200b00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Canonical EIDR Service Identifier Type</Name>
+      <Definition>Canonical EIDR Service Identifier as specified in RP 2079</Definition>
+      <Applications>EIDR</Applications>
+      <DefiningDocument>SMPTE RP 2079:2018</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>AbstractContext</ContextScope>
+      <TypeKind>Rename</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01200700.00000000</BaseType>
     </Entry>
     <Entry>
       <Register>Types</Register>
@@ -2752,6 +2792,39 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>HEVCCodedContentType</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.02010133.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>HEVCCodedContentType</Name>
+      <DefiningDocument>SMPTE ST 381-5</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01010100.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Symbol>HEVCCodedContent_NotKnown</Symbol>
+          <Name>HEVCCodedContent_NotKnown</Name>
+          <Value>0</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>HEVCCodedContent_ProgressiveFramePicture</Symbol>
+          <Name>HEVCCodedContent_ProgressiveFramePicture</Name>
+          <Value>1</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>HEVCCodedContent_InterlacedFieldPicture</Symbol>
+          <Name>HEVCCodedContent_InterlacedFieldPicture</Name>
+          <Value>2</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>EnumeratedUInt16Types</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.02010200.00000000</UL>
       <Kind>NODE</Kind>
@@ -2882,8 +2955,9 @@
       <Symbol>TransferCharacteristicType</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.02020102.00000000</UL>
       <Kind>LEAF</Kind>
-      <Name>TransferCharacteristicType</Name>
+      <Name>Transfer Characteristic Type</Name>
       <Applications>AAF</Applications>
+      <DefiningDocument>SMPTE ST 377-1</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
       <ContextScope>UnknownContext</ContextScope>
       <TypeKind>Enumeration</TypeKind>
@@ -2941,6 +3015,38 @@
         </Facet>
         <Facet>
           <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010b0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010c0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010d0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010e0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.010f0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.01100000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.01110000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.01120000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.01130000</Value>
           <IsDeprecated>false</IsDeprecated>
         </Facet>
       </Facets>
@@ -3065,6 +3171,30 @@
           <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03080000</Value>
           <IsDeprecated>false</IsDeprecated>
         </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.03090000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.030a0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.030b0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.030c0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.030d0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.030e0000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
       </Facets>
     </Entry>
     <Entry>
@@ -3108,6 +3238,10 @@
           <Applications>AAF[1.1:]</Applications>
           <IsDeprecated>false</IsDeprecated>
         </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04010101.02070000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
       </Facets>
     </Entry>
     <Entry>
@@ -3140,6 +3274,34 @@
         </Facet>
         <Facet>
           <Value>urn:smpte:ul:060e2b34.0401010b.05100101.01050000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>ViewingEnvironmentType</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.02020108.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Viewing Environment Type</Name>
+      <Applications>AAF</Applications>
+      <DefiningDocument>SMPTE ST 2067-50</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01030100.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04100101.01010000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04100101.01020000</Value>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Value>urn:smpte:ul:060e2b34.0401010d.04100101.01030000</Value>
           <IsDeprecated>false</IsDeprecated>
         </Facet>
       </Facets>
@@ -3649,6 +3811,96 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>J2KExtendedCapabilities</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.03010d00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>JPEG 2000 Extended Capabilities</Name>
+      <DefiningDocument>SMPTE ST 422</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Record</TypeKind>
+      <Facets>
+        <Facet>
+          <Symbol>Pcap</Symbol>
+          <Name>Pcap</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Ccapi</Symbol>
+          <Name>Ccapi</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.04011200.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>AssetIntegrityHash</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.03010e00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>Asset Integrity Hash</Name>
+      <DefiningDocument>SMPTE ST 430-17</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Record</TypeKind>
+      <Facets>
+        <Facet>
+          <Symbol>AssetID</Symbol>
+          <Name>Asset ID</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.04011100.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>AssetHash</Symbol>
+          <Name>Asset Hash</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01030400.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>CplValidation</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.03010f00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>CPL Validation</Name>
+      <DefiningDocument>SMPTE ST 430-17</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Record</TypeKind>
+      <Facets>
+        <Facet>
+          <Symbol>CPLID</Symbol>
+          <Name>CPL ID</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.04011100.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>ErrorCode</Symbol>
+          <Name>Error Code</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01010300.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>PermittedPlaybackStartTime</Symbol>
+          <Name>Permitted Playback Start Time</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01010800.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>ExpirationTime</Symbol>
+          <Name>Expiration Time</Name>
+          <Type>urn:smpte:ul:060e2b34.01040101.01010800.00000000</Type>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>Multiples</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.04000000.00000000</UL>
       <Kind>NODE</Kind>
@@ -3923,6 +4175,19 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>HalfFloatArray</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04011300.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>HalfFloatArray</Name>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>VariableArray</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01020300.00000000</BaseType>
+      <TypeQualifiers>isOrdered</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>VC2WaveletArray</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.04011400.00000000</UL>
       <Kind>LEAF</Kind>
@@ -4170,6 +4435,51 @@
     <Entry>
       <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>AssetIntegrityHashSet</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04030500.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>AssetIntegrityHashSet</Name>
+      <DefiningDocument>SMPTE ST 430-17</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Set</TypeKind>
+      <TypeSize>0</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.03010e00.00000000</BaseType>
+      <TypeQualifiers>isIdentified</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>CplValidationSet</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04030600.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>CplValidationSet</Name>
+      <DefiningDocument>SMPTE ST 430-17</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Set</TypeKind>
+      <TypeSize>0</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.03010f00.00000000</BaseType>
+      <TypeQualifiers>isIdentified</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>DataEssenceCodingSet</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04030700.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>DataEssenceCodingSet</Name>
+      <DefiningDocument>SMPTE ST 430-17</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Set</TypeKind>
+      <TypeSize>0</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.04011100.00000000</BaseType>
+      <TypeQualifiers>isIdentified</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
       <Symbol>BytestreamTypes</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.04100000.00000000</UL>
       <Kind>NODE</Kind>
@@ -4288,6 +4598,19 @@
       <DefiningDocument>SMPTE ST 377-1</DefiningDocument>
       <IsDeprecated>false</IsDeprecated>
       <ContextScope>UnknownContext</ContextScope>
+      <TypeKind>Rename</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.04100100.00000000</BaseType>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012</NamespaceName>
+      <Symbol>ST2109PayloadSeries</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.04100b00.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>ST 2109 Payload Series</Name>
+      <DefiningDocument>SMPTE ST 2109</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
       <TypeKind>Rename</TypeKind>
       <BaseType>urn:smpte:ul:060e2b34.01040101.04100100.00000000</BaseType>
     </Entry>
@@ -6148,6 +6471,17 @@
       <UL>urn:smpte:ul:060e2b34.01040101.0d010701.00000000</UL>
       <Kind>NODE</Kind>
       <Name>Application Specifications Version 1</Name>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/as07</NamespaceName>
+      <Symbol>AS_07</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d010701.07000000</UL>
+      <Kind>NODE</Kind>
+      <Name>AS_07</Name>
+      <Definition>AS-07 Archiving and Preservation Format</Definition>
+      <Applications>AMWA</Applications>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>
@@ -9869,6 +10203,291 @@
     </Entry>
     <Entry>
       <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>LOC_Types</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0104010e.0d0e0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>LOC_Types</Name>
+      <Definition>Metadata registered by the Library of Congress for public use</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>LOC_ApplicationSpecifications_Types</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0104010e.0d0e0100.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>LOC_ApplicationSpecifications_Types</Name>
+      <Definition>Library of Congress Application Specifications Types</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>LOC_ApplicationSpecifications_Types_V1</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0104010e.0d0e0101.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>LOC_ApplicationSpecifications_Types_V1</Name>
+      <Definition>Library of Congress Application Specifications TypesV1</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>AS_07_Types</Symbol>
+      <UL>urn:smpte:ul:060e2b34.0104010e.0d0e0101.07000000</UL>
+      <Kind>NODE</Kind>
+      <Name>AS_07_Types</Name>
+      <Definition>AS-07 Archiving and Preservation Format Types</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>AS_07_DMS_Types</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010000</UL>
+      <Kind>NODE</Kind>
+      <Name>AS_07_DMS_Types</Name>
+      <Definition>AS-07 Archiving and Preservation Format Descriptive Metadata Types</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>StrongReferenceAS_07_DMS_Device</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010200</UL>
+      <Kind>LEAF</Kind>
+      <Name>StrongReferenceAS_07_DMS_Device</Name>
+      <Definition>StrongReference to AS_07_DMS_Device Set</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>StrongReference</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.027f0101.0d0e0101.07010200</BaseType>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>StrongReferenceSetAS_07_DMS_Device</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010201</UL>
+      <Kind>LEAF</Kind>
+      <Name>StrongReferenceSetAS_07_DMS_Device</Name>
+      <Definition>Set of StrongReferences to AS_07_DMS_Device sets</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>Set</TypeKind>
+      <TypeSize>0</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010200</BaseType>
+      <TypeQualifiers>isIdentified</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>StrongReferenceAS_07_DMS_Identifier</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010300</UL>
+      <Kind>LEAF</Kind>
+      <Name>StrongReferenceAS_07_DMS_Identifier</Name>
+      <Definition>StrongReference to AS_07_DMS_Identifier Set</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>StrongReference</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.027f0101.0d0e0101.07010300</BaseType>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>StrongReferenceSetAS_07_DMS_Identifier</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010301</UL>
+      <Kind>LEAF</Kind>
+      <Name>StrongReferenceSetAS_07_DMS_Identifier</Name>
+      <Definition>Set of StrongReferences to AS_07_DMS_Identifier sets</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>Set</TypeKind>
+      <TypeSize>0</TypeSize>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010300</BaseType>
+      <TypeQualifiers>isIdentified</TypeQualifiers>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>AS_07_DMS_IdentifierRoleCode</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010400</UL>
+      <Kind>LEAF</Kind>
+      <Name>AS_07_DMS_IdentifierRoleCode</Name>
+      <Definition>Controlled vocabulary string value identifying the role of identifier</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01100600.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Symbol>Main</Symbol>
+          <Name>Main</Name>
+          <Value>Main</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Additional</Symbol>
+          <Name>Additional</Name>
+          <Value>Additional</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>GSP</Symbol>
+          <Name>GSP</Name>
+          <Value>GSP</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>AS_07_DMS_IdentifierTypeCode</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010500</UL>
+      <Kind>LEAF</Kind>
+      <Name>AS_07_DMS_IdentifierTypeCode</Name>
+      <Definition>Controlled vocabulary string value identifying the type of identifier</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01100600.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Symbol>UUID</Symbol>
+          <Name>UUID</Name>
+          <Value>UUID</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>UMID</Symbol>
+          <Name>UMID</Name>
+          <Value>UMID</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>UL</Symbol>
+          <Name>UL</Name>
+          <Value>UL</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Other</Symbol>
+          <Name>Other</Name>
+          <Value>Other</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.loc.gov/avconservation</NamespaceName>
+      <Symbol>AS_07_DMS_DataDescriptionCode</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0e0101.07010600</UL>
+      <Kind>LEAF</Kind>
+      <Name>AS_07_DMS_DataDescriptionCode</Name>
+      <Definition>Controlled vocabulary string value identifying the role of identifier</Definition>
+      <Applications>DMS_AS_07</Applications>
+      <IsDeprecated>false</IsDeprecated>
+      <ContextScope>DefinedContext</ContextScope>
+      <TypeKind>Enumeration</TypeKind>
+      <BaseType>urn:smpte:ul:060e2b34.01040101.01100600.00000000</BaseType>
+      <Facets>
+        <Facet>
+          <Symbol>Caption</Symbol>
+          <Name>Caption</Name>
+          <Value>Caption</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>TimedText</Symbol>
+          <Name>TimedText</Name>
+          <Value>TimedText</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Graphic</Symbol>
+          <Name>Graphic</Name>
+          <Value>Graphic</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>RelatedDocument</Symbol>
+          <Name>RelatedDocument</Name>
+          <Value>RelatedDocument</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>SupplementaryMetadata</Symbol>
+          <Name>SupplementaryMetadata</Name>
+          <Value>SupplementaryMetadata</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>AssociatedMaterial</Symbol>
+          <Name>AssociatedMaterial</Name>
+          <Value>AssociatedMaterial</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Trailer</Symbol>
+          <Name>Trailer</Name>
+          <Value>Trailer</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>QC</Symbol>
+          <Name>QC</Name>
+          <Value>QC</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+        <Facet>
+          <Symbol>Other</Symbol>
+          <Name>Other</Name>
+          <Value>Other</Value>
+          <Applications>DMS_AS_07</Applications>
+          <IsDeprecated>false</IsDeprecated>
+        </Facet>
+      </Facets>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/13/15</NamespaceName>
+      <Symbol>ISDCF</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0d0f0000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Inter-Society Digital Cinema Forum</Name>
+      <Definition>Metadata registered by Inter-Society Digital Cinema Forum for public use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/14</NamespaceName>
       <Symbol>OrganizationallyRegisteredasPrivate</Symbol>
       <UL>urn:smpte:ul:060e2b34.01040101.0e000000.00000000</UL>
@@ -10185,6 +10804,16 @@
       <Kind>NODE</Kind>
       <Name>Apple Inc.</Name>
       <Definition>Metadata registered by Apple Inc. for private use</Definition>
+      <IsDeprecated>false</IsDeprecated>
+    </Entry>
+    <Entry>
+      <Register>Types</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/2003/2012/14/33</NamespaceName>
+      <Symbol>Fraunhofer</Symbol>
+      <UL>urn:smpte:ul:060e2b34.01040101.0e210000.00000000</UL>
+      <Kind>NODE</Kind>
+      <Name>Fraunhofer</Name>
+      <Definition>Metadata registered by Fraunhofer for private use</Definition>
       <IsDeprecated>false</IsDeprecated>
     </Entry>
     <Entry>

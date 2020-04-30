@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Tue Jun 26 22:01:38 PDT 2018--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Apr 30 08:42:36 PDT 2020--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
@@ -307,6 +307,7 @@
 <xs:element name="EssenceContainers" type="r0:AUIDSet"/>
 <xs:element name="DescriptiveSchemes" type="r0:AUIDSet"/>
 <xs:element name="IsRIPPresent" type="r0:Boolean"/>
+<xs:element name="ConformsToSpecifications" type="r0:AUIDSet"/>
 <xs:element name="ApplicationSupplierName" type="r0:UTF16String"/>
 <xs:element name="ApplicationName" type="r0:UTF16String"/>
 <xs:element name="ApplicationVersion" type="r0:ProductVersionType"/>
@@ -451,7 +452,11 @@
 <xs:element name="CodingStyleDefault" type="r0:DataValue"/>
 <xs:element name="QuantizationDefault" type="r0:DataValue"/>
 <xs:element name="J2CLayout" type="r0:RGBALayout"/>
+<xs:element name="J2KExtendedCapabilities" type="r0:J2KExtendedCapabilities"/>
+<xs:element name="J2KProfile" type="r0:UInt16Array"/>
+<xs:element name="J2KCorrespondingProfile" type="r0:UInt16Array"/>
 <xs:element name="MPEGAudioBitRate" type="r0:UInt32"/>
+<xs:element name="MPEGAudioChannelAssignment" type="r0:AUID"/>
 <xs:element name="VC1InitializationMetadata" type="r0:Stream"/>
 <xs:element name="VC1SingleSequence" type="r0:Boolean"/>
 <xs:element name="VC1CodedContentType" type="r0:ContentScanningType"/>
@@ -470,6 +475,9 @@
 <xs:element name="UCSEncoding" type="r0:UTF16String"/>
 <xs:element name="NamespaceURI" type="r0:UTF16String"/>
 <xs:element name="RFC5646LanguageTagList" type="r0:UTF16String"/>
+<xs:element name="DisplayType" type="r0:UTF16String"/>
+<xs:element name="IntrinsicPictureResolution" type="r0:UTF16String"/>
+<xs:element name="ZpositionInUse" type="r0:UInt8"/>
 <xs:element name="AncillaryResourceID" type="r0:UUID"/>
 <xs:element name="BaseClass" type="r0:AUID"/>
 <xs:element name="MCALabelDictionaryID" type="r0:AUID"/>
@@ -486,6 +494,13 @@
 <xs:element name="MCAPartitionNumber" type="r0:UTF16String"/>
 <xs:element name="MCAAudioContentKind" type="r0:UTF16String"/>
 <xs:element name="MCAAudioElementKind" type="r0:UTF16String"/>
+<xs:element name="MCAContent" type="r0:UTF16String"/>
+<xs:element name="MCAUseClass" type="r0:UTF16String"/>
+<xs:element name="MCAContentSubtype" type="r0:UTF16String"/>
+<xs:element name="MCAContentDifferentiator" type="r0:UTF16String"/>
+<xs:element name="MCASpokenLanguageAttribute" type="r0:ISO7"/>
+<xs:element name="RFC5646AdditionalSpokenLanguages" type="r0:ISO7"/>
+<xs:element name="MCAAdditionalLanguageAttributes" type="r0:ISO7"/>
 <xs:element name="SoundfieldGroupLinkID" type="r0:UUID"/>
 <xs:element name="GroupOfSoundfieldGroupsLinkID" type="r0:UUIDArray"/>
 <xs:element name="AVCConstantBPictureFlag" type="r0:Boolean"/>
@@ -532,6 +547,21 @@
 <xs:element name="VC5AlphaSampling" type="r0:UInt16"/>
 <xs:element name="AACSamplingFrequency" type="r0:UInt8"/>
 <xs:element name="AACChannelConfiguration" type="r0:UInt8"/>
+<xs:element name="ACESAuthoringInformation" type="r0:UTF16String"/>
+<xs:element name="ACESMasteringDisplayPrimaries" type="r0:ThreeColorPrimaries"/>
+<xs:element name="ACESMasteringDisplayWhitePointChromaticity" type="r0:ColorPrimary"/>
+<xs:element name="ACESMasteringDisplayMaximumLuminance" type="r0:UInt32"/>
+<xs:element name="ACESMasteringDisplayMinimumLuminance" type="r0:UInt32"/>
+<xs:element name="TargetFrameAncillaryResourceID" type="r0:UUID"/>
+<xs:element name="MediaType" type="r0:UTF16String"/>
+<xs:element name="TargetFrameIndex" type="r0:UInt64"/>
+<xs:element name="TargetFrameTransferCharacteristic" type="r0:TransferCharacteristicType"/>
+<xs:element name="TargetFrameColorPrimaries" type="r0:ColorPrimariesType"/>
+<xs:element name="TargetFrameComponentMaxRef" type="r0:UInt32"/>
+<xs:element name="TargetFrameComponentMinRef" type="r0:UInt32"/>
+<xs:element name="TargetFrameEssenceStreamID" type="r0:UInt32"/>
+<xs:element name="ACESPictureSubDescriptorInstanceID" type="r0:UUID"/>
+<xs:element name="TargetFrameViewingEnvironment" type="r0:ViewingEnvironmentType"/>
 <xs:element name="ParentClass" type="r0:ClassDefinitionWeakReference"/>
 <xs:element name="Properties" type="r0:PropertyDefinitionStrongReferenceSet"/>
 <xs:element name="IsConcrete" type="r0:Boolean"/>
@@ -539,6 +569,7 @@
 <xs:element name="IsOptional" type="r0:Boolean"/>
 <xs:element name="LocalIdentification" type="r0:UInt16"/>
 <xs:element name="IsUniqueIdentifier" type="r0:Boolean"/>
+<xs:element name="MemberOf" type="r0:ClassDefinitionWeakReference"/>
 <xs:element name="Size" type="r0:UInt8"/>
 <xs:element name="IsSigned" type="r0:Boolean"/>
 <xs:element name="ReferencedType" type="r0:ClassDefinitionWeakReference"/>
@@ -567,10 +598,13 @@
 <xs:element name="PreferredPrefix" type="r0:UTF16String"/>
 <xs:element name="ExtensionDescription" type="r0:UTF16String"/>
 <xs:element name="MetaDefinitions" type="r0:MetaDefinitionStrongReferenceSet"/>
+<xs:element name="OriginalProperty" type="r0:PropertyDefinitionWeakReference"/>
+<xs:element name="ElementOf" type="r0:TypeDefinitionExtendibleEnumerationWeakReferenceSet"/>
 <xs:element name="RootMetaDictionary" type="r0:MetaDictionaryStrongReference"/>
 <xs:element name="RootPreface" type="r0:PrefaceStrongReference"/>
 <xs:element name="RootObjectDirectory" type="r0:DataValue"/>
 <xs:element name="RootFormatVersion" type="r0:UInt32"/>
+<xs:element name="RootExtensions" type="r0:ExtensionSchemeStrongReferenceSet"/>
 <xs:element name="IndexEditRate" type="r0:Rational"/>
 <xs:element name="IndexStartPosition" type="r0:PositionType"/>
 <xs:element name="IndexDuration" type="r0:LengthType"/>
@@ -791,4 +825,5 @@
 <xs:element name="RFC5646TextLanguageCode" type="r0:UTF16String"/>
 <xs:element name="TextDataDescription" type="r0:UTF16String"/>
 <xs:element name="EIDRDMSEssenceID" type="r0:CanonicalEIDRIdentifierType"/>
+<xs:element name="IABSampleRate" type="r0:Rational"/>
 </xs:schema>

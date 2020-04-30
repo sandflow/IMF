@@ -7,7 +7,9 @@
 <import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/rules" schemaLocation="www-smpte-ra-org-reg-335-2012-13-1-amwa-rules.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" schemaLocation="www-smpte-ra-org-reg-395-2014-13-1-amwa-as11.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/2003/2012/13/12/as11" schemaLocation="www-smpte-ra-org-reg-2003-2012-13-12-as11.xsd"/>
+<import namespace="http://www.loc.gov/avconservation" schemaLocation="www-loc-gov-avconservation.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/335/2012/13/12/as11" schemaLocation="www-smpte-ra-org-reg-335-2012-13-12-as11.xsd"/>
+<import namespace="http://www.smpte-ra.org/reg/395/2014/14/9" schemaLocation="www-smpte-ra-org-reg-395-2014-14-9.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10" schemaLocation="www-smpte-ra-org-reg-335-2012-13-1-amwa-as10.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as12" schemaLocation="www-smpte-ra-org-reg-335-2012-13-1-amwa-as12.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/395/2014" schemaLocation="www-smpte-ra-org-reg-395-2014.xsd"/>
@@ -25,6 +27,7 @@
 <import namespace="http://www.ebu.ch/metadata/schemas/ebucore/smpte/class13/group" schemaLocation="www-ebu-ch-metadata-schemas-ebucore-smpte-class13-group.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as12" schemaLocation="www-smpte-ra-org-reg-395-2014-13-1-amwa-as12.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" schemaLocation="www-smpte-ra-org-reg-335-2012-13-1-aaf.xsd"/>
+<import namespace="http://www.smpte-ra.org/reg/335/2012/14/9" schemaLocation="www-smpte-ra-org-reg-335-2012-14-9.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/395/2014/13/4/archive" schemaLocation="www-smpte-ra-org-reg-395-2014-13-4-archive.xsd"/>
 <import namespace="http://www.smpte-ra.org/reg/395/2014/13/12/as11" schemaLocation="www-smpte-ra-org-reg-395-2014-13-12-as11.xsd"/>
 </schema>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Tue Jun 26 22:01:38 PDT 2018--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/rules" xmlns:r3="http://www.smpte-ra.org/reg/335/2012/13/4/archive" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Apr 30 08:42:36 PDT 2020--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:r1="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:r2="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/rules" xmlns:r3="http://www.smpte-ra.org/reg/335/2012/13/4/archive" xmlns:r4="http://www.loc.gov/avconservation" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/rules"/>
+<xs:import namespace="http://www.loc.gov/avconservation"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/4/archive"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
 <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
@@ -989,14 +990,15 @@
 <xs:element ref="r0:ContentStorageObject"/>
 <xs:element minOccurs="0" ref="r0:Dictionary"/>
 <xs:element ref="r0:FileLastModified"/>
-<xs:element ref="r0:EssenceContainers"/>
 <xs:element ref="r0:OperationalPattern"/>
+<xs:element ref="r0:DescriptiveSchemes"/>
+<xs:element minOccurs="0" ref="r0:IsRIPPresent"/>
+<xs:element minOccurs="0" ref="r0:ConformsToSpecifications"/>
+<xs:element ref="r0:EssenceContainers"/>
 <xs:element minOccurs="0" ref="r0:ByteOrder"/>
 <xs:element minOccurs="0" ref="r0:PrimaryPackage"/>
 <xs:element minOccurs="0" ref="r0:ObjectModelVersion"/>
-<xs:element ref="r0:DescriptiveSchemes"/>
 <xs:element ref="r0:IdentificationList"/>
-<xs:element minOccurs="0" ref="r0:IsRIPPresent"/>
 <xs:element ref="r0:FormatVersion"/>
 <xs:element minOccurs="0" ref="r3:APP_VTRErrorCount"/>
 <xs:element minOccurs="0" ref="r3:APP_PSEFailureCount"/>
@@ -1906,6 +1908,9 @@
 <xs:element minOccurs="0" ref="r0:CodingStyleDefault"/>
 <xs:element minOccurs="0" ref="r0:QuantizationDefault"/>
 <xs:element minOccurs="0" ref="r0:J2CLayout"/>
+<xs:element minOccurs="0" ref="r0:J2KCorrespondingProfile"/>
+<xs:element minOccurs="0" ref="r0:J2KExtendedCapabilities"/>
+<xs:element minOccurs="0" ref="r0:J2KProfile"/>
 <xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element minOccurs="0" ref="r0:ObjectClass"/>
 <xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
@@ -1983,6 +1988,7 @@
 <xs:element name="MPEGAudioDescriptor">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:MPEGAudioChannelAssignment"/>
 <xs:element minOccurs="0" ref="r0:MPEGAudioBitRate"/>
 <xs:element minOccurs="0" ref="r0:ReferenceImageEditRate"/>
 <xs:element minOccurs="0" ref="r0:ReferenceAudioAlignmentLevel"/>
@@ -2137,9 +2143,12 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:ResourceID"/>
+<xs:element minOccurs="0" ref="r0:ZpositionInUse"/>
 <xs:element ref="r0:UCSEncoding"/>
 <xs:element ref="r0:NamespaceURI"/>
 <xs:element minOccurs="0" ref="r0:RFC5646LanguageTagList"/>
+<xs:element minOccurs="0" ref="r0:DisplayType"/>
+<xs:element minOccurs="0" ref="r0:IntrinsicPictureResolution"/>
 <xs:element minOccurs="0" ref="r0:DataEssenceCoding"/>
 <xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
 <xs:element minOccurs="0" ref="r0:EssenceLength"/>
@@ -2263,11 +2272,18 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
+<xs:element minOccurs="0" ref="r0:MCAContentDifferentiator"/>
 <xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
+<xs:element minOccurs="0" ref="r0:MCAContentSubtype"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
+<xs:element minOccurs="0" ref="r0:MCAContent"/>
 <xs:element minOccurs="0" ref="r0:RFC5646SpokenLanguage"/>
+<xs:element minOccurs="0" ref="r0:MCAUseClass"/>
+<xs:element minOccurs="0" ref="r0:MCASpokenLanguageAttribute"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionNumber"/>
+<xs:element minOccurs="0" ref="r0:RFC5646AdditionalSpokenLanguages"/>
+<xs:element minOccurs="0" ref="r0:MCAAdditionalLanguageAttributes"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionKind"/>
 <xs:element minOccurs="0" ref="r0:MCATitleVersion"/>
 <xs:element minOccurs="0" ref="r0:MCAAudioElementKind"/>
@@ -2289,11 +2305,18 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
+<xs:element minOccurs="0" ref="r0:MCAContentDifferentiator"/>
 <xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
+<xs:element minOccurs="0" ref="r0:MCAContentSubtype"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
+<xs:element minOccurs="0" ref="r0:MCAContent"/>
 <xs:element minOccurs="0" ref="r0:RFC5646SpokenLanguage"/>
+<xs:element minOccurs="0" ref="r0:MCAUseClass"/>
+<xs:element minOccurs="0" ref="r0:MCASpokenLanguageAttribute"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionNumber"/>
+<xs:element minOccurs="0" ref="r0:RFC5646AdditionalSpokenLanguages"/>
+<xs:element minOccurs="0" ref="r0:MCAAdditionalLanguageAttributes"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionKind"/>
 <xs:element minOccurs="0" ref="r0:MCATitleVersion"/>
 <xs:element minOccurs="0" ref="r0:MCAAudioElementKind"/>
@@ -2315,11 +2338,18 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
+<xs:element minOccurs="0" ref="r0:MCAContentDifferentiator"/>
 <xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
+<xs:element minOccurs="0" ref="r0:MCAContentSubtype"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
+<xs:element minOccurs="0" ref="r0:MCAContent"/>
 <xs:element minOccurs="0" ref="r0:RFC5646SpokenLanguage"/>
+<xs:element minOccurs="0" ref="r0:MCAUseClass"/>
+<xs:element minOccurs="0" ref="r0:MCASpokenLanguageAttribute"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionNumber"/>
+<xs:element minOccurs="0" ref="r0:RFC5646AdditionalSpokenLanguages"/>
+<xs:element minOccurs="0" ref="r0:MCAAdditionalLanguageAttributes"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionKind"/>
 <xs:element minOccurs="0" ref="r0:MCATitleVersion"/>
 <xs:element minOccurs="0" ref="r0:MCAAudioElementKind"/>
@@ -2340,11 +2370,18 @@
 <xs:element ref="r0:MCALinkID"/>
 <xs:element minOccurs="0" ref="r0:MCATagName"/>
 <xs:element minOccurs="0" ref="r0:MCATitle"/>
+<xs:element minOccurs="0" ref="r0:MCAContentDifferentiator"/>
 <xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
+<xs:element minOccurs="0" ref="r0:MCAContentSubtype"/>
 <xs:element ref="r0:MCALabelDictionaryID"/>
 <xs:element ref="r0:MCATagSymbol"/>
+<xs:element minOccurs="0" ref="r0:MCAContent"/>
 <xs:element minOccurs="0" ref="r0:RFC5646SpokenLanguage"/>
+<xs:element minOccurs="0" ref="r0:MCAUseClass"/>
+<xs:element minOccurs="0" ref="r0:MCASpokenLanguageAttribute"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionNumber"/>
+<xs:element minOccurs="0" ref="r0:RFC5646AdditionalSpokenLanguages"/>
+<xs:element minOccurs="0" ref="r0:MCAAdditionalLanguageAttributes"/>
 <xs:element minOccurs="0" ref="r0:MCAPartitionKind"/>
 <xs:element minOccurs="0" ref="r0:MCATitleVersion"/>
 <xs:element minOccurs="0" ref="r0:MCAAudioElementKind"/>
@@ -2551,6 +2588,103 @@
 <xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
+<xs:element name="ACESPictureSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:ACESMasteringDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:ACESMasteringDisplayMaximumLuminance"/>
+<xs:element minOccurs="0" ref="r0:ACESMasteringDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:ACESMasteringDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:ACESAuthoringInformation"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="TargetFrameSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:TargetFrameEssenceStreamID"/>
+<xs:element ref="r0:MediaType"/>
+<xs:element ref="r0:TargetFrameIndex"/>
+<xs:element minOccurs="0" ref="r0:ACESPictureSubDescriptorInstanceID"/>
+<xs:element ref="r0:TargetFrameTransferCharacteristic"/>
+<xs:element ref="r0:TargetFrameComponentMinRef"/>
+<xs:element ref="r0:TargetFrameColorPrimaries"/>
+<xs:element ref="r0:TargetFrameComponentMaxRef"/>
+<xs:element minOccurs="0" ref="r0:TargetFrameViewingEnvironment"/>
+<xs:element ref="r0:TargetFrameAncillaryResourceID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="IABEssenceDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:ReferenceImageEditRate"/>
+<xs:element minOccurs="0" ref="r0:ReferenceAudioAlignmentLevel"/>
+<xs:element ref="r0:ChannelCount"/>
+<xs:element minOccurs="0" ref="r0:AudioReferenceLevel"/>
+<xs:element ref="r0:QuantizationBits"/>
+<xs:element minOccurs="0" ref="r0:ElectrospatialFormulation"/>
+<xs:element minOccurs="0" ref="r0:Locked"/>
+<xs:element ref="r0:AudioSampleRate"/>
+<xs:element minOccurs="0" ref="r0:DialNorm"/>
+<xs:element minOccurs="0" ref="r0:SoundCompression"/>
+<xs:element minOccurs="0" ref="r0:LinkedTrackID"/>
+<xs:element minOccurs="0" ref="r0:EssenceLength"/>
+<xs:element minOccurs="0" ref="r0:SampleRate"/>
+<xs:element minOccurs="0" ref="r0:Codec"/>
+<xs:element minOccurs="0" ref="r0:ContainerFormat"/>
+<xs:element minOccurs="0" ref="r0:SubDescriptors"/>
+<xs:element minOccurs="0" ref="r0:Locators"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="IABSoundfieldLabelSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:MCALinkID"/>
+<xs:element minOccurs="0" ref="r0:MCATagName"/>
+<xs:element minOccurs="0" ref="r0:MCATitle"/>
+<xs:element minOccurs="0" ref="r0:MCAContentDifferentiator"/>
+<xs:element minOccurs="0" ref="r0:MCATitleSubVersion"/>
+<xs:element minOccurs="0" ref="r0:MCAContentSubtype"/>
+<xs:element ref="r0:MCALabelDictionaryID"/>
+<xs:element ref="r0:MCATagSymbol"/>
+<xs:element minOccurs="0" ref="r0:MCAContent"/>
+<xs:element minOccurs="0" ref="r0:RFC5646SpokenLanguage"/>
+<xs:element minOccurs="0" ref="r0:MCAUseClass"/>
+<xs:element minOccurs="0" ref="r0:MCASpokenLanguageAttribute"/>
+<xs:element minOccurs="0" ref="r0:MCAPartitionNumber"/>
+<xs:element minOccurs="0" ref="r0:RFC5646AdditionalSpokenLanguages"/>
+<xs:element minOccurs="0" ref="r0:MCAAdditionalLanguageAttributes"/>
+<xs:element minOccurs="0" ref="r0:MCAPartitionKind"/>
+<xs:element minOccurs="0" ref="r0:MCATitleVersion"/>
+<xs:element minOccurs="0" ref="r0:MCAAudioElementKind"/>
+<xs:element minOccurs="0" ref="r0:MCAAudioContentKind"/>
+<xs:element minOccurs="0" ref="r0:MCAEpisode"/>
+<xs:element minOccurs="0" ref="r0:MCAChannelID"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
 <xs:element name="OPDefinition">
 <xs:complexType>
 <xs:all>
@@ -2595,6 +2729,7 @@
 <xs:element ref="r0:IsConcrete"/>
 <xs:element minOccurs="0" ref="r0:Properties"/>
 <xs:element ref="r0:ParentClass"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2606,10 +2741,12 @@
 <xs:element name="PropertyDefinition">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:LocalIdentification"/>
+<xs:element minOccurs="0" ref="r0:LocalIdentification"/>
 <xs:element minOccurs="0" ref="r0:IsUniqueIdentifier"/>
 <xs:element ref="r0:PropertyType"/>
+<xs:element minOccurs="0" ref="r0:MemberOf"/>
 <xs:element ref="r0:IsOptional"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2621,6 +2758,7 @@
 <xs:element abstract="true" name="TypeDefinition">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2634,6 +2772,7 @@
 <xs:all>
 <xs:element ref="r0:Size"/>
 <xs:element ref="r0:IsSigned"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2646,6 +2785,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:ReferencedType"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2659,6 +2799,7 @@
 <xs:all>
 <xs:element ref="r0:TargetSet"/>
 <xs:element ref="r0:WeakReferencedType"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2673,6 +2814,7 @@
 <xs:element ref="r0:ElementValues"/>
 <xs:element ref="r0:ElementType"/>
 <xs:element ref="r0:ElementNames"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2686,6 +2828,7 @@
 <xs:all>
 <xs:element ref="r0:FixedArrayElementType"/>
 <xs:element ref="r0:ElementCount"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2698,6 +2841,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:VariableArrayElementType"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2710,6 +2854,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:SetElementType"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2722,6 +2867,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:StringElementType"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2733,6 +2879,7 @@
 <xs:element name="TypeDefinitionStream">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2746,6 +2893,7 @@
 <xs:all>
 <xs:element ref="r0:MemberNames"/>
 <xs:element ref="r0:MemberTypes"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2758,6 +2906,7 @@
 <xs:complexType>
 <xs:all>
 <xs:element ref="r0:RenamedType"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2769,8 +2918,9 @@
 <xs:element name="TypeDefinitionExtendibleEnumeration">
 <xs:complexType>
 <xs:all>
-<xs:element ref="r0:ExtendibleEnumerationElementNames"/>
-<xs:element ref="r0:ExtendibleEnumerationElementValues"/>
+<xs:element minOccurs="0" ref="r0:ExtendibleEnumerationElementNames"/>
+<xs:element minOccurs="0" ref="r0:ExtendibleEnumerationElementValues"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2782,6 +2932,7 @@
 <xs:element name="TypeDefinitionIndirect">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2793,6 +2944,7 @@
 <xs:element name="TypeDefinitionOpaque">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2804,6 +2956,7 @@
 <xs:element name="TypeDefinitionCharacter">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2815,6 +2968,7 @@
 <xs:element abstract="true" name="MetaDefinition">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
 <xs:element ref="r0:MetaDefinitionName"/>
 <xs:element ref="r0:MetaDefinitionIdentification"/>
 <xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
@@ -2845,6 +2999,40 @@
 <xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
 </xs:element>
+<xs:element name="PropertyAliasDefinition">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:OriginalProperty"/>
+<xs:element minOccurs="0" ref="r0:LocalIdentification"/>
+<xs:element minOccurs="0" ref="r0:IsUniqueIdentifier"/>
+<xs:element ref="r0:PropertyType"/>
+<xs:element minOccurs="0" ref="r0:MemberOf"/>
+<xs:element ref="r0:IsOptional"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element ref="r0:MetaDefinitionName"/>
+<xs:element ref="r0:MetaDefinitionIdentification"/>
+<xs:element minOccurs="0" ref="r0:MetaDefinitionDescription"/>
+</xs:all>
+<xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="ExtendibleEnumerationElement">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:ElementOf"/>
+<xs:element ref="r0:DefinitionObjectName"/>
+<xs:element ref="r0:DefinitionObjectIdentification"/>
+<xs:element minOccurs="0" ref="r0:DefinitionObjectDescription"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:ObjectClass"/>
+<xs:element minOccurs="0" ref="r0:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r0:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:uid" use="required"/>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
 <xs:element name="Root">
 <xs:complexType>
 <xs:all>
@@ -2852,7 +3040,8 @@
 <xs:element minOccurs="0" ref="r0:RootObjectDirectory"/>
 <xs:element ref="r0:RootPreface"/>
 <xs:element minOccurs="0" ref="r0:RootFormatVersion"/>
-<xs:element ref="r0:RootMetaDictionary"/>
+<xs:element minOccurs="0" ref="r0:RootExtensions"/>
+<xs:element minOccurs="0" ref="r0:RootMetaDictionary"/>
 </xs:all>
 <xs:attribute ref="reg:path" use="optional"/>
 </xs:complexType>
@@ -3655,6 +3844,7 @@
 <xs:element name="CryptographicContext">
 <xs:complexType>
 <xs:all>
+<xs:element minOccurs="0" ref="r4:MICCarriage"/>
 <xs:element ref="r0:CryptographicContextID"/>
 <xs:element ref="r0:SourceContainerFormat"/>
 <xs:element ref="r0:CryptographicKeyID"/>
