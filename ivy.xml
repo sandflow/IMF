@@ -1,8 +1,8 @@
 <ivy-module version="2.0">
     <info organisation="com.sandflow" module="imf-artifacts"/>
     <dependencies>
-        <dependency org="com.sandflow" name="regxmllib" rev="1.1.2+"/>
-        <dependency org="javax.xml.bind" name="jaxb-api" rev="2+"/>
-        <dependency org="com.sun.xml.bind" name="jaxb-impl" rev="2+"/>
+        <dependency org="com.sandflow" name="regxmllib" rev="1.1.4"/>
+        <dependency org="javax.xml.bind" name="jaxb-api" rev="2.3.1"/>
+        <dependency org="org.glassfish.jaxb" name="jaxb-runtime" rev="2.3.1"/>
     </dependencies>
 </ivy-module>
