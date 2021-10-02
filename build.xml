@@ -17,10 +17,20 @@
         </fileset>
     </path>
 
-    <!-- Retrive dependencies -->
+    <!-- java version -->
+
+    <condition property="compile.config" value="java_8">
+        <equals arg1="${ant.java.version}" arg2="1.8"/>
+    </condition>
+
+    <condition property="compile.config" value="java_11">
+        <equals arg1="${ant.java.version}" arg2="11"/>
+    </condition>
+
+    <!-- Retrieve dependencies -->
 
     <target name="deps" description="retrieve dependencies with ivy">
-        <ivy:retrieve type="jar" pattern="${lib.dir}/[artifact].[ext]" />
+        <ivy:retrieve type="jar" pattern="${lib.dir}/[artifact].[ext]" conf="${compile.config}"/>
     </target>
 
     <!-- Generate RegXML XML Schemas -->

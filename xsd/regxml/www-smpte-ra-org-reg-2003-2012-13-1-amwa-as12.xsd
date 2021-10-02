@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Tue Jun 26 22:01:37 PDT 2018--><!--By: regxmllib build 80585d09fb02349076635d0853cc4e518f6651fb--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/395/2014/13/13" xmlns:r1="http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/as12" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/as12" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/13"/>
-<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-<xs:complexType name="AS_12_DescriptiveObjectStrongReference">
-<xs:choice>
-<xs:element ref="r0:DMS_AS_12_AdID_Slate"/>
-</xs:choice>
-</xs:complexType>
-<xs:element name="AS_12_DescriptiveObjectStrongReference" type="r1:AS_12_DescriptiveObjectStrongReference"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:42 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/395/2014/13/13" xmlns:r1="http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/as12" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012/13/1/amwa/as12" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/13"/>
+    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+    <xs:complexType name="AS_12_DescriptiveObjectStrongReference">
+        <xs:choice>
+            <xs:element ref="r0:DMS_AS_12_AdID_Slate"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:element name="AS_12_DescriptiveObjectStrongReference" type="r1:AS_12_DescriptiveObjectStrongReference"/>
 </xs:schema>
