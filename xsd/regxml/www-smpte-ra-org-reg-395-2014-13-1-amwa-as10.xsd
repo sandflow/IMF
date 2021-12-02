@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:42 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10"/>
-    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element name="DMS_AS_10_Core_Framework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:AS_10_Person_Name"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Location_Description"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Common_Spanning_ID"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Spanning_Number"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Main_Title"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Sub_Title"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Title_Description"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Organization_Name"/>
-                <xs:element ref="r0:AS_10_Shim_Name"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Type"/>
-                <xs:element minOccurs="0" ref="r0:AS_10_Cumulative_Duration"/>
-                <xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r1:InstanceID"/>
-                <xs:element minOccurs="0" ref="r1:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Dec 02 09:18:44 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="DMS_AS_10_Core_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:AS_10_Person_Name"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Location_Description"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Common_Spanning_ID"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Spanning_Number"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Main_Title"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Sub_Title"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Title_Description"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Organization_Name"/>
+<xs:element ref="r0:AS_10_Shim_Name"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Type"/>
+<xs:element minOccurs="0" ref="r0:AS_10_Cumulative_Duration"/>
+<xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
 </xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created: Thu Dec 02 09:18:41 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><Extension xmlns="http://www.smpte-ra.org/schemas/2001-1b/2013/metadict">
+<SchemeID>urn:uuid:3c343e7c-f7b1-5fa0-7fc9-96aaa45cb485</SchemeID>
+<SchemeURI>http://www.smpte-ra.org/reg/395/2014/14/9</SchemeURI>
+<MetaDefinitions>
+<ClassDefinition>
+<Identification>urn:smpte:ul:060e2b34.027f0105.0e090502.00000000</Identification>
+<Symbol>ISXDDataEssenceDescriptor</Symbol>
+<Description>Identifies an ISXD Data Essence Descriptor</Description>
+<Name>ISXD Data Essence Descriptor</Name>
+<ParentClass>urn:smpte:ul:060e2b34.027f0101.0d010101.01012400</ParentClass>
+<IsConcrete>true</IsConcrete>
+</ClassDefinition>
+</MetaDefinitions>
+</Extension>

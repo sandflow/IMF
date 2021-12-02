@@ -16050,6 +16050,26 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     </Entry>
     <Entry>
       <Register>Groups</Register>
+      <NamespaceName>http://www.smpte-ra.org/reg/395/2014/14/9</NamespaceName>
+      <Symbol>ISXDDataEssenceDescriptor</Symbol>
+      <UL>urn:smpte:ul:060e2b34.027f0105.0e090502.00000000</UL>
+      <Kind>LEAF</Kind>
+      <Name>ISXD Data Essence Descriptor</Name>
+      <Definition>Identifies an ISXD Data Essence Descriptor</Definition>
+      <DefiningDocument>RDD47</DefiningDocument>
+      <IsDeprecated>false</IsDeprecated>
+      <Parent>urn:smpte:ul:060e2b34.027f0101.0d010101.01012400</Parent>
+      <IsConcrete>true</IsConcrete>
+      <KLVSyntax>06 53</KLVSyntax>
+      <Contents>
+        <Record>
+          <UL>urn:smpte:ul:060e2b34.01010105.0e090400.00000000</UL>
+          <IsOptional>false</IsOptional>
+        </Record>
+      </Contents>
+    </Entry>
+    <Entry>
+      <Register>Groups</Register>
       <NamespaceName>http://www.smpte-ra.org/reg/395/2014/14/10</NamespaceName>
       <Symbol>Snell_and_Wilcox</Symbol>
       <UL>urn:smpte:ul:060e2b34.027f0101.0e0a0000.00000000</UL>
