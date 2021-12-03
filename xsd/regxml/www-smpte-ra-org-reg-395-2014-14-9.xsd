@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Dec 02 09:18:44 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012/14/9" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/14/9" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Fri Dec 03 07:54:38 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012/14/9" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/14/9" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/14/9"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
 <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
@@ -9,6 +9,42 @@
 <xs:element ref="r0:NamespaceURI"/>
 <xs:element minOccurs="0" ref="r1:SubDescriptors"/>
 <xs:element minOccurs="0" ref="r1:Locators"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="IADataEssenceDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:DataEssenceCoding"/>
+<xs:element minOccurs="0" ref="r1:LinkedTrackID"/>
+<xs:element minOccurs="0" ref="r1:EssenceLength"/>
+<xs:element minOccurs="0" ref="r1:SampleRate"/>
+<xs:element minOccurs="0" ref="r1:Codec"/>
+<xs:element minOccurs="0" ref="r1:ContainerFormat"/>
+<xs:element minOccurs="0" ref="r1:SubDescriptors"/>
+<xs:element minOccurs="0" ref="r1:Locators"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="IADataEssenceSubDescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:IABSampleRate"/>
+<xs:element minOccurs="0" ref="r0:FirstFrame"/>
+<xs:element minOccurs="0" ref="r0:ImmersiveAudioID"/>
+<xs:element minOccurs="0" ref="r0:ImmersiveAudioVersion"/>
+<xs:element minOccurs="0" ref="r0:MaxChannelCount"/>
+<xs:element minOccurs="0" ref="r0:MaxObjectCount"/>
 <xs:element minOccurs="0" ref="r1:InstanceID"/>
 <xs:element minOccurs="0" ref="r1:ObjectClass"/>
 <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>

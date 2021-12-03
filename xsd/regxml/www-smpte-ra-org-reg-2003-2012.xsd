@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Thu Dec 02 09:18:44 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r10="http://www.smpte-ra.org/reg/395/2014/13/13" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/14/9" xmlns:r3="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r4="http://www.loc.gov/avconservation" xmlns:r5="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as10" xmlns:r6="http://www.ebu.ch/metadata/schemas/ebucore/smpte/class13/group" xmlns:r7="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as12" xmlns:r8="http://www.smpte-ra.org/reg/395/2014/13/4/archive" xmlns:r9="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Fri Dec 03 07:54:39 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.smpte-ra.org/reg/395/2014/13/1/aaf" xmlns:r10="http://www.smpte-ra.org/reg/395/2014/13/13" xmlns:r2="http://www.smpte-ra.org/reg/395/2014/14/9" xmlns:r3="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as11" xmlns:r4="http://www.loc.gov/avconservation" xmlns:r5="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as10" xmlns:r6="http://www.ebu.ch/metadata/schemas/ebucore/smpte/class13/group" xmlns:r7="http://www.smpte-ra.org/reg/395/2014/13/1/amwa/as12" xmlns:r8="http://www.smpte-ra.org/reg/395/2014/13/4/archive" xmlns:r9="http://www.smpte-ra.org/reg/395/2014/13/12/as11" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/2003/2012" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/1/aaf"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/12/as11"/>
 <xs:import namespace="http://www.smpte-ra.org/reg/395/2014/13/4/archive"/>
@@ -168,6 +168,32 @@
 </xs:union>
 </xs:simpleType>
 <xs:element name="Float" type="r0:Float"/>
+<xs:simpleType name="HalfFloat">
+<xs:union>
+<xs:simpleType>
+<xs:restriction base="xs:short"/>
+</xs:simpleType>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="0x[0-9a-fA-F]{1,4}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:union>
+</xs:simpleType>
+<xs:element name="HalfFloat" type="r0:HalfFloat"/>
+<xs:simpleType name="LensSerialHalfFloat">
+<xs:union>
+<xs:simpleType>
+<xs:restriction base="xs:unsignedShort"/>
+</xs:simpleType>
+<xs:simpleType>
+<xs:restriction base="xs:string">
+<xs:pattern value="0x[0-9a-fA-F]{1,4}"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:union>
+</xs:simpleType>
+<xs:element name="LensSerialHalfFloat" type="r0:LensSerialHalfFloat"/>
 <xs:simpleType name="AUID">
 <xs:restriction base="xs:anyURI">
 <xs:pattern value="urn:smpte:ul:([0-9a-fA-F]{8}\.){3}[0-9a-fA-F]{8}"/>
@@ -187,6 +213,12 @@
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="UUID" type="r0:UUID"/>
+<xs:complexType name="UInt8Array20">
+<xs:sequence>
+<xs:element maxOccurs="20" minOccurs="20" ref="r0:UInt8"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="UInt8Array20" type="r0:UInt8Array20"/>
 <xs:simpleType name="Boolean">
 <xs:restriction base="xs:token">
 <xs:enumeration value="False"/>
@@ -658,6 +690,7 @@
 <xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter4300K"/>
 <xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter6300K"/>
 <xs:enumeration value="ColorCorrectionFilterWheelSetting_CCFilter5600K"/>
+<xs:enumeration value="ColorCorrectionFilterWheelSetting_Undefined"/>
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="ColorCorrectionFilterWheelSettingType" type="r0:ColorCorrectionFilterWheelSettingType"/>
@@ -666,6 +699,7 @@
 <xs:enumeration value="ImageSensorReadoutMode_InterlacedField"/>
 <xs:enumeration value="ImageSensorReadoutMode_InterlacedFrame"/>
 <xs:enumeration value="ImageSensorReadoutMode_ProgressiveFrame"/>
+<xs:enumeration value="ImageSensorReadoutMode_Undefined"/>
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="ImageSensorReadoutModeType" type="r0:ImageSensorReadoutModeType"/>
@@ -675,6 +709,7 @@
 <xs:enumeration value="AutoWhiteBalanceMode_AutomaticWhiteBalanceSetup"/>
 <xs:enumeration value="AutoWhiteBalanceMode_HoldWhiteBalanceSetup"/>
 <xs:enumeration value="AutoWhiteBalanceMode_OnePushWhiteBalanceSetup"/>
+<xs:enumeration value="AutoWhiteBalanceMode_Undefined"/>
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="AutoWhiteBalanceModeType" type="r0:AutoWhiteBalanceModeType"/>
@@ -685,9 +720,30 @@
 <xs:enumeration value="AutoFocusSensingAreaSetting_FullScreenSensingAutoFocusMode"/>
 <xs:enumeration value="AutoFocusSensingAreaSetting_MultiSpotSensingAutoFocusMode"/>
 <xs:enumeration value="AutoFocusSensingAreaSetting_SingleSpotSensingAutoFocusMode"/>
+<xs:enumeration value="AutoFocusSensingAreaSetting_Undefined"/>
 </xs:restriction>
 </xs:simpleType>
 <xs:element name="AutoFocusSensingAreaSettingType" type="r0:AutoFocusSensingAreaSettingType"/>
+<xs:simpleType name="HEVCCodedContentType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="HEVCCodedContent_NotKnown"/>
+<xs:enumeration value="HEVCCodedContent_ProgressiveFramePicture"/>
+<xs:enumeration value="HEVCCodedContent_InterlacedFieldPicture"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="HEVCCodedContentType" type="r0:HEVCCodedContentType"/>
+<xs:simpleType name="LuminanceCodeRangeType">
+<xs:restriction base="xs:token">
+<xs:enumeration value="LuminanceCodeRange_UnknownCode"/>
+<xs:enumeration value="LuminanceCodeRange_UnknownPicture"/>
+<xs:enumeration value="LuminanceCodeRange_FullScaledCode"/>
+<xs:enumeration value="LuminanceCodeRange_FullScaledPicture"/>
+<xs:enumeration value="LuminanceCodeRange_NormalVideo"/>
+<xs:enumeration value="LuminanceCodeRange_VideoRangedCode"/>
+<xs:enumeration value="LuminanceCodeRange_LimitedRangeVideo"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:element name="LuminanceCodeRangeType" type="r0:LuminanceCodeRangeType"/>
 <xs:simpleType name="TIFFByteOrderType">
 <xs:restriction base="xs:token">
 <xs:enumeration value="TIFFByteOrder_BigEndian"/>
@@ -853,6 +909,29 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="ColorPrimary" type="r0:ColorPrimary"/>
+<xs:complexType name="J2KExtendedCapabilities">
+<xs:sequence>
+<xs:element name="Pcap" type="r0:UInt32"/>
+<xs:element name="Ccapi" type="r0:UInt16Array"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="J2KExtendedCapabilities" type="r0:J2KExtendedCapabilities"/>
+<xs:complexType name="AssetIntegrityHash">
+<xs:sequence>
+<xs:element name="AssetID" type="r0:UInt8Array16"/>
+<xs:element name="AssetHash" type="r0:UInt8Array20"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AssetIntegrityHash" type="r0:AssetIntegrityHash"/>
+<xs:complexType name="CplValidation">
+<xs:sequence>
+<xs:element name="CPLID" type="r0:UInt8Array16"/>
+<xs:element name="ErrorCode" type="r0:UInt32"/>
+<xs:element name="PermittedPlaybackStartTime" type="r0:Int64"/>
+<xs:element name="ExpirationTime" type="r0:Int64"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CplValidation" type="r0:CplValidation"/>
 <xs:complexType name="UInt8Array">
 <xs:sequence>
 <xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:UInt8"/>
@@ -973,6 +1052,12 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="UUIDArray" type="r0:UUIDArray"/>
+<xs:complexType name="HalfFloatArray">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:HalfFloat"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="HalfFloatArray" type="r0:HalfFloatArray"/>
 <xs:complexType name="RGBALayout">
 <xs:sequence>
 <xs:element maxOccurs="8" minOccurs="8" ref="r0:RGBAComponent"/>
@@ -1057,6 +1142,24 @@
 </xs:sequence>
 </xs:complexType>
 <xs:element name="ASMLEKeyIDMappingSet" type="r0:ASMLEKeyIDMappingSet"/>
+<xs:complexType name="AssetIntegrityHashSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:AssetIntegrityHash"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="AssetIntegrityHashSet" type="r0:AssetIntegrityHashSet"/>
+<xs:complexType name="CplValidationSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:CplValidation"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="CplValidationSet" type="r0:CplValidationSet"/>
+<xs:complexType name="DataEssenceCodingSet">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" ref="r0:UInt8Array16"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="DataEssenceCodingSet" type="r0:DataEssenceCodingSet"/>
 <xs:simpleType name="DataValue">
 <xs:restriction base="reg:HexByteArrayType"/>
 </xs:simpleType>
@@ -1106,6 +1209,10 @@
 <xs:restriction base="r0:DataValue"/>
 </xs:simpleType>
 <xs:element name="DeltaEntry" type="r0:DeltaEntry"/>
+<xs:simpleType name="ST2109PayloadSeries">
+<xs:restriction base="r0:DataValue"/>
+</xs:simpleType>
+<xs:element name="ST2109PayloadSeries" type="r0:ST2109PayloadSeries"/>
 <xs:simpleType name="ClassDefinitionWeakReference">
 <xs:restriction base="reg:TargetType"/>
 </xs:simpleType>
@@ -1176,6 +1283,7 @@
 <xs:element ref="r1:AIFCDescriptor"/>
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r2:IADataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
 <xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
@@ -1198,6 +1306,7 @@
 <xs:element ref="r1:AES3PCMDescriptor"/>
 <xs:element ref="r1:DCPCMSoundDescriptor"/>
 <xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:IABEssenceDescriptor"/>
 <xs:element ref="r1:ImportDescriptor"/>
 <xs:element ref="r1:BWFImportDescriptor"/>
 <xs:element ref="r1:AuxiliaryDescriptor"/>
@@ -1382,6 +1491,7 @@
 <xs:complexType name="PropertyDefinitionStrongReference">
 <xs:choice>
 <xs:element ref="r1:PropertyDefinition"/>
+<xs:element ref="r1:PropertyAliasDefinition"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="PropertyDefinitionStrongReference" type="r0:PropertyDefinitionStrongReference"/>
@@ -1422,6 +1532,7 @@
 <xs:element ref="r1:AIFCDescriptor"/>
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r2:IADataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
 <xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
@@ -1444,6 +1555,7 @@
 <xs:element ref="r1:AES3PCMDescriptor"/>
 <xs:element ref="r1:DCPCMSoundDescriptor"/>
 <xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:IABEssenceDescriptor"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="FileDescriptorStrongReference" type="r0:FileDescriptorStrongReference"/>
@@ -1825,6 +1937,7 @@
 <xs:element ref="r10:DMS_AS_12_AdID_Slate"/>
 <xs:element ref="r1:ControlPoint"/>
 <xs:element ref="r4:AS_07_TimecodeLabelSubdescriptor"/>
+<xs:element ref="r2:IADataEssenceSubDescriptor"/>
 <xs:element ref="r1:DMCVTTargetSubDescriptor"/>
 <xs:element ref="r1:VC5BayerPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:VC2SubDescriptor"/>
@@ -1833,16 +1946,20 @@
 <xs:element ref="r1:TargetFrameSubDescriptor"/>
 <xs:element ref="r1:VC5CDCIPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:AACSubDescriptor"/>
+<xs:element ref="r1:JPEGXSSubDescriptor"/>
+<xs:element ref="r1:HEVCSubDescriptor"/>
 <xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
 <xs:element ref="r1:StereoscopicPictureSubDescriptor"/>
 <xs:element ref="r1:GroupOfSoundfieldGroupsLabelSubDescriptor"/>
 <xs:element ref="r1:AudioChannelLabelSubDescriptor"/>
 <xs:element ref="r1:SoundfieldGroupLabelSubDescriptor"/>
+<xs:element ref="r1:IABSoundfieldLabelSubDescriptor"/>
 <xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
 <xs:element ref="r1:MPEG4VisualSubDescriptor"/>
 <xs:element ref="r1:AVCSubDescriptor"/>
 <xs:element ref="r1:STLSubDescriptor"/>
 <xs:element ref="r1:OperationsStereoscopicSubDescriptor"/>
+<xs:element ref="r1:ExtendibleEnumerationElement"/>
 <xs:element ref="r1:ParameterDefinition"/>
 <xs:element ref="r1:KLVDataDefinition"/>
 <xs:element ref="r1:OPDefinition"/>
@@ -1892,6 +2009,7 @@
 <xs:element ref="r1:AIFCDescriptor"/>
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r2:IADataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
 <xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
@@ -1914,6 +2032,7 @@
 <xs:element ref="r1:AES3PCMDescriptor"/>
 <xs:element ref="r1:DCPCMSoundDescriptor"/>
 <xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:IABEssenceDescriptor"/>
 <xs:element ref="r1:ImportDescriptor"/>
 <xs:element ref="r1:BWFImportDescriptor"/>
 <xs:element ref="r1:AuxiliaryDescriptor"/>
@@ -2115,6 +2234,7 @@
 <xs:element ref="r10:DMS_AS_12_AdID_Slate"/>
 <xs:element ref="r1:ControlPoint"/>
 <xs:element ref="r4:AS_07_TimecodeLabelSubdescriptor"/>
+<xs:element ref="r2:IADataEssenceSubDescriptor"/>
 <xs:element ref="r1:DMCVTTargetSubDescriptor"/>
 <xs:element ref="r1:VC5BayerPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:VC2SubDescriptor"/>
@@ -2123,16 +2243,20 @@
 <xs:element ref="r1:TargetFrameSubDescriptor"/>
 <xs:element ref="r1:VC5CDCIPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:AACSubDescriptor"/>
+<xs:element ref="r1:JPEGXSSubDescriptor"/>
+<xs:element ref="r1:HEVCSubDescriptor"/>
 <xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
 <xs:element ref="r1:StereoscopicPictureSubDescriptor"/>
 <xs:element ref="r1:GroupOfSoundfieldGroupsLabelSubDescriptor"/>
 <xs:element ref="r1:AudioChannelLabelSubDescriptor"/>
 <xs:element ref="r1:SoundfieldGroupLabelSubDescriptor"/>
+<xs:element ref="r1:IABSoundfieldLabelSubDescriptor"/>
 <xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
 <xs:element ref="r1:MPEG4VisualSubDescriptor"/>
 <xs:element ref="r1:AVCSubDescriptor"/>
 <xs:element ref="r1:STLSubDescriptor"/>
 <xs:element ref="r1:OperationsStereoscopicSubDescriptor"/>
+<xs:element ref="r1:ExtendibleEnumerationElement"/>
 <xs:element ref="r1:ParameterDefinition"/>
 <xs:element ref="r1:KLVDataDefinition"/>
 <xs:element ref="r1:OPDefinition"/>
@@ -2182,6 +2306,7 @@
 <xs:element ref="r1:AIFCDescriptor"/>
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r2:IADataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
 <xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
@@ -2204,6 +2329,7 @@
 <xs:element ref="r1:AES3PCMDescriptor"/>
 <xs:element ref="r1:DCPCMSoundDescriptor"/>
 <xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:IABEssenceDescriptor"/>
 <xs:element ref="r1:ImportDescriptor"/>
 <xs:element ref="r1:BWFImportDescriptor"/>
 <xs:element ref="r1:AuxiliaryDescriptor"/>
@@ -2244,6 +2370,7 @@
 <xs:complexType name="SubDescriptorStrongReference">
 <xs:choice>
 <xs:element ref="r4:AS_07_TimecodeLabelSubdescriptor"/>
+<xs:element ref="r2:IADataEssenceSubDescriptor"/>
 <xs:element ref="r1:DMCVTTargetSubDescriptor"/>
 <xs:element ref="r1:VC5BayerPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:VC2SubDescriptor"/>
@@ -2252,11 +2379,14 @@
 <xs:element ref="r1:TargetFrameSubDescriptor"/>
 <xs:element ref="r1:VC5CDCIPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:AACSubDescriptor"/>
+<xs:element ref="r1:JPEGXSSubDescriptor"/>
+<xs:element ref="r1:HEVCSubDescriptor"/>
 <xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
 <xs:element ref="r1:StereoscopicPictureSubDescriptor"/>
 <xs:element ref="r1:GroupOfSoundfieldGroupsLabelSubDescriptor"/>
 <xs:element ref="r1:AudioChannelLabelSubDescriptor"/>
 <xs:element ref="r1:SoundfieldGroupLabelSubDescriptor"/>
+<xs:element ref="r1:IABSoundfieldLabelSubDescriptor"/>
 <xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
 <xs:element ref="r1:MPEG4VisualSubDescriptor"/>
 <xs:element ref="r1:AVCSubDescriptor"/>
@@ -2330,6 +2460,7 @@
 <xs:element ref="r1:TypeDefinitionIndirect"/>
 <xs:element ref="r1:TypeDefinitionOpaque"/>
 <xs:element ref="r1:PropertyDefinition"/>
+<xs:element ref="r1:PropertyAliasDefinition"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="MetaDefinitionStrongReference" type="r0:MetaDefinitionStrongReference"/>
@@ -2446,6 +2577,7 @@
 <xs:complexType name="PropertyDefinitionStrongReferenceSet">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
 <xs:element ref="r1:PropertyDefinition"/>
+<xs:element ref="r1:PropertyAliasDefinition"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="PropertyDefinitionStrongReferenceSet" type="r0:PropertyDefinitionStrongReferenceSet"/>
@@ -2680,6 +2812,7 @@
 <xs:element ref="r1:TypeDefinitionIndirect"/>
 <xs:element ref="r1:TypeDefinitionOpaque"/>
 <xs:element ref="r1:PropertyDefinition"/>
+<xs:element ref="r1:PropertyAliasDefinition"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="MetaDefinitionStrongReferenceSet" type="r0:MetaDefinitionStrongReferenceSet"/>
@@ -2791,6 +2924,7 @@
 <xs:element ref="r1:AIFCDescriptor"/>
 <xs:element ref="r1:DateTimeDescriptor"/>
 <xs:element ref="r1:DataEssenceDescriptor"/>
+<xs:element ref="r2:IADataEssenceDescriptor"/>
 <xs:element ref="r1:RP217Descriptor"/>
 <xs:element ref="r1:AuxDataEssenceDescriptor"/>
 <xs:element ref="r1:DCTimedTextDescriptor"/>
@@ -2813,6 +2947,7 @@
 <xs:element ref="r1:AES3PCMDescriptor"/>
 <xs:element ref="r1:DCPCMSoundDescriptor"/>
 <xs:element ref="r1:MPEGAudioDescriptor"/>
+<xs:element ref="r1:IABEssenceDescriptor"/>
 </xs:choice>
 </xs:complexType>
 <xs:element name="FileDescriptorStrongReferenceVector" type="r0:FileDescriptorStrongReferenceVector"/>
@@ -2987,6 +3122,7 @@
 <xs:complexType name="SubDescriptorStrongReferenceVector">
 <xs:choice maxOccurs="unbounded" minOccurs="0">
 <xs:element ref="r4:AS_07_TimecodeLabelSubdescriptor"/>
+<xs:element ref="r2:IADataEssenceSubDescriptor"/>
 <xs:element ref="r1:DMCVTTargetSubDescriptor"/>
 <xs:element ref="r1:VC5BayerPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:VC2SubDescriptor"/>
@@ -2995,11 +3131,14 @@
 <xs:element ref="r1:TargetFrameSubDescriptor"/>
 <xs:element ref="r1:VC5CDCIPictureEssenceSubDescriptor"/>
 <xs:element ref="r1:AACSubDescriptor"/>
+<xs:element ref="r1:JPEGXSSubDescriptor"/>
+<xs:element ref="r1:HEVCSubDescriptor"/>
 <xs:element ref="r1:DCTimedTextResourceSubDescriptor"/>
 <xs:element ref="r1:StereoscopicPictureSubDescriptor"/>
 <xs:element ref="r1:GroupOfSoundfieldGroupsLabelSubDescriptor"/>
 <xs:element ref="r1:AudioChannelLabelSubDescriptor"/>
 <xs:element ref="r1:SoundfieldGroupLabelSubDescriptor"/>
+<xs:element ref="r1:IABSoundfieldLabelSubDescriptor"/>
 <xs:element ref="r1:ContainerConstraintsSubDescriptor"/>
 <xs:element ref="r1:MPEG4VisualSubDescriptor"/>
 <xs:element ref="r1:AVCSubDescriptor"/>
