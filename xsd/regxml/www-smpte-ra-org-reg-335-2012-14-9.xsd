@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Fri Dec 03 07:54:39 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/14/9" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="NamespaceURI" type="r0:UTF8String"/>
+<xs:element name="ImmersiveAudioVersion" type="r0:UInt8"/>
+<xs:element name="MaxChannelCount" type="r0:UInt16"/>
+<xs:element name="MaxObjectCount" type="r0:UInt16"/>
+<xs:element name="ImmersiveAudioID" type="r0:UUID"/>
+<xs:element name="FirstFrame" type="r0:UInt32"/>
+</xs:schema>

@@ -1,211 +1,231 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:42 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element abstract="true" name="DMCVTGenericSet1">
-        <xs:complexType>
-            <xs:all>
-                <xs:element ref="r0:ApplicationIdentifier"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
-                <xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
-                <xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
-                <xs:element ref="r0:ApplicationVersionNumber"/>
-                <xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
-                <xs:element minOccurs="0" ref="r0:WindowNumber"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="DMCVTApp1Set">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:SaturationGain"/>
-                <xs:element minOccurs="0" ref="r0:MaximumPqencodedMaxrgbOffset"/>
-                <xs:element minOccurs="0" ref="r0:AveragePqencodedMaxrgbOffset"/>
-                <xs:element minOccurs="0" ref="r0:ToneMappingOffset"/>
-                <xs:element minOccurs="0" ref="r0:ToneDetailFactor"/>
-                <xs:element minOccurs="0" ref="r0:ChromaCompensationWeight"/>
-                <xs:element minOccurs="0" ref="r0:ToneMappingGamma"/>
-                <xs:element minOccurs="0" ref="r0:ToneMappingGain"/>
-                <xs:element ref="r0:MaximumPqencodedMaxrgb"/>
-                <xs:element minOccurs="0" ref="r0:MinimumPqencodedMaxrgbOffset"/>
-                <xs:element ref="r0:AveragePqencodedMaxrgb"/>
-                <xs:element ref="r0:MinimumPqencodedMaxrgb"/>
-                <xs:element ref="r0:ApplicationIdentifier"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
-                <xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
-                <xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
-                <xs:element ref="r0:ApplicationVersionNumber"/>
-                <xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
-                <xs:element minOccurs="0" ref="r0:WindowNumber"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="DMCVTApp2Set">
-        <xs:complexType>
-            <xs:all>
-                <xs:element ref="r0:ToneMappingInputSignalWhiteLevelOffset"/>
-                <xs:element ref="r0:SaturationGainFunction"/>
-                <xs:element ref="r0:MidToneWidthAdjustmentFactor"/>
-                <xs:element minOccurs="0" ref="r0:LuminanceLowerBound"/>
-                <xs:element minOccurs="0" ref="r0:LuminanceRangeSelector"/>
-                <xs:element minOccurs="0" ref="r0:ChromaticityDiskRadius"/>
-                <xs:element minOccurs="0" ref="r0:ChromaticityDiskCenter"/>
-                <xs:element ref="r0:ToneMappingInputSignalBlackLevelOffset"/>
-                <xs:element ref="r0:ShadowGainControl"/>
-                <xs:element ref="r0:ToneMappingOutputFineTuningFunction"/>
-                <xs:element ref="r0:HighlightGainControl"/>
-                <xs:element minOccurs="0" ref="r0:LuminanceUpperBound"/>
-                <xs:element ref="r0:ToneMappingInputSignalWeights"/>
-                <xs:element minOccurs="0" ref="r0:ChromaticityAreaSelector"/>
-                <xs:element ref="r0:ApplicationIdentifier"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
-                <xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
-                <xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
-                <xs:element ref="r0:ApplicationVersionNumber"/>
-                <xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
-                <xs:element minOccurs="0" ref="r0:WindowNumber"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="DMCVTApp3Set">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:PostMatrixToneMapping1"/>
-                <xs:element minOccurs="0" ref="r0:ColorRemappingMatrix"/>
-                <xs:element minOccurs="0" ref="r0:PreMatrixToneMapping1"/>
-                <xs:element minOccurs="0" ref="r0:MetadataColorCodingWorkspace"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplaySignalFormat"/>
-                <xs:element minOccurs="0" ref="r0:PreMatrixToneMapping2"/>
-                <xs:element minOccurs="0" ref="r0:PreMatrixToneMapping3"/>
-                <xs:element minOccurs="0" ref="r0:PostMatrixToneMapping2"/>
-                <xs:element minOccurs="0" ref="r0:PostMatrixToneMapping3"/>
-                <xs:element ref="r0:ApplicationIdentifier"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
-                <xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
-                <xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
-                <xs:element ref="r0:ApplicationVersionNumber"/>
-                <xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
-                <xs:element minOccurs="0" ref="r0:WindowNumber"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="DMCVTApp4Set">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:MasteringDisplayActualPeakLuminance"/>
-                <xs:element minOccurs="0" ref="r0:SemiMajorAxisExternalEllipse"/>
-                <xs:element ref="r0:DistributionMaxRGBPercentiles"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayActualPeakLuminance"/>
-                <xs:element ref="r0:MaxSCL"/>
-                <xs:element ref="r0:AverageMaxRGB"/>
-                <xs:element minOccurs="0" ref="r0:SemiMinorAxisExternalEllipse"/>
-                <xs:element minOccurs="0" ref="r0:KneePoint"/>
-                <xs:element minOccurs="0" ref="r0:CenterOfEllipse"/>
-                <xs:element minOccurs="0" ref="r0:ColorSaturationWeight"/>
-                <xs:element minOccurs="0" ref="r0:SemiMajorAxisInternalEllipse"/>
-                <xs:element ref="r0:FractionBrightPixels"/>
-                <xs:element ref="r0:DistributionMaxRGBPercentages"/>
-                <xs:element minOccurs="0" ref="r0:RowsInTargetedSystemDisplayActualPeakLuminance"/>
-                <xs:element minOccurs="0" ref="r0:RowsInMasteringDisplayActualPeakLuminance"/>
-                <xs:element minOccurs="0" ref="r0:OverlapProcessOption"/>
-                <xs:element minOccurs="0" ref="r0:BezierCurveAnchors"/>
-                <xs:element minOccurs="0" ref="r0:RotationAngle"/>
-                <xs:element ref="r0:ApplicationIdentifier"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
-                <xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
-                <xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
-                <xs:element ref="r0:ApplicationVersionNumber"/>
-                <xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
-                <xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
-                <xs:element minOccurs="0" ref="r0:WindowNumber"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
-                <xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="LensUnitAcquisitionMetadata">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:InstanceID"/>
-                <xs:element minOccurs="0" ref="r0:LensAttributes"/>
-                <xs:element minOccurs="0" ref="r0:IrisFNumber"/>
-                <xs:element minOccurs="0" ref="r0:FocusRingPosition"/>
-                <xs:element minOccurs="0" ref="r0:ZoomRingPosition"/>
-                <xs:element minOccurs="0" ref="r0:IrisRingPosition"/>
-                <xs:element minOccurs="0" ref="r0:IrisTNumber"/>
-                <xs:element minOccurs="0" ref="r0:OpticalExtenderMagnification"/>
-                <xs:element minOccurs="0" ref="r0:MacroSetting"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="CameraUnitAcquisitionMetadata">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:CaptureFrameRate"/>
-                <xs:element minOccurs="0" ref="r0:CameraAttributes"/>
-                <xs:element minOccurs="0" ref="r0:ShutterSpeedTime"/>
-                <xs:element minOccurs="0" ref="r0:GammaForCDL"/>
-                <xs:element minOccurs="0" ref="r0:CameraLuminanceDynamicRange"/>
-                <xs:element minOccurs="0" ref="r0:CameraKneeSlope"/>
-                <xs:element minOccurs="0" ref="r0:CameraKneePoint"/>
-                <xs:element minOccurs="0" ref="r0:CameraMasterBlackLevel"/>
-                <xs:element minOccurs="0" ref="r0:WhiteBalance"/>
-                <xs:element minOccurs="0" ref="r0:AutoWhiteBalanceMode"/>
-                <xs:element minOccurs="0" ref="r0:CameraSettingFileURI"/>
-                <xs:element minOccurs="0" ref="r0:InstanceID"/>
-                <xs:element minOccurs="0" ref="r0:ExposureIndexOfPhotoMeter"/>
-                <xs:element minOccurs="0" ref="r0:ColorMatrix"/>
-                <xs:element minOccurs="0" ref="r0:ISOSensitivity"/>
-                <xs:element minOccurs="0" ref="r0:ElectricalExtenderMagnification"/>
-                <xs:element minOccurs="0" ref="r0:ShutterSpeedAngle"/>
-                <xs:element minOccurs="0" ref="r0:CameraMasterGainAdjustment"/>
-                <xs:element minOccurs="0" ref="r0:ImageSensorDimensionEffectiveHeight"/>
-                <xs:element minOccurs="0" ref="r0:ImageSensorReadoutMode"/>
-                <xs:element minOccurs="0" ref="r0:NeutralDensityFilterWheelSetting"/>
-                <xs:element minOccurs="0" ref="r0:ImageSensorDimensionEffectiveWidth"/>
-                <xs:element minOccurs="0" ref="r0:AutoFocusSensingAreaSetting"/>
-                <xs:element minOccurs="0" ref="r0:ColorCorrectionFilterWheelSetting"/>
-                <xs:element minOccurs="0" ref="r0:AutoExposureMode"/>
-                <xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="UserDefinedAcquisitionMetadata">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:InstanceID"/>
-                <xs:element minOccurs="0" ref="r0:UDAMSetIdentifier"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Fri Dec 03 07:54:38 PST 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element abstract="true" name="DMCVTGenericSet1">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:ApplicationIdentifier"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
+<xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
+<xs:element ref="r0:ApplicationVersionNumber"/>
+<xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:WindowNumber"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DMCVTApp1Set">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:SaturationGain"/>
+<xs:element minOccurs="0" ref="r0:MaximumPqencodedMaxrgbOffset"/>
+<xs:element minOccurs="0" ref="r0:AveragePqencodedMaxrgbOffset"/>
+<xs:element minOccurs="0" ref="r0:ToneMappingOffset"/>
+<xs:element minOccurs="0" ref="r0:ToneDetailFactor"/>
+<xs:element minOccurs="0" ref="r0:ChromaCompensationWeight"/>
+<xs:element minOccurs="0" ref="r0:ToneMappingGamma"/>
+<xs:element minOccurs="0" ref="r0:ToneMappingGain"/>
+<xs:element ref="r0:MaximumPqencodedMaxrgb"/>
+<xs:element minOccurs="0" ref="r0:MinimumPqencodedMaxrgbOffset"/>
+<xs:element ref="r0:AveragePqencodedMaxrgb"/>
+<xs:element ref="r0:MinimumPqencodedMaxrgb"/>
+<xs:element ref="r0:ApplicationIdentifier"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
+<xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
+<xs:element ref="r0:ApplicationVersionNumber"/>
+<xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:WindowNumber"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DMCVTApp2Set">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r0:ToneMappingInputSignalWhiteLevelOffset"/>
+<xs:element ref="r0:SaturationGainFunction"/>
+<xs:element ref="r0:MidToneWidthAdjustmentFactor"/>
+<xs:element minOccurs="0" ref="r0:LuminanceLowerBound"/>
+<xs:element minOccurs="0" ref="r0:LuminanceRangeSelector"/>
+<xs:element minOccurs="0" ref="r0:ChromaticityDiskRadius"/>
+<xs:element minOccurs="0" ref="r0:ChromaticityDiskCenter"/>
+<xs:element ref="r0:ToneMappingInputSignalBlackLevelOffset"/>
+<xs:element ref="r0:ShadowGainControl"/>
+<xs:element ref="r0:ToneMappingOutputFineTuningFunction"/>
+<xs:element ref="r0:HighlightGainControl"/>
+<xs:element minOccurs="0" ref="r0:LuminanceUpperBound"/>
+<xs:element ref="r0:ToneMappingInputSignalWeights"/>
+<xs:element minOccurs="0" ref="r0:ChromaticityAreaSelector"/>
+<xs:element ref="r0:ApplicationIdentifier"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
+<xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
+<xs:element ref="r0:ApplicationVersionNumber"/>
+<xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:WindowNumber"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DMCVTApp3Set">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:PostMatrixToneMapping1"/>
+<xs:element minOccurs="0" ref="r0:ColorRemappingMatrix"/>
+<xs:element minOccurs="0" ref="r0:PreMatrixToneMapping1"/>
+<xs:element minOccurs="0" ref="r0:MetadataColorCodingWorkspace"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplaySignalFormat"/>
+<xs:element minOccurs="0" ref="r0:PreMatrixToneMapping2"/>
+<xs:element minOccurs="0" ref="r0:PreMatrixToneMapping3"/>
+<xs:element minOccurs="0" ref="r0:PostMatrixToneMapping2"/>
+<xs:element minOccurs="0" ref="r0:PostMatrixToneMapping3"/>
+<xs:element ref="r0:ApplicationIdentifier"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
+<xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
+<xs:element ref="r0:ApplicationVersionNumber"/>
+<xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:WindowNumber"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="DMCVTApp4Set">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:MasteringDisplayActualPeakLuminance"/>
+<xs:element minOccurs="0" ref="r0:SemiMajorAxisExternalEllipse"/>
+<xs:element ref="r0:DistributionMaxRGBPercentiles"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayActualPeakLuminance"/>
+<xs:element ref="r0:MaxSCL"/>
+<xs:element ref="r0:AverageMaxRGB"/>
+<xs:element minOccurs="0" ref="r0:SemiMinorAxisExternalEllipse"/>
+<xs:element minOccurs="0" ref="r0:KneePoint"/>
+<xs:element minOccurs="0" ref="r0:CenterOfEllipse"/>
+<xs:element minOccurs="0" ref="r0:ColorSaturationWeight"/>
+<xs:element minOccurs="0" ref="r0:SemiMajorAxisInternalEllipse"/>
+<xs:element ref="r0:FractionBrightPixels"/>
+<xs:element ref="r0:DistributionMaxRGBPercentages"/>
+<xs:element minOccurs="0" ref="r0:RowsInTargetedSystemDisplayActualPeakLuminance"/>
+<xs:element minOccurs="0" ref="r0:RowsInMasteringDisplayActualPeakLuminance"/>
+<xs:element minOccurs="0" ref="r0:OverlapProcessOption"/>
+<xs:element minOccurs="0" ref="r0:BezierCurveAnchors"/>
+<xs:element minOccurs="0" ref="r0:RotationAngle"/>
+<xs:element ref="r0:ApplicationIdentifier"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMinimumLuminance"/>
+<xs:element minOccurs="0" ref="r0:UpperLeftCorner"/>
+<xs:element minOccurs="0" ref="r0:LowerRightCorner"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalDuration"/>
+<xs:element ref="r0:ApplicationVersionNumber"/>
+<xs:element minOccurs="0" ref="r0:BackwardsVersion"/>
+<xs:element minOccurs="0" ref="r0:TimeIntervalStart"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayPrimaries"/>
+<xs:element minOccurs="0" ref="r0:WindowNumber"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayWhitePointChromaticity"/>
+<xs:element minOccurs="0" ref="r0:TargetedSystemDisplayMaximumLuminance"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="LensUnitAcquisitionMetadata">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:LensZoomActualFocalLength"/>
+<xs:element minOccurs="0" ref="r0:LensAttributes"/>
+<xs:element minOccurs="0" ref="r0:IrisFNumber"/>
+<xs:element minOccurs="0" ref="r0:FocusRingPosition"/>
+<xs:element minOccurs="0" ref="r0:OpticalInversion"/>
+<xs:element minOccurs="0" ref="r0:ZoomRingPosition"/>
+<xs:element minOccurs="0" ref="r0:AnamorphicLensSqueezeRatio"/>
+<xs:element minOccurs="0" ref="r0:IrisRingPosition"/>
+<xs:element minOccurs="0" ref="r0:FocusPositionFromFrontLensVertex"/>
+<xs:element minOccurs="0" ref="r0:IrisTNumber"/>
+<xs:element minOccurs="0" ref="r0:FocusPositionFromImagePlane"/>
+<xs:element minOccurs="0" ref="r0:OpticalExtenderMagnification"/>
+<xs:element minOccurs="0" ref="r0:MacroSetting"/>
+<xs:element minOccurs="0" ref="r0:LensZoom35mmStillCameraEquivalent"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="CameraUnitAcquisitionMetadata">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:CaptureFrameRate"/>
+<xs:element minOccurs="0" ref="r0:CameraAttributes"/>
+<xs:element minOccurs="0" ref="r0:ExposureIndexOfPhotoMeterLongInteger"/>
+<xs:element minOccurs="0" ref="r0:ColorPrimaries"/>
+<xs:element minOccurs="0" ref="r0:ColorForCDL"/>
+<xs:element minOccurs="0" ref="r0:ISOSensitivityLongInteger"/>
+<xs:element minOccurs="0" ref="r0:TintCorrection"/>
+<xs:element minOccurs="0" ref="r0:ASCCDLV12"/>
+<xs:element minOccurs="0" ref="r0:ShutterSpeedTime"/>
+<xs:element minOccurs="0" ref="r0:GammaForCDL"/>
+<xs:element minOccurs="0" ref="r0:CameraLuminanceDynamicRange"/>
+<xs:element minOccurs="0" ref="r0:CameraKneeSlope"/>
+<xs:element minOccurs="0" ref="r0:CameraKneePoint"/>
+<xs:element minOccurs="0" ref="r0:CameraMasterBlackLevel"/>
+<xs:element minOccurs="0" ref="r0:WhiteBalance"/>
+<xs:element minOccurs="0" ref="r0:AutoWhiteBalanceMode"/>
+<xs:element minOccurs="0" ref="r0:CameraSettingFileURI"/>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:CodingEquations"/>
+<xs:element minOccurs="0" ref="r0:LuminanceCodeRange"/>
+<xs:element minOccurs="0" ref="r0:AcquisitionSettingProcedure"/>
+<xs:element minOccurs="0" ref="r0:ImageSensorDecimationRatio"/>
+<xs:element minOccurs="0" ref="r0:ImageScanDirection"/>
+<xs:element minOccurs="0" ref="r0:RotaryShutter"/>
+<xs:element minOccurs="0" ref="r0:OpticalAntiAliasingFilter"/>
+<xs:element minOccurs="0" ref="r0:ExposureIndexOfPhotoMeter"/>
+<xs:element minOccurs="0" ref="r0:ColorMatrix"/>
+<xs:element minOccurs="0" ref="r0:ISOSensitivity"/>
+<xs:element minOccurs="0" ref="r0:ElectricalExtenderMagnification"/>
+<xs:element minOccurs="0" ref="r0:ShutterSpeedAngle"/>
+<xs:element minOccurs="0" ref="r0:CameraMasterGainAdjustment"/>
+<xs:element minOccurs="0" ref="r0:ImageSensorDimensionEffectiveHeight"/>
+<xs:element minOccurs="0" ref="r0:ImageSensorReadoutMode"/>
+<xs:element minOccurs="0" ref="r0:NeutralDensityFilterWheelSetting"/>
+<xs:element minOccurs="0" ref="r0:ImageSensorDimensionEffectiveWidth"/>
+<xs:element minOccurs="0" ref="r0:AutoFocusSensingAreaSetting"/>
+<xs:element minOccurs="0" ref="r0:ColorCorrectionFilterWheelSetting"/>
+<xs:element minOccurs="0" ref="r0:AutoExposureMode"/>
+<xs:element minOccurs="0" ref="r0:TransferCharacteristic"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="UserDefinedAcquisitionMetadata">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:InstanceID"/>
+<xs:element minOccurs="0" ref="r0:UDAMSetVersion"/>
+<xs:element ref="r0:UDAMSetIdentifier"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
 </xs:schema>
