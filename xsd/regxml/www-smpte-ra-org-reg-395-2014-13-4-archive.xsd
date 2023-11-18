@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:43 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012/13/4/archive" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/4/archive" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
-    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/4/archive"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element name="APP_InfaxFramework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:APP_Memo"/>
-                <xs:element minOccurs="0" ref="r0:APP_SpoolDescriptor"/>
-                <xs:element minOccurs="0" ref="r0:APP_SpoolNumber"/>
-                <xs:element minOccurs="0" ref="r0:APP_Duration"/>
-                <xs:element minOccurs="0" ref="r0:APP_CatalogueDetail"/>
-                <xs:element minOccurs="0" ref="r0:APP_AccessionNumber"/>
-                <xs:element minOccurs="0" ref="r0:APP_ItemNumber"/>
-                <xs:element minOccurs="0" ref="r0:APP_ProductionCode"/>
-                <xs:element minOccurs="0" ref="r0:APP_ProgrammeTitle"/>
-                <xs:element minOccurs="0" ref="r0:APP_Format"/>
-                <xs:element minOccurs="0" ref="r0:APP_TransmissionDate"/>
-                <xs:element minOccurs="0" ref="r0:APP_EpisodeTitle"/>
-                <xs:element minOccurs="0" ref="r0:APP_ProgrammeNumber"/>
-                <xs:element minOccurs="0" ref="r0:APP_MagazinePrefix"/>
-                <xs:element minOccurs="0" ref="r0:APP_StockDate"/>
-                <xs:element minOccurs="0" ref="r0:APP_SpoolStatus"/>
-                <xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r1:InstanceID"/>
-                <xs:element minOccurs="0" ref="r1:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="APP_PSEAnalysisFramework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:APP_RedFlash"/>
-                <xs:element minOccurs="0" ref="r0:APP_LuminanceFlash"/>
-                <xs:element minOccurs="0" ref="r0:APP_SpatialPattern"/>
-                <xs:element minOccurs="0" ref="r0:APP_ExtendedFailure"/>
-                <xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r1:InstanceID"/>
-                <xs:element minOccurs="0" ref="r1:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="APP_VTRReplayErrorFramework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:APP_VTRErrorCode"/>
-                <xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r1:InstanceID"/>
-                <xs:element minOccurs="0" ref="r1:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="APP_DigiBetaDropoutFramework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:APP_Strength"/>
-                <xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r1:InstanceID"/>
-                <xs:element minOccurs="0" ref="r1:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="APP_TimecodeBreakFramework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r0:APP_TimecodeType"/>
-                <xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r1:InstanceID"/>
-                <xs:element minOccurs="0" ref="r1:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Nov 18 14:42:50 PST 2023--><!--By: regxmllib build 819ac8d8e7d4679f0c38a9c624f8dcf6fae79fa0--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/335/2012/13/4/archive" xmlns:r1="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/395/2014/13/4/archive" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012/13/4/archive"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="APP_InfaxFramework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:APP_Memo"/>
+<xs:element minOccurs="0" ref="r0:APP_SpoolDescriptor"/>
+<xs:element minOccurs="0" ref="r0:APP_SpoolNumber"/>
+<xs:element minOccurs="0" ref="r0:APP_Duration"/>
+<xs:element minOccurs="0" ref="r0:APP_CatalogueDetail"/>
+<xs:element minOccurs="0" ref="r0:APP_AccessionNumber"/>
+<xs:element minOccurs="0" ref="r0:APP_ItemNumber"/>
+<xs:element minOccurs="0" ref="r0:APP_ProductionCode"/>
+<xs:element minOccurs="0" ref="r0:APP_ProgrammeTitle"/>
+<xs:element minOccurs="0" ref="r0:APP_Format"/>
+<xs:element minOccurs="0" ref="r0:APP_TransmissionDate"/>
+<xs:element minOccurs="0" ref="r0:APP_EpisodeTitle"/>
+<xs:element minOccurs="0" ref="r0:APP_ProgrammeNumber"/>
+<xs:element minOccurs="0" ref="r0:APP_MagazinePrefix"/>
+<xs:element minOccurs="0" ref="r0:APP_StockDate"/>
+<xs:element minOccurs="0" ref="r0:APP_SpoolStatus"/>
+<xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="APP_PSEAnalysisFramework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:APP_RedFlash"/>
+<xs:element minOccurs="0" ref="r0:APP_LuminanceFlash"/>
+<xs:element minOccurs="0" ref="r0:APP_SpatialPattern"/>
+<xs:element minOccurs="0" ref="r0:APP_ExtendedFailure"/>
+<xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="APP_VTRReplayErrorFramework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:APP_VTRErrorCode"/>
+<xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="APP_DigiBetaDropoutFramework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:APP_Strength"/>
+<xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="APP_TimecodeBreakFramework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r0:APP_TimecodeType"/>
+<xs:element minOccurs="0" ref="r1:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r1:InstanceID"/>
+<xs:element minOccurs="0" ref="r1:ObjectClass"/>
+<xs:element minOccurs="0" ref="r1:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r1:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
 </xs:schema>

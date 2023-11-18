@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:43 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element name="TapeFormat" type="r0:TapeFormatType"/>
-    <xs:element name="AS_03_Identifier" type="r0:UTF16String"/>
-    <xs:element name="AS_03_IdentifierKind" type="r0:UTF16String"/>
-    <xs:element name="AS_03_ShimName" type="r0:UTF16String"/>
-    <xs:element name="AS_03_SignalStandard" type="r0:UTF16String"/>
-    <xs:element name="AS_03_IntendedAFD" type="r0:UTF16String"/>
-    <xs:element name="AS_03_SlateTitle" type="r0:UTF16String"/>
-    <xs:element name="AS_03_NOLACode" type="r0:UTF16String"/>
-    <xs:element name="AS_03_Rating" type="r0:UTF16String"/>
-    <xs:element name="AS_03_NielsenStreamIdentifier" type="r0:UTF16String"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Nov 18 14:42:50 PST 2023--><!--By: regxmllib build 819ac8d8e7d4679f0c38a9c624f8dcf6fae79fa0--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/1/aaf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="TapeFormat" type="r0:TapeFormatType"/>
+<xs:element name="AS_03_Identifier" type="r0:UTF16String"/>
+<xs:element name="AS_03_IdentifierKind" type="r0:UTF16String"/>
+<xs:element name="AS_03_ShimName" type="r0:UTF16String"/>
+<xs:element name="AS_03_SignalStandard" type="r0:UTF16String"/>
+<xs:element name="AS_03_IntendedAFD" type="r0:UTF16String"/>
+<xs:element name="AS_03_SlateTitle" type="r0:UTF16String"/>
+<xs:element name="AS_03_NOLACode" type="r0:UTF16String"/>
+<xs:element name="AS_03_Rating" type="r0:UTF16String"/>
+<xs:element name="AS_03_NielsenStreamIdentifier" type="r0:UTF16String"/>
 </xs:schema>

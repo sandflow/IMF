@@ -1,212 +1,212 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:42 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.loc.gov/avconservation" xmlns:r2="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.loc.gov/avconservation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
-    <xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element name="MICCarriage" type="r0:AUID"/>
-    <xs:element name="AS_07_Core_DMS_ShimName" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_Identifiers" type="r1:StrongReferenceSetAS_07_DMS_Identifier"/>
-    <xs:element name="AS_07_Core_DMS_ResponsibleOrganizationName" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_ResponsibleOrganizationCode" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_NatureOfOrganization" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_WorkingTitle" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_SecondaryTitle" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_PictureFormat" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_IntendedAFD" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_Captions" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_AudioTrackPrimaryLanguage" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_AudioTrackSecondaryLanguage" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_AudioTrackLayout" type="r0:AUID"/>
-    <xs:element name="AS_07_Core_DMS_AudioTrackLayoutComment" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_Devices" type="r1:StrongReferenceSetAS_07_DMS_Device"/>
-    <xs:element name="AS_07_Core_DMS_Framework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_Devices"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_AudioTrackLayoutComment"/>
-                <xs:element ref="r1:AS_07_Core_DMS_AudioTrackLayout"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_AudioTrackSecondaryLanguage"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_AudioTrackPrimaryLanguage"/>
-                <xs:element ref="r1:AS_07_Core_DMS_Captions"/>
-                <xs:element ref="r1:AS_07_Core_DMS_IntendedAFD"/>
-                <xs:element ref="r1:AS_07_Core_DMS_PictureFormat"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_SecondaryTitle"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_WorkingTitle"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_NatureOfOrganization"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_ResponsibleOrganizationCode"/>
-                <xs:element ref="r1:AS_07_Core_DMS_ResponsibleOrganizationName"/>
-                <xs:element ref="r1:AS_07_Core_DMS_Identifiers"/>
-                <xs:element ref="r1:AS_07_Core_DMS_ShimName"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_Core_DMS_DeviceType" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_DeviceManufacturer" type="r0:UTF16String"/>
-    <xs:element name="AS_07_Core_DMS_DeviceModel" type="r0:UTF8String"/>
-    <xs:element name="AS_07_Core_DMS_DeviceSerialNumber" type="r0:UTF8String"/>
-    <xs:element name="AS_07_Core_DMS_DeviceUsageDescription" type="r0:UTF16String"/>
-    <xs:element name="AS_07_DMS_Device">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceSerialNumber"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceModel"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceManufacturer"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceType"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceUsageDescription"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveObjectPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_DMS_IdentifierValue" type="r0:UTF16String"/>
-    <xs:element name="AS_07_DMS_IdentifierComment" type="r0:UTF16String"/>
-    <xs:element name="AS_07_DMS_Identifier">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r1:AS_07_DMS_IdentifierComment"/>
-                <xs:element ref="r1:AS_07_DMS_IdentifierValue"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveObjectPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_GSP_DMS_Identifiers" type="r1:StrongReferenceSetAS_07_DMS_Identifier"/>
-    <xs:element name="AS_07_GSP_DMS_MIMEMediaType" type="r0:UTF16String"/>
-    <xs:element name="AS_07_GSP_DMS_Note" type="r0:UTF16String"/>
-    <xs:element name="AS_07_GSP_DMS_Object">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r1:AS_07_GSP_DMS_Note"/>
-                <xs:element ref="r1:AS_07_GSP_DMS_MIMEMediaType"/>
-                <xs:element ref="r1:AS_07_GSP_DMS_Identifiers"/>
-                <xs:element ref="r2:GenericStreamID"/>
-                <xs:element ref="r2:TextMIMEMediaType"/>
-                <xs:element ref="r2:TextBasedMetadataPayloadSchemeID"/>
-                <xs:element minOccurs="0" ref="r2:TextDataDescription"/>
-                <xs:element ref="r2:RFC5646TextLanguageCode"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveObjectPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_GSP_DMS_Framework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r2:TextBasedObject"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_GSP_BD_DMS_Framework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r2:TextBasedObject"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_GSP_TD_DMS_PrimaryRFC5646LanguageCode" type="r0:UTF16String"/>
-    <xs:element name="AS_07_GSP_TD_DMS_SecondaryRFC5646LanguageCode" type="r0:UTF16String"/>
-    <xs:element name="AS_07_GSP_TD_DMS_Framework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element minOccurs="0" ref="r1:AS_07_GSP_TD_DMS_SecondaryRFC5646LanguageCode"/>
-                <xs:element ref="r1:AS_07_GSP_TD_DMS_PrimaryRFC5646LanguageCode"/>
-                <xs:element minOccurs="0" ref="r2:TextBasedObject"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_Segmentation_DMS_PartNumber" type="r0:UInt16"/>
-    <xs:element name="AS_07_Segmentation_DMS_PartTotal" type="r0:UInt16"/>
-    <xs:element name="AS_07_Segmentation_DMS_Framework">
-        <xs:complexType>
-            <xs:all>
-                <xs:element ref="r1:AS_07_Segmentation_DMS_PartTotal"/>
-                <xs:element ref="r1:AS_07_Segmentation_DMS_PartNumber"/>
-                <xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:element name="AS_07_DateTimeSymbol" type="r0:UTF16String"/>
-    <xs:element name="AS_07_DateTimeEssenceTrackID" type="r0:UInt32"/>
-    <xs:element name="AS_07_DateTimeChannelID" type="r0:UInt32"/>
-    <xs:element name="AS_07_DateTimeDescription" type="r0:UTF16String"/>
-    <xs:element name="AS_07_TimecodeLabelSubdescriptor">
-        <xs:complexType>
-            <xs:all>
-                <xs:element ref="r1:AS_07_DateTimeSymbol"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_DateTimeDescription"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_DateTimeChannelID"/>
-                <xs:element minOccurs="0" ref="r1:AS_07_DateTimeEssenceTrackID"/>
-                <xs:element minOccurs="0" ref="r2:InstanceID"/>
-                <xs:element minOccurs="0" ref="r2:ObjectClass"/>
-                <xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
-                <xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
-            </xs:all>
-            <xs:attribute ref="reg:path" use="optional"/>
-        </xs:complexType>
-    </xs:element>
-    <xs:complexType name="StrongReferenceAS_07_DMS_Device">
-        <xs:choice>
-            <xs:element ref="r1:AS_07_DMS_Device"/>
-        </xs:choice>
-    </xs:complexType>
-    <xs:element name="StrongReferenceAS_07_DMS_Device" type="r1:StrongReferenceAS_07_DMS_Device"/>
-    <xs:complexType name="StrongReferenceSetAS_07_DMS_Device">
-        <xs:choice maxOccurs="unbounded" minOccurs="0">
-            <xs:element ref="r1:AS_07_DMS_Device"/>
-        </xs:choice>
-    </xs:complexType>
-    <xs:element name="StrongReferenceSetAS_07_DMS_Device" type="r1:StrongReferenceSetAS_07_DMS_Device"/>
-    <xs:complexType name="StrongReferenceAS_07_DMS_Identifier">
-        <xs:choice>
-            <xs:element ref="r1:AS_07_DMS_Identifier"/>
-        </xs:choice>
-    </xs:complexType>
-    <xs:element name="StrongReferenceAS_07_DMS_Identifier" type="r1:StrongReferenceAS_07_DMS_Identifier"/>
-    <xs:complexType name="StrongReferenceSetAS_07_DMS_Identifier">
-        <xs:choice maxOccurs="unbounded" minOccurs="0">
-            <xs:element ref="r1:AS_07_DMS_Identifier"/>
-        </xs:choice>
-    </xs:complexType>
-    <xs:element name="StrongReferenceSetAS_07_DMS_Identifier" type="r1:StrongReferenceSetAS_07_DMS_Identifier"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Nov 18 14:42:49 PST 2023--><!--By: regxmllib build 819ac8d8e7d4679f0c38a9c624f8dcf6fae79fa0--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:r1="http://www.loc.gov/avconservation" xmlns:r2="http://www.smpte-ra.org/reg/335/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.loc.gov/avconservation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.smpte-ra.org/reg/335/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="MICCarriage" type="r0:AUID"/>
+<xs:element name="AS_07_Core_DMS_ShimName" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_Identifiers" type="r1:StrongReferenceSetAS_07_DMS_Identifier"/>
+<xs:element name="AS_07_Core_DMS_ResponsibleOrganizationName" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_ResponsibleOrganizationCode" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_NatureOfOrganization" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_WorkingTitle" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_SecondaryTitle" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_PictureFormat" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_IntendedAFD" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_Captions" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_AudioTrackPrimaryLanguage" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_AudioTrackSecondaryLanguage" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_AudioTrackLayout" type="r0:AUID"/>
+<xs:element name="AS_07_Core_DMS_AudioTrackLayoutComment" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_Devices" type="r1:StrongReferenceSetAS_07_DMS_Device"/>
+<xs:element name="AS_07_Core_DMS_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_Devices"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_AudioTrackLayoutComment"/>
+<xs:element ref="r1:AS_07_Core_DMS_AudioTrackLayout"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_AudioTrackSecondaryLanguage"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_AudioTrackPrimaryLanguage"/>
+<xs:element ref="r1:AS_07_Core_DMS_Captions"/>
+<xs:element ref="r1:AS_07_Core_DMS_IntendedAFD"/>
+<xs:element ref="r1:AS_07_Core_DMS_PictureFormat"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_SecondaryTitle"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_WorkingTitle"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_NatureOfOrganization"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_ResponsibleOrganizationCode"/>
+<xs:element ref="r1:AS_07_Core_DMS_ResponsibleOrganizationName"/>
+<xs:element ref="r1:AS_07_Core_DMS_Identifiers"/>
+<xs:element ref="r1:AS_07_Core_DMS_ShimName"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_Core_DMS_DeviceType" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_DeviceManufacturer" type="r0:UTF16String"/>
+<xs:element name="AS_07_Core_DMS_DeviceModel" type="r0:UTF8String"/>
+<xs:element name="AS_07_Core_DMS_DeviceSerialNumber" type="r0:UTF8String"/>
+<xs:element name="AS_07_Core_DMS_DeviceUsageDescription" type="r0:UTF16String"/>
+<xs:element name="AS_07_DMS_Device">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceSerialNumber"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceModel"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceManufacturer"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceType"/>
+<xs:element minOccurs="0" ref="r1:AS_07_Core_DMS_DeviceUsageDescription"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_DMS_IdentifierValue" type="r0:UTF16String"/>
+<xs:element name="AS_07_DMS_IdentifierComment" type="r0:UTF16String"/>
+<xs:element name="AS_07_DMS_Identifier">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:AS_07_DMS_IdentifierComment"/>
+<xs:element ref="r1:AS_07_DMS_IdentifierValue"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_GSP_DMS_Identifiers" type="r1:StrongReferenceSetAS_07_DMS_Identifier"/>
+<xs:element name="AS_07_GSP_DMS_MIMEMediaType" type="r0:UTF16String"/>
+<xs:element name="AS_07_GSP_DMS_Note" type="r0:UTF16String"/>
+<xs:element name="AS_07_GSP_DMS_Object">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:AS_07_GSP_DMS_Note"/>
+<xs:element ref="r1:AS_07_GSP_DMS_MIMEMediaType"/>
+<xs:element ref="r1:AS_07_GSP_DMS_Identifiers"/>
+<xs:element ref="r2:GenericStreamID"/>
+<xs:element ref="r2:TextMIMEMediaType"/>
+<xs:element ref="r2:TextBasedMetadataPayloadSchemeID"/>
+<xs:element minOccurs="0" ref="r2:TextDataDescription"/>
+<xs:element ref="r2:RFC5646TextLanguageCode"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveObjectPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_GSP_DMS_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r2:TextBasedObject"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_GSP_BD_DMS_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r2:TextBasedObject"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_GSP_TD_DMS_PrimaryRFC5646LanguageCode" type="r0:UTF16String"/>
+<xs:element name="AS_07_GSP_TD_DMS_SecondaryRFC5646LanguageCode" type="r0:UTF16String"/>
+<xs:element name="AS_07_GSP_TD_DMS_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element minOccurs="0" ref="r1:AS_07_GSP_TD_DMS_SecondaryRFC5646LanguageCode"/>
+<xs:element ref="r1:AS_07_GSP_TD_DMS_PrimaryRFC5646LanguageCode"/>
+<xs:element minOccurs="0" ref="r2:TextBasedObject"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_Segmentation_DMS_PartNumber" type="r0:UInt16"/>
+<xs:element name="AS_07_Segmentation_DMS_PartTotal" type="r0:UInt16"/>
+<xs:element name="AS_07_Segmentation_DMS_Framework">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r1:AS_07_Segmentation_DMS_PartTotal"/>
+<xs:element ref="r1:AS_07_Segmentation_DMS_PartNumber"/>
+<xs:element minOccurs="0" ref="r2:LinkedDescriptiveFrameworkPluginID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:element name="AS_07_DateTimeSymbol" type="r0:UTF16String"/>
+<xs:element name="AS_07_DateTimeEssenceTrackID" type="r0:UInt32"/>
+<xs:element name="AS_07_DateTimeChannelID" type="r0:UInt32"/>
+<xs:element name="AS_07_DateTimeDescription" type="r0:UTF16String"/>
+<xs:element name="AS_07_TimecodeLabelSubdescriptor">
+<xs:complexType>
+<xs:all>
+<xs:element ref="r1:AS_07_DateTimeSymbol"/>
+<xs:element minOccurs="0" ref="r1:AS_07_DateTimeDescription"/>
+<xs:element minOccurs="0" ref="r1:AS_07_DateTimeChannelID"/>
+<xs:element minOccurs="0" ref="r1:AS_07_DateTimeEssenceTrackID"/>
+<xs:element minOccurs="0" ref="r2:InstanceID"/>
+<xs:element minOccurs="0" ref="r2:ObjectClass"/>
+<xs:element minOccurs="0" ref="r2:ApplicationPlugInObjects"/>
+<xs:element minOccurs="0" ref="r2:LinkedGenerationID"/>
+</xs:all>
+<xs:attribute ref="reg:path" use="optional"/>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="StrongReferenceAS_07_DMS_Device">
+<xs:choice>
+<xs:element ref="r1:AS_07_DMS_Device"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="StrongReferenceAS_07_DMS_Device" type="r1:StrongReferenceAS_07_DMS_Device"/>
+<xs:complexType name="StrongReferenceSetAS_07_DMS_Device">
+<xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r1:AS_07_DMS_Device"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="StrongReferenceSetAS_07_DMS_Device" type="r1:StrongReferenceSetAS_07_DMS_Device"/>
+<xs:complexType name="StrongReferenceAS_07_DMS_Identifier">
+<xs:choice>
+<xs:element ref="r1:AS_07_DMS_Identifier"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="StrongReferenceAS_07_DMS_Identifier" type="r1:StrongReferenceAS_07_DMS_Identifier"/>
+<xs:complexType name="StrongReferenceSetAS_07_DMS_Identifier">
+<xs:choice maxOccurs="unbounded" minOccurs="0">
+<xs:element ref="r1:AS_07_DMS_Identifier"/>
+</xs:choice>
+</xs:complexType>
+<xs:element name="StrongReferenceSetAS_07_DMS_Identifier" type="r1:StrongReferenceSetAS_07_DMS_Identifier"/>
 </xs:schema>

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:42 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/13" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element name="adid_prefix" type="r0:UTF16String"/>
-    <xs:element name="adid_code" type="r0:UTF16String"/>
-    <xs:element name="ad_title" type="r0:UTF16String"/>
-    <xs:element name="brand" type="r0:UTF16String"/>
-    <xs:element name="product" type="r0:UTF16String"/>
-    <xs:element name="advertiser" type="r0:UTF16String"/>
-    <xs:element name="agency_office_location" type="r0:UTF16String"/>
-    <xs:element name="length" type="r0:UTF16String"/>
-    <xs:element name="medium" type="r0:UTF16String"/>
-    <xs:element name="sd_flag" type="r0:UTF16String"/>
-    <xs:element name="parent" type="r0:UTF16String"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Nov 18 14:42:50 PST 2023--><!--By: regxmllib build 819ac8d8e7d4679f0c38a9c624f8dcf6fae79fa0--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/13" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="adid_prefix" type="r0:UTF16String"/>
+<xs:element name="adid_code" type="r0:UTF16String"/>
+<xs:element name="ad_title" type="r0:UTF16String"/>
+<xs:element name="brand" type="r0:UTF16String"/>
+<xs:element name="product" type="r0:UTF16String"/>
+<xs:element name="advertiser" type="r0:UTF16String"/>
+<xs:element name="agency_office_location" type="r0:UTF16String"/>
+<xs:element name="length" type="r0:UTF16String"/>
+<xs:element name="medium" type="r0:UTF16String"/>
+<xs:element name="sd_flag" type="r0:UTF16String"/>
+<xs:element name="parent" type="r0:UTF16String"/>
 </xs:schema>
