@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Sep 18 17:43:42 PDT 2021--><!--By: regxmllib build 2dd1797a0414219f3746f955d6abe7d3085a5303--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
-    <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
-    <xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
-    <xs:element name="AS_10_Shim_Name" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Type" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Main_Title" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Sub_Title" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Title_Description" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Organization_Name" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Person_Name" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Location_Description" type="r0:UTF16String"/>
-    <xs:element name="AS_10_Common_Spanning_ID" type="r0:UMID"/>
-    <xs:element name="AS_10_Spanning_Number" type="r0:UInt16"/>
-    <xs:element name="AS_10_Cumulative_Duration" type="r0:PositionType"/>
+<?xml version="1.0" encoding="UTF-8"?><!--Created: Sat Nov 18 14:42:49 PST 2023--><!--By: regxmllib build 819ac8d8e7d4679f0c38a9c624f8dcf6fae79fa0--><!--See: https://github.com/sandflow/regxmllib--><xs:schema xmlns:r0="http://www.smpte-ra.org/reg/2003/2012" xmlns:reg="http://sandflow.com/ns/SMPTEST2001-1/baseline" xmlns:xlink="http://www.w3.org/1999/xlink" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.smpte-ra.org/reg/335/2012/13/1/amwa/as10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.smpte-ra.org/reg/2003/2012"/>
+<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
+<xs:import namespace="http://sandflow.com/ns/SMPTEST2001-1/baseline"/>
+<xs:element name="AS_10_Shim_Name" type="r0:UTF16String"/>
+<xs:element name="AS_10_Type" type="r0:UTF16String"/>
+<xs:element name="AS_10_Main_Title" type="r0:UTF16String"/>
+<xs:element name="AS_10_Sub_Title" type="r0:UTF16String"/>
+<xs:element name="AS_10_Title_Description" type="r0:UTF16String"/>
+<xs:element name="AS_10_Organization_Name" type="r0:UTF16String"/>
+<xs:element name="AS_10_Person_Name" type="r0:UTF16String"/>
+<xs:element name="AS_10_Location_Description" type="r0:UTF16String"/>
+<xs:element name="AS_10_Common_Spanning_ID" type="r0:UMID"/>
+<xs:element name="AS_10_Spanning_Number" type="r0:UInt16"/>
+<xs:element name="AS_10_Cumulative_Duration" type="r0:PositionType"/>
 </xs:schema>

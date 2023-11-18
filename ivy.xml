@@ -5,7 +5,7 @@
         <conf name="java_11" description="Java JDK11 compile dependencies"/>
     </configurations>
     <dependencies>
-        <dependency org="com.sandflow" name="regxmllib" rev="1.1.4"/>
+        <dependency org="com.sandflow" name="regxmllib" rev="1.1.5-SNAPSHOT"/>
         <dependency org="javax.xml.bind" name="jaxb-api" rev="2.3.1" conf="java_11->default"/>
         <dependency org="org.glassfish.jaxb" name="jaxb-runtime" rev="2.3.1" conf="java_11->default"/>
         <dependency org="javax.xml.bind" name="jaxb-api" rev="2+" conf="java_8->default"/>
